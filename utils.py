@@ -61,3 +61,16 @@ def save_new_links(csv_path, new_links):
                 writer.writerow([timestamp, link])
     except Exception as e:
         print(f"Error writing to log file {csv_path}: {e}")
+
+# Helper function to get HTML content for a given link
+def get_html_content(link):
+    """
+    Downloads and returns the HTML content for the given link.
+    Raises requests.RequestException if the request fails.
+    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    }
+    response = requests.get(link, headers=headers)
+    response.raise_for_status()
+    return response.text
