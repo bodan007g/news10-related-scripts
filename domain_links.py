@@ -12,6 +12,19 @@ from utils import (
 )
 
 LOG_DIR = "logs"
+CACHE_DIR = "cache"
+
+def get_cache_path(url):
+    parsed = urlparse(url)
+    filename = parsed.netloc.replace('.', '_') + ".html"
+    return os.path.join(CACHE_DIR, filename)
+
+def is_cache_fresh(cache_path, threshold_minutes=5):
+    if not os.path.exists(cache_path):
+        return False
+    mtime = os.path.getmtime(cache_path)
+    age = (datetime.now() - datetime.fromtimestamp(mtime)).total_seconds() / 60.0
+    return age < threshold_minutes
 
 def get_csv_filename(domain):
     now = datetime.now()
@@ -20,6 +33,19 @@ def get_csv_filename(domain):
     os.makedirs(month_dir, exist_ok=True)
     return os.path.join(month_dir, f"{domain}.csv")
 
+
+def download_html(url, cache_threshold_minutes=5):
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    cache_path = get_cache_path(url)
+    if is_cache_fresh(cache_path, cache_threshold_minutes):
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return f.read()
+    response = requests.get(url)
+    response.raise_for_status()
+    html = response.text
+    with open(cache_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    return html
 
 def main(url):
     html = download_html(url)
@@ -31,9 +57,7 @@ def main(url):
     existing_links = load_existing_links(csv_filename)
     new_links = [link for link in links if link not in existing_links]
     save_new_links(csv_filename, new_links)
-    print(f"Total links found: {len(links)}")
-    print(f"New links added: {len(new_links)}")
-    print(f"Ignored (already existing): {len(links) - len(new_links)}")
+    return len(links), len(new_links), len(links) - len(new_links)
 
 def read_websites_csv(filename):
     websites = []
@@ -53,10 +77,16 @@ def read_websites_csv(filename):
     return websites
 
 if __name__ == "__main__":
+    import time
     input_csv = "websites.csv"
     websites = read_websites_csv(input_csv)
     if not websites:
         print("No websites to process.")
+    start_time = time.time()
     for link, city, country in websites:
-        print(f"Processing: {link} (City: {city}, Country: {country})")
-        main(link)
+        parsed = urlparse(link)
+        domain = parsed.netloc
+        total, added, _ = main(link)
+        print(f"{domain} | found: {total} | new: {added}")
+    elapsed = time.time() - start_time
+    print(f"Total time taken: {elapsed:.2f} seconds")
