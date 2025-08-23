@@ -74,3 +74,16 @@ def get_html_content(link):
     response = requests.get(link, headers=headers)
     response.raise_for_status()
     return response.text
+
+# Helper function to strip irrelevant HTML tags for text extraction
+def strip_irrelevant_html_tags(html):
+    """
+    Removes tags that are not relevant for text extraction, such as <script>, <style>, <noscript>, and <iframe>.
+    Returns cleaned HTML as a string.
+    """
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["script", "style", "noscript", "iframe"]):
+        tag.decompose()
+    return str(soup)
+
