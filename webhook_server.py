@@ -40,5 +40,11 @@ def webhook(project):
     return 'Ignored.', 200
 
 
+
+# Default status page
+@app.route('/', methods=['GET'])
+def index():
+    return '<h1>Webhook server is running</h1>', 200
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
