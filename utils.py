@@ -54,7 +54,10 @@ def load_existing_links(csv_path):
 def save_new_links(csv_path, new_links):
     now = datetime.now()
     timestamp = now.strftime("%Y-%m%d: %H:%M")
-    with open(csv_path, "a", encoding="utf-8", newline='') as f:
-        writer = csv.writer(f)
-        for link in new_links:
-            writer.writerow([timestamp, link])
+    try:
+        with open(csv_path, "a", encoding="utf-8", newline='') as f:
+            writer = csv.writer(f)
+            for link in new_links:
+                writer.writerow([timestamp, link])
+    except Exception as e:
+        print(f"Error writing to log file {csv_path}: {e}")
