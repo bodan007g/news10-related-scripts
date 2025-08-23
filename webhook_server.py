@@ -35,8 +35,7 @@ def webhook(project):
     if not repo_path:
         abort(404, description='Unknown project')
     if event == 'push':
-        with open('/var/www/vhosts/news10-related-scripts/logs/webhook.log', 'a') as f:
-            result = subprocess.run(['git', '-C', repo_path, 'pull'], stdout=f, stderr=f)
+        subprocess.run(['git', '-C', repo_path, 'pull'])
         return f'Pulled latest code for {project}.', 200
     return 'Ignored.', 200
 
