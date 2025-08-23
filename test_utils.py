@@ -11,6 +11,22 @@ class TestUtils(unittest.TestCase):
         self.assertNotIn('<iframe', cleaned)
         self.assertIn('Hello World!', cleaned)
 
+    def test_strip_irrelevant_html_tags_removes_empty_tags(self):
+        html = '<div></div><span id="x"></span><p>Text</p>'
+        cleaned = strip_irrelevant_html_tags(html)
+        self.assertNotIn('<div></div>', cleaned)
+        self.assertIn('<span id="x"></span>', cleaned)
+        self.assertIn('Text', cleaned)
+
+    def test_strip_irrelevant_html_tags_strips_attributes_except_id_and_class(self):
+        html = '<p id="pid" class="c" style="color:red" data-x="1">Text</p>'
+        cleaned = strip_irrelevant_html_tags(html)
+        self.assertIn('id="pid"', cleaned)
+        self.assertIn('class="c"', cleaned)
+        self.assertNotIn('style=', cleaned)
+        self.assertNotIn('data-x=', cleaned)
+        self.assertIn('Text', cleaned)
+
     def test_strip_irrelevant_html_tags_keeps_text(self):
         html = '<html><body><p>Text</p></body></html>'
         cleaned = strip_irrelevant_html_tags(html)

@@ -7,10 +7,12 @@ from datetime import datetime
 
 CACHE_DIR = "cache"
 
+
 def get_cache_path(url):
     parsed = urlparse(url)
     filename = parsed.netloc.replace('.', '_') + ".html"
     return os.path.join(CACHE_DIR, filename)
+
 
 def download_html(url):
     os.makedirs(CACHE_DIR, exist_ok=True)
@@ -24,6 +26,7 @@ def download_html(url):
     with open(cache_path, "w", encoding="utf-8") as f:
         f.write(html)
     return html
+
 
 def extract_domain_links(html, base_url):
     parsed_base = urlparse(base_url)
@@ -41,6 +44,7 @@ def extract_domain_links(html, base_url):
             links.add(path)
     return sorted(links)
 
+
 def load_existing_links(csv_path):
     existing = set()
     if os.path.exists(csv_path):
@@ -50,6 +54,7 @@ def load_existing_links(csv_path):
                 if len(row) >= 2:
                     existing.add(row[1])
     return existing
+
 
 def save_new_links(csv_path, new_links):
     now = datetime.now()
@@ -63,6 +68,8 @@ def save_new_links(csv_path, new_links):
         print(f"Error writing to log file {csv_path}: {e}")
 
 # Helper function to get HTML content for a given link
+
+
 def get_html_content(link):
     """
     Downloads and returns the HTML content for the given link.
@@ -76,6 +83,8 @@ def get_html_content(link):
     return response.text
 
 # Helper function to strip irrelevant HTML tags for text extraction
+
+
 def strip_irrelevant_html_tags(html):
     """
     Removes tags that are not relevant for text extraction, such as <script>, <style>, <noscript>, and <iframe>.
@@ -85,15 +94,17 @@ def strip_irrelevant_html_tags(html):
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "iframe"]):
         tag.decompose()
+
     # Remove all attributes except 'id' and 'class'
     for tag in soup.find_all():
         attrs = dict(tag.attrs)
         for attr in list(attrs.keys()):
             if attr not in ["id", "class"]:
                 del tag.attrs[attr]
+
     # Remove empty tags (tags with no content and no attributes)
     for tag in soup.find_all():
         if not tag.contents and not tag.attrs:
             tag.decompose()
-    return str(soup)
 
+    return str(soup)
