@@ -10,4 +10,4 @@ if lsof -i:5000 | grep LISTEN; then
 fi
 
 source "$VHOSTS_BASE/news10-related-scripts/venv/bin/activate"
-python3 "$VHOSTS_BASE/news10-related-scripts/webhook_server.py"
+"$VHOSTS_BASE/news10-related-scripts/venv/bin/python" "$VHOSTS_BASE/news10-related-scripts/webhook_server.py"
