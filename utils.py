@@ -85,5 +85,15 @@ def strip_irrelevant_html_tags(html):
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "iframe"]):
         tag.decompose()
+    # Remove all attributes except 'id' and 'class'
+    for tag in soup.find_all():
+        attrs = dict(tag.attrs)
+        for attr in list(attrs.keys()):
+            if attr not in ["id", "class"]:
+                del tag.attrs[attr]
+    # Remove empty tags (tags with no content and no attributes)
+    for tag in soup.find_all():
+        if not tag.contents and not tag.attrs:
+            tag.decompose()
     return str(soup)
 
