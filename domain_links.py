@@ -83,10 +83,29 @@ if __name__ == "__main__":
     if not websites:
         print("No websites to process.")
     start_time = time.time()
+    # Collect new links per domain for summary log
+    new_links_summary = {}
     for link, city, country in websites:
         parsed = urlparse(link)
         domain = parsed.netloc
         total, added, _ = main(link)
         print(f"{domain} | found: {total} | new: {added}")
+        if added > 0:
+            new_links_summary[domain] = added
     elapsed = time.time() - start_time
     print(f"Total time taken: {elapsed:.2f} seconds")
+
+    # Always write a summary log line, even if no new links found
+    now = datetime.now()
+    time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+    if new_links_summary:
+        summary_parts = [f"{domain}: {count}" for domain, count in new_links_summary.items()]
+        summary_line = f"{time_str} " + " ".join(summary_parts) + "\n"
+    else:
+        summary_line = f"{time_str} none found\n"
+    month_str = now.strftime("%Y-%m")
+    month_dir = os.path.join(LOG_DIR, month_str)
+    os.makedirs(month_dir, exist_ok=True)
+    summary_log_path = os.path.join(month_dir, "summary.log")
+    with open(summary_log_path, "a", encoding="utf-8") as f:
+        f.write(summary_line)
