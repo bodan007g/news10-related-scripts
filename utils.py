@@ -58,7 +58,7 @@ def load_existing_links(csv_path):
 
 def save_new_links(csv_path, new_links):
     now = datetime.now()
-    timestamp = now.strftime("%Y-%m%d: %H:%M")
+    timestamp = now.strftime("%Y-%m-%d: %H:%M")
     try:
         with open(csv_path, "a", encoding="utf-8", newline='') as f:
             writer = csv.writer(f)
