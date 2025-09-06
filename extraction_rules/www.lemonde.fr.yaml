@@ -1,0 +1,63 @@
+domain: "www.lemonde.fr"
+language: "fr"
+
+# Content filtering (URL-based)
+content_filters:
+  require_article_id: true
+  article_id_pattern: '_(\d{7,})_'
+  min_word_count: 200
+  additional_skip_patterns:
+    - "/guides-d-achat/"
+    - "/applications-groupe/"
+    - "/annonces-legales/"
+    - "/archives-du-monde/"
+    - "?origin=HPcarrousel"
+    - "?lmd_campaign="
+
+# HTML extraction rules
+article_selectors:
+  - ".article__content"
+  - ".article-content"
+  - ".post-content"
+  - "[data-module=ArticleContent]"
+remove_selectors:
+  - ".teads-inread"
+  - ".article-aside"
+  - ".breadcrumb"
+  - ".share-buttons"
+  - ".related-articles"
+  - ".social-share"
+  - ".newsletter-signup"
+  - ".advertising"
+  - ".pub"
+  - ".aside"
+  - ".navigation"
+  - ".header"
+  - ".footer"
+  - ".comments"
+  - ".author-bio"
+  - ".tags"
+title_selector: "h1"
+date_selector: ".meta__date, time"
+author_selector: ".meta__author, .author"
+
+# Text cleanup patterns (French-specific)
+cleanup_patterns:
+  subscription_walls:
+    - "Il vous reste \\d+[.,]\\d*% de cet article à lire.*"
+    - "La suite est réservée aux abonnés.*"
+    - "Article réservé à nos abonnés.*"
+    - "Pour lire la suite.*abonnez-vous.*"
+  navigation_elements:
+    - "Lire aussi.*?\\|.*?Article réservé.*"
+    - "Lire plus tard.*"
+    - "Voir aussi.*?\\|.*"
+  social_sharing:
+    - "Partager cet article.*"
+    - "Suivez.*?sur.*"
+    - "Retrouvez.*?sur.*"
+  newsletter_promotional:
+    - "Recevez.*?newsletter.*"
+    - "S'abonner.*?à partir de.*€.*"
+  stop_at_patterns:
+    - "Il vous reste \\d+[.,]\\d*%"  # Stop extraction here

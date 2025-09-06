@@ -1,0 +1,68 @@
+domain: "www.bzi.ro"
+language: "ro"
+
+# Content filtering (URL-based)
+content_filters:
+  require_article_id: true
+  article_id_pattern: '-(\d{6,})$'
+  min_word_count: 150
+  additional_skip_patterns:
+    - "/ghid-"
+    - "/test-"
+    - "/recenzie-"
+    - "/anunturi/"
+    - "/contact"
+    - "/despre-noi"
+    - "/politica-"
+    - "/termeni-"
+
+# HTML extraction rules
+article_selectors:
+  - ".article-content"
+  - ".post-content"
+  - ".entry-content"
+  - ".content-area"
+  - "[data-content]"
+remove_selectors:
+  - ".advertisement"
+  - ".ads"
+  - ".pub"
+  - ".reclama"
+  - ".social-share"
+  - ".related-posts"
+  - ".sidebar"
+  - ".navigation"
+  - ".header"
+  - ".footer"
+  - ".comments"
+  - ".comment-section"
+  - ".tags"
+  - ".author-bio"
+title_selector: "h1, .article-title, .post-title"
+date_selector: ".date, .post-date, time"
+author_selector: ".author, .by-author"
+
+# Text cleanup patterns (Romanian-specific)
+cleanup_patterns:
+  subscription_walls:
+    - "Restul articolului este rezervat abonaților.*"
+    - "Pentru a citi restul articolului.*abonează-te.*"
+    - "Articol disponibil doar pentru abonați.*"
+    - "Conținutul complet.*doar pentru abonați.*"
+  navigation_elements:
+    - "Citește și:.*"
+    - "Vezi și:.*"
+    - "Citește mai mult.*"
+    - "Continuă citirea.*"
+    - "În același subiect.*"
+  social_sharing:
+    - "Distribuie acest articol.*"
+    - "Distribuie pe Facebook.*"
+    - "Urmărește.*?pe.*"
+    - "Găsește.*?pe.*"
+  newsletter_promotional:
+    - "Primește newsletter.*"
+    - "Abonează-te.*newsletter.*"
+    - "Înscrie-te.*newsletter.*"
+  stop_at_patterns:
+    - "Restul articolului este rezervat"  # Stop extraction here

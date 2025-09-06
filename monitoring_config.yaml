@@ -1,0 +1,28 @@
+# Monitoring and Error Handling Configuration
+
+# Email notification settings (SendGrid)
+email:
+  enabled: false  # Set to true to enable email notifications
+  sendgrid_api_key: "YOUR_SENDGRID_API_KEY_HERE"
+  from_email: "alerts@your-domain.com"
+  to_emails:
+    - "admin@your-domain.com"
+  
+# Error thresholds
+error_thresholds:
+  content_fetcher_failures: 10    # Alert if more than 10 failures per run
+  text_extractor_failures: 5      # Alert if more than 5 failures per run
+  ai_analyzer_failures: 3         # Alert if more than 3 failures per run
+  
+# Monitoring intervals
+monitoring:
+  disk_usage_warning: 80          # Warn when disk usage exceeds 80%
+  disk_usage_critical: 90         # Critical alert at 90%
+  cache_size_limit_mb: 1000       # Clean cache if it exceeds 1GB
+  log_retention_days: 365         # Keep logs for 365 days
+  
+# Health check URLs (for external monitoring)
+health_checks:
+  enabled: false
+  webhook_urls:
+    - "https://your-monitoring-service.com/ping/content-pipeline"

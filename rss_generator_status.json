@@ -1,0 +1,32 @@
+{
+  "rss:www.lemonde.fr": {
+    "status": "generated",
+    "file_path": "rss/www.lemonde.fr.xml",
+    "article_count": 6,
+    "generated_at": "2025-09-06T07:21:59.379298"
+  },
+  "category:politic": {
+    "status": "generated",
+    "file_path": "rss/category_politic.xml",
+    "article_count": 1,
+    "generated_at": "2025-09-06T07:21:59.605319"
+  },
+  "category:social": {
+    "status": "generated",
+    "file_path": "rss/category_social.xml",
+    "article_count": 1,
+    "generated_at": "2025-09-06T07:22:00.042418"
+  },
+  "category:international": {
+    "status": "generated",
+    "file_path": "rss/category_international.xml",
+    "article_count": 1,
+    "generated_at": "2025-09-06T07:22:00.245960"
+  },
+  "category:culture": {
+    "status": "generated",
+    "file_path": "rss/category_culture.xml",
+    "article_count": 1,
+    "generated_at": "2025-09-06T07:22:00.766593"
+  }
+}

@@ -1,0 +1,73 @@
+domain: "www.digi24.ro"
+language: "ro"
+
+# Content filtering (URL-based)
+content_filters:
+  require_article_id: true
+  article_id_pattern: '-(\d{6,})$'
+  min_word_count: 150
+  additional_skip_patterns:
+    - "/ghid-"
+    - "/test-"
+    - "/recenzie-"
+    - "/anunturi/"
+    - "/contact"
+    - "/despre"
+    - "/politica-"
+    - "/termeni-"
+    - "/televiziune/"
+    - "/programe/"
+
+# HTML extraction rules
+article_selectors:
+  - ".article-content"
+  - ".post-content"
+  - ".entry-content"
+  - ".story-content"
+  - "[data-article-content]"
+remove_selectors:
+  - ".advertisement"
+  - ".ads"
+  - ".pub"
+  - ".reclama"
+  - ".banner"
+  - ".social-share"
+  - ".related-articles"
+  - ".sidebar"
+  - ".navigation"
+  - ".header"
+  - ".footer"
+  - ".comments"
+  - ".comment-form"
+  - ".tags"
+  - ".author-box"
+  - ".video-player"
+  - ".ad-container"
+title_selector: "h1, .article-title, .story-title"
+date_selector: ".date, .publish-date, time, .timestamp"
+author_selector: ".author, .reporter, .by-author"
+
+# Text cleanup patterns (Romanian-specific)
+cleanup_patterns:
+  subscription_walls:
+    - "Restul articolului este rezervat abonaților.*"
+    - "Pentru a citi restul articolului.*"
+    - "Articol disponibil doar pentru abonați.*"
+    - "Conținutul complet.*doar pentru abonați.*"
+  navigation_elements:
+    - "Citește și:.*"
+    - "Vezi și:.*"
+    - "Citește mai mult.*"
+    - "Mai multe despre:.*"
+    - "Articole similare:.*"
+  social_sharing:
+    - "Distribuie pe Facebook.*"
+    - "Distribuie pe Twitter.*"
+    - "Urmărește Digi24.*"
+    - "Abonează-te la canalul.*"
+  newsletter_promotional:
+    - "Primește newsletter.*Digi24.*"
+    - "Abonează-te.*newsletter.*"
+    - "Înscrie-te.*newsletter.*"
+  stop_at_patterns:
+    - "Restul articolului"  # Stop extraction here

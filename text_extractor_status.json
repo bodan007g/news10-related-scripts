@@ -1,0 +1,597 @@
+{
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2022_09_01_les-meilleures-lunch-box-pour-la-pause-dejeuner_6139786_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2022_09_01_les-meilleures-lunch-box-pour-la-pause-dejeuner_6139786_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2022_09_01_les-meilleures-lunch-box-pour-la-pause-dejeuner_6139786_5306571.yaml",
+    "content_length": 51937,
+    "processed_at": "2025-09-06T07:11:36.133814"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/idees_article_2025_08_21_l-appel-de-23-economistes-a-un-arret-immediat-de-toute-politique-qui-intensifie-la-famine-generalisee-a-gaza_6632905_3232.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/idees_article_2025_08_21_l-appel-de-23-economistes-a-un-arret-immediat-de-toute-politique-qui-intensifie-la-famine-generalisee-a-gaza_6632905_3232.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/idees_article_2025_08_21_l-appel-de-23-economistes-a-un-arret-immediat-de-toute-politique-qui-intensifie-la-famine-generalisee-a-gaza_6632905_3232.yaml",
+    "content_length": 2493,
+    "processed_at": "2025-09-06T07:11:36.413808"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/economie-mondiale.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/economie-mondiale.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/economie-mondiale.yaml",
+    "content_length": 59361,
+    "processed_at": "2025-09-06T07:11:37.542786"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/afrique_article_2025_08_22_cybercriminalite-plus-de-1-200-arrestations-dans-une-vaste-operation-d-interpol-en-afrique_6633542_3212.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/afrique_article_2025_08_22_cybercriminalite-plus-de-1-200-arrestations-dans-une-vaste-operation-d-interpol-en-afrique_6633542_3212.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/afrique_article_2025_08_22_cybercriminalite-plus-de-1-200-arrestations-dans-une-vaste-operation-d-interpol-en-afrique_6633542_3212.yaml",
+    "content_length": 2430,
+    "processed_at": "2025-09-06T07:11:38.053678"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/economie_article_2025_08_22_la-poste-suspend-l-envoi-de-colis-vers-les-etats-unis_6633516_3234.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/economie_article_2025_08_22_la-poste-suspend-l-envoi-de-colis-vers-les-etats-unis_6633516_3234.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/economie_article_2025_08_22_la-poste-suspend-l-envoi-de-colis-vers-les-etats-unis_6633516_3234.yaml",
+    "content_length": 3403,
+    "processed_at": "2025-09-06T07:11:38.439490"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/eclairages.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/eclairages.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/eclairages.yaml",
+    "content_length": 60923,
+    "processed_at": "2025-09-06T07:11:40.049948"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_02_06_les-meilleures-visseuses-entre-50-et-100-euros_6171388_5306572.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_02_06_les-meilleures-visseuses-entre-50-et-100-euros_6171388_5306572.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_02_06_les-meilleures-visseuses-entre-50-et-100-euros_6171388_5306572.yaml",
+    "content_length": 70550,
+    "processed_at": "2025-09-06T07:11:40.545802"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_04_05_les-meilleurs-robots-patissiers_6226175_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_04_05_les-meilleurs-robots-patissiers_6226175_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_04_05_les-meilleurs-robots-patissiers_6226175_5306571.yaml",
+    "content_length": 49460,
+    "processed_at": "2025-09-06T07:11:41.050814"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/annonces-legales_list.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/annonces-legales_list.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/annonces-legales_list.yaml",
+    "content_length": 81385,
+    "processed_at": "2025-09-06T07:11:43.005508"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_03_10_les-meilleurs-couteaux-de-chef_6578271_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_03_10_les-meilleurs-couteaux-de-chef_6578271_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_03_10_les-meilleurs-couteaux-de-chef_6578271_5306571.yaml",
+    "content_length": 47196,
+    "processed_at": "2025-09-06T07:11:43.603187"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/crise-ukrainienne.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/crise-ukrainienne.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/crise-ukrainienne.yaml",
+    "content_length": 64667,
+    "processed_at": "2025-09-06T07:11:45.224863"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/culture.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/culture.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/culture.yaml",
+    "content_length": 57514,
+    "processed_at": "2025-09-06T07:11:46.749161"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_02_17_les-meilleurs-cuiseurs-a-riz_6551215_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=ricecooker.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_02_17_les-meilleurs-cuiseurs-a-riz_6551215_5306571.md?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=ricecooker.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_02_17_les-meilleurs-cuiseurs-a-riz_6551215_5306571.yaml?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=ricecooker.yaml",
+    "content_length": 28342,
+    "processed_at": "2025-09-06T07:11:47.276378"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=blocservice&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.md?lmd_medium=blocservice&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.yaml?lmd_medium=blocservice&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.yaml",
+    "content_length": 1331,
+    "processed_at": "2025-09-06T07:11:47.709840"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_10_17_le-meilleur-antivol-pour-velo_6195018_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_10_17_le-meilleur-antivol-pour-velo_6195018_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_10_17_le-meilleur-antivol-pour-velo_6195018_5306571.yaml",
+    "content_length": 90237,
+    "processed_at": "2025-09-06T07:11:48.658884"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=header&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.md?lmd_medium=header&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.yaml?lmd_medium=header&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.yaml",
+    "content_length": 1331,
+    "processed_at": "2025-09-06T07:11:49.158519"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/emploi.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/emploi.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/emploi.yaml",
+    "content_length": 61940,
+    "processed_at": "2025-09-06T07:11:50.731634"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/editoriaux.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/editoriaux.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/editoriaux.yaml",
+    "content_length": 51057,
+    "processed_at": "2025-09-06T07:11:51.657724"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/canicule.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/canicule.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/canicule.yaml",
+    "content_length": 57269,
+    "processed_at": "2025-09-06T07:11:52.961877"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/idees-tribunes.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/idees-tribunes.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/idees-tribunes.yaml",
+    "content_length": 63342,
+    "processed_at": "2025-09-06T07:11:54.345876"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=coussins-de-voyage.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.md?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=coussins-de-voyage.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.yaml?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=coussins-de-voyage.yaml",
+    "content_length": 44956,
+    "processed_at": "2025-09-06T07:11:54.930679"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/economie-francaise.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/economie-francaise.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/economie-francaise.yaml",
+    "content_length": 57990,
+    "processed_at": "2025-09-06T07:11:56.424733"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/economie.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/economie.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/economie.yaml",
+    "content_length": 59464,
+    "processed_at": "2025-09-06T07:11:57.608828"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/climat.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/climat.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/climat.yaml",
+    "content_length": 57672,
+    "processed_at": "2025-09-06T07:11:58.845897"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat.yaml",
+    "content_length": 56877,
+    "processed_at": "2025-09-06T07:11:59.921026"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_11_20_les-meilleurs-fours-micro-ondes-grill_6405200_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_11_20_les-meilleurs-fours-micro-ondes-grill_6405200_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_11_20_les-meilleurs-fours-micro-ondes-grill_6405200_5306571.yaml",
+    "content_length": 43136,
+    "processed_at": "2025-09-06T07:12:00.445978"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite-medias_article_2010_11_03_la-charte-d-ethique-et-de-deontologie-du-groupe-le-monde_1434737_3236.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite-medias_article_2010_11_03_la-charte-d-ethique-et-de-deontologie-du-groupe-le-monde_1434737_3236.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite-medias_article_2010_11_03_la-charte-d-ethique-et-de-deontologie-du-groupe-le-monde_1434737_3236.yaml",
+    "content_length": 38451,
+    "processed_at": "2025-09-06T07:12:00.997977"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/droits-de-douane.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/droits-de-douane.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/droits-de-douane.yaml",
+    "content_length": 58487,
+    "processed_at": "2025-09-06T07:12:02.302607"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite-medias_article_2025_08_22_de-nombreuses-societes-de-journalistes-denoncent-le-refus-de-la-france-insoumise-d-accrediter-un-journaliste-du-monde-a-ses-universites-d-ete_6633534_3236.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite-medias_article_2025_08_22_de-nombreuses-societes-de-journalistes-denoncent-le-refus-de-la-france-insoumise-d-accrediter-un-journaliste-du-monde-a-ses-universites-d-ete_6633534_3236.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite-medias_article_2025_08_22_de-nombreuses-societes-de-journalistes-denoncent-le-refus-de-la-france-insoumise-d-accrediter-un-journaliste-du-monde-a-ses-universites-d-ete_6633534_3236.yaml",
+    "content_length": 2125,
+    "processed_at": "2025-09-06T07:12:02.568934"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/comprendre-en-3-minutes_video_2025_08_14_pourquoi-tout-le-monde-s-arrache-l-arctique-comprendre-en-trois-minutes_6629216_6176282.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/comprendre-en-3-minutes_video_2025_08_14_pourquoi-tout-le-monde-s-arrache-l-arctique-comprendre-en-trois-minutes_6629216_6176282.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/comprendre-en-3-minutes_video_2025_08_14_pourquoi-tout-le-monde-s-arrache-l-arctique-comprendre-en-trois-minutes_6629216_6176282.yaml",
+    "content_length": 3240,
+    "processed_at": "2025-09-06T07:12:02.868523"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=bizdev&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.md?lmd_medium=bizdev&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.yaml?lmd_medium=bizdev&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.yaml",
+    "content_length": 1331,
+    "processed_at": "2025-09-06T07:12:03.186320"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite-medias.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite-medias.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite-medias.yaml",
+    "content_length": 58067,
+    "processed_at": "2025-09-06T07:12:04.393361"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/campus.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/campus.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/campus.yaml",
+    "content_length": 63639,
+    "processed_at": "2025-09-06T07:12:05.636183"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/enquete-idees.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/enquete-idees.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/enquete-idees.yaml",
+    "content_length": 61555,
+    "processed_at": "2025-09-06T07:12:06.929293"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/disparitions.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/disparitions.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/disparitions.yaml",
+    "content_length": 55922,
+    "processed_at": "2025-09-06T07:12:08.425425"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.yaml",
+    "content_length": 69854,
+    "processed_at": "2025-09-06T07:12:09.124944"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2022_07_06_les-meilleurs-reveils-simulateurs-d-aube_6133588_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2022_07_06_les-meilleurs-reveils-simulateurs-d-aube_6133588_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2022_07_06_les-meilleurs-reveils-simulateurs-d-aube_6133588_5306571.yaml",
+    "content_length": 74914,
+    "processed_at": "2025-09-06T07:12:09.851303"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/entretien-idees.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/entretien-idees.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/entretien-idees.yaml",
+    "content_length": 66369,
+    "processed_at": "2025-09-06T07:12:11.127413"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_06_09_les-meilleurs-coussins-de-voyage_6176870_5306571.yaml",
+    "content_length": 44956,
+    "processed_at": "2025-09-06T07:12:11.780978"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_01_26_les-meilleures-imprimantes-laser_6159425_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_01_26_les-meilleures-imprimantes-laser_6159425_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_01_26_les-meilleures-imprimantes-laser_6159425_5306571.yaml",
+    "content_length": 47422,
+    "processed_at": "2025-09-06T07:12:12.427788"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_10_04_les-meilleurs-gaufriers_6192421_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_10_04_les-meilleurs-gaufriers_6192421_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_10_04_les-meilleurs-gaufriers_6192421_5306571.yaml",
+    "content_length": 42374,
+    "processed_at": "2025-09-06T07:12:13.002995"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2022_12_14_les-meilleurs-boucleurs-a-cheveux_6154394_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2022_12_14_les-meilleurs-boucleurs-a-cheveux_6154394_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2022_12_14_les-meilleurs-boucleurs-a-cheveux_6154394_5306571.yaml",
+    "content_length": 79408,
+    "processed_at": "2025-09-06T07:12:13.724650"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/enquetes-video.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/enquetes-video.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/enquetes-video.yaml",
+    "content_length": 65361,
+    "processed_at": "2025-09-06T07:12:15.091744"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/confidentialite.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/confidentialite.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/confidentialite.yaml",
+    "content_length": 47487,
+    "processed_at": "2025-09-06T07:12:15.661350"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.yaml",
+    "content_length": 33650,
+    "processed_at": "2025-09-06T07:12:16.215162"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/en-direct.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/en-direct.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/en-direct.yaml",
+    "content_length": 65280,
+    "processed_at": "2025-09-06T07:12:17.959484"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/analyses.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/analyses.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/analyses.yaml",
+    "content_length": 57941,
+    "processed_at": "2025-09-06T07:12:19.199628"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/arts.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/arts.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/arts.yaml",
+    "content_length": 56866,
+    "processed_at": "2025-09-06T07:12:20.444456"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/cote-d-ivoire.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/cote-d-ivoire.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/cote-d-ivoire.yaml",
+    "content_length": 57613,
+    "processed_at": "2025-09-06T07:12:21.759365"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/cinema.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/cinema.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/cinema.yaml",
+    "content_length": 57014,
+    "processed_at": "2025-09-06T07:12:23.214306"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/archives-du-monde.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/archives-du-monde.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/archives-du-monde.yaml",
+    "content_length": 42114,
+    "processed_at": "2025-09-06T07:12:24.257097"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=chargeurs-solaires-portables.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.md?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=chargeurs-solaires-portables.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_05_28_les-meilleurs-chargeurs-solaires-portables_6609021_5306571.yaml?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=chargeurs-solaires-portables.yaml",
+    "content_length": 69854,
+    "processed_at": "2025-09-06T07:12:24.991705"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2023_04_06_les-meilleurs-ventilateurs-pour-affronter-la-chaleur_6168531_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2023_04_06_les-meilleurs-ventilateurs-pour-affronter-la-chaleur_6168531_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2023_04_06_les-meilleurs-ventilateurs-pour-affronter-la-chaleur_6168531_5306571.yaml",
+    "content_length": 48506,
+    "processed_at": "2025-09-06T07:12:25.530507"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_11_26_les-meilleurs-pianos-numeriques-pas-chers-pour-debutants_6415845_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_11_26_les-meilleurs-pianos-numeriques-pas-chers-pour-debutants_6415845_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_11_26_les-meilleurs-pianos-numeriques-pas-chers-pour-debutants_6415845_5306571.yaml",
+    "content_length": 46952,
+    "processed_at": "2025-09-06T07:12:26.125266"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/argent.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/argent.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/argent.yaml",
+    "content_length": 57802,
+    "processed_at": "2025-09-06T07:12:27.619856"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/donald-trump.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/donald-trump.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/donald-trump.yaml",
+    "content_length": 60386,
+    "processed_at": "2025-09-06T07:12:29.024954"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/canada.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/canada.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/canada.yaml",
+    "content_length": 60953,
+    "processed_at": "2025-09-06T07:12:30.163726"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/index.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/index.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/index.yaml",
+    "content_length": 50843,
+    "processed_at": "2025-09-06T07:12:31.395593"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_06_04_les-meilleurs-robots-aspirateurs-laveurs_6188403_5306572.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_06_04_les-meilleurs-robots-aspirateurs-laveurs_6188403_5306572.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_06_04_les-meilleurs-robots-aspirateurs-laveurs_6188403_5306572.yaml",
+    "content_length": 97121,
+    "processed_at": "2025-09-06T07:12:32.312401"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/afrique.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/afrique.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/afrique.yaml",
+    "content_length": 59014,
+    "processed_at": "2025-09-06T07:12:33.429755"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_06_10_les-meilleures-friteuses-sans-huile_6202128_5306572.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_06_10_les-meilleures-friteuses-sans-huile_6202128_5306572.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_06_10_les-meilleures-friteuses-sans-huile_6202128_5306572.yaml",
+    "content_length": 40060,
+    "processed_at": "2025-09-06T07:12:33.924767"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=mixeursplongeants.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.md?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=mixeursplongeants.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_11_28_en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.yaml?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=mixeursplongeants.yaml",
+    "content_length": 33650,
+    "processed_at": "2025-09-06T07:12:34.584321"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/histoire_video_2025_08_02_hiroshima-comment-s-est-deroule-le-bombardement-atomique-le-plus-devastateur-de-l-histoire_6626343_4655323.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/histoire_video_2025_08_02_hiroshima-comment-s-est-deroule-le-bombardement-atomique-le-plus-devastateur-de-l-histoire_6626343_4655323.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/histoire_video_2025_08_02_hiroshima-comment-s-est-deroule-le-bombardement-atomique-le-plus-devastateur-de-l-histoire_6626343_4655323.yaml",
+    "content_length": 1196,
+    "processed_at": "2025-09-06T07:12:34.997505"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=guides-d-achat.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=guides-d-achat.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=guides-d-achat.yaml",
+    "content_length": 57027,
+    "processed_at": "2025-09-06T07:12:36.183884"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/algerie.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/algerie.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/algerie.yaml",
+    "content_length": 59161,
+    "processed_at": "2025-09-06T07:12:37.294080"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/faq.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/faq.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/faq.yaml",
+    "content_length": 426,
+    "processed_at": "2025-09-06T07:12:37.345766"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_04_25_les-meilleurs-aspirateurs-balais-sans-fil_6229835_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_04_25_les-meilleurs-aspirateurs-balais-sans-fil_6229835_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_04_25_les-meilleurs-aspirateurs-balais-sans-fil_6229835_5306571.yaml",
+    "content_length": 98067,
+    "processed_at": "2025-09-06T07:12:38.116920"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/idees-chroniques.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/idees-chroniques.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/idees-chroniques.yaml",
+    "content_length": 62889,
+    "processed_at": "2025-09-06T07:12:39.629706"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/belgique.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/belgique.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/belgique.yaml",
+    "content_length": 59917,
+    "processed_at": "2025-09-06T07:12:40.896737"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/education.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/education.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/education.yaml",
+    "content_length": 60667,
+    "processed_at": "2025-09-06T07:12:42.424625"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=infeed&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.md?lmd_medium=infeed&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/chaleur-humaine_article_2025_01_30_mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.yaml?lmd_medium=infeed&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe.yaml",
+    "content_length": 1331,
+    "processed_at": "2025-09-06T07:12:42.835802"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2021_10_07_instax-ou-polaroid-les-meilleurs-appareils-photos-instantanes-en-2021_6097486_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2021_10_07_instax-ou-polaroid-les-meilleurs-appareils-photos-instantanes-en-2021_6097486_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2021_10_07_instax-ou-polaroid-les-meilleurs-appareils-photos-instantanes-en-2021_6097486_5306571.yaml",
+    "content_length": 52188,
+    "processed_at": "2025-09-06T07:12:43.616246"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2022_06_15_les-meilleures-gourdes-pour-remplacer-les-bouteilles-jetables_6130466_5306571.html#origin=HPcarrousel.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2022_06_15_les-meilleures-gourdes-pour-remplacer-les-bouteilles-jetables_6130466_5306571.md#origin=HPcarrousel.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2022_06_15_les-meilleures-gourdes-pour-remplacer-les-bouteilles-jetables_6130466_5306571.yaml#origin=HPcarrousel.yaml",
+    "content_length": 92952,
+    "processed_at": "2025-09-06T07:12:44.356181"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2025_04_15_les-meilleurs-balais-vapeur_6596301_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=balais-vapeur.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2025_04_15_les-meilleurs-balais-vapeur_6596301_5306571.md?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=balais-vapeur.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2025_04_15_les-meilleurs-balais-vapeur_6596301_5306571.yaml?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=balais-vapeur.yaml",
+    "content_length": 64430,
+    "processed_at": "2025-09-06T07:12:44.785674"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite-medias_article_2019_08_12_les-flux-rss-du-monde-fr_5498778_3236.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite-medias_article_2019_08_12_les-flux-rss-du-monde-fr_5498778_3236.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite-medias_article_2019_08_12_les-flux-rss-du-monde-fr_5498778_3236.yaml",
+    "content_length": 5766,
+    "processed_at": "2025-09-06T07:12:45.201729"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/idees_article_2025_08_22_deces-du-streamer-jean-pormanove-la-mort-en-direct-un-scandale-lucratif_6633482_3232.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/idees_article_2025_08_22_deces-du-streamer-jean-pormanove-la-mort-en-direct-un-scandale-lucratif_6633482_3232.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/idees_article_2025_08_22_deces-du-streamer-jean-pormanove-la-mort-en-direct-un-scandale-lucratif_6633482_3232.yaml",
+    "content_length": 4904,
+    "processed_at": "2025-09-06T07:12:45.700979"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2022_11_23_les-meilleurs-jeux-de-societe-pour-adultes_6151232_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2022_11_23_les-meilleurs-jeux-de-societe-pour-adultes_6151232_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2022_11_23_les-meilleurs-jeux-de-societe-pour-adultes_6151232_5306571.yaml",
+    "content_length": 71762,
+    "processed_at": "2025-09-06T07:12:46.542887"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/en.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/en.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/en.yaml",
+    "content_length": 24942,
+    "processed_at": "2025-09-06T07:12:47.567240"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/afrique_video_2025_08_13_en-russie-des-jeunes-femmes-africaines-contraintes-de-fabriquer-des-drones-de-combat_6629046_3212.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/afrique_video_2025_08_13_en-russie-des-jeunes-femmes-africaines-contraintes-de-fabriquer-des-drones-de-combat_6629046_3212.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/afrique_video_2025_08_13_en-russie-des-jeunes-femmes-africaines-contraintes-de-fabriquer-des-drones-de-combat_6629046_3212.yaml",
+    "content_length": 1215,
+    "processed_at": "2025-09-06T07:12:48.228962"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite.yaml",
+    "content_length": 53842,
+    "processed_at": "2025-09-06T07:12:49.592169"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/idees.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/idees.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/idees.yaml",
+    "content_length": 59644,
+    "processed_at": "2025-09-06T07:12:51.083747"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/faq_?thematic=contacter.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/faq_?thematic=contacter.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/faq_?thematic=contacter.yaml",
+    "content_length": 426,
+    "processed_at": "2025-09-06T07:12:51.132730"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/annonces-legales.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/annonces-legales.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/annonces-legales.yaml",
+    "content_length": 27511,
+    "processed_at": "2025-09-06T07:12:51.757500"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/guides-d-achat_article_2024_07_31_les-meilleures-machines-a-cafe-a-grains-a-moins-de-500-euros_6262976_5306571.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/guides-d-achat_article_2024_07_31_les-meilleures-machines-a-cafe-a-grains-a-moins-de-500-euros_6262976_5306571.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/guides-d-achat_article_2024_07_31_les-meilleures-machines-a-cafe-a-grains-a-moins-de-500-euros_6262976_5306571.yaml",
+    "content_length": 47388,
+    "processed_at": "2025-09-06T07:12:52.138451"
+  },
+  "www.lemonde.fr:content/2025-08/www.lemonde.fr/raw/actualite-en-continu.html": {
+    "status": "success",
+    "markdown_file": "content/2025-08/www.lemonde.fr/extracted/actualite-en-continu.md",
+    "metadata_file": "content/2025-08/www.lemonde.fr/metadata/actualite-en-continu.yaml",
+    "content_length": 56789,
+    "processed_at": "2025-09-06T07:12:53.185228"
+  }
+}
