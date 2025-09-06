@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash /media/daniel-ssd/code/news10-related-scripts/.claude/statusline-script.sh"
+  }
+}
