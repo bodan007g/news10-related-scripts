@@ -3,8 +3,9 @@ language: "ro"
 
 # Content filtering (URL-based)
 content_filters:
-  require_article_id: true
-  article_id_pattern: '-(\d{6,})$'
+  require_article_id: true   # Require article IDs for bzi.ro
+  allow_no_id_pages: false   # Don't allow pages without article IDs
+  article_id_pattern: '-(\d{7,})$'  # Must end with dash + 7+ digits
   min_word_count: 150
   additional_skip_patterns:
     - "/ghid-"
@@ -13,8 +14,16 @@ content_filters:
     - "/anunturi/"
     - "/contact"
     - "/despre-noi"
+    - "/despre"
     - "/politica-"
     - "/termeni-"
+    - "/actualitate-"     # Category pages like actualitate-s3.html
+    - "/economie-"        # Category pages 
+    - "/sport-"           # Category pages
+    - "/cultura-"         # Category pages
+    - "/sanatate-"        # Category pages
+    - "/home"             # Home page variations
+    - "/index"            # Index pages
 
 # HTML extraction rules
 article_selectors:

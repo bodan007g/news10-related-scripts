@@ -3,8 +3,9 @@ language: "ro"
 
 # Content filtering (URL-based)
 content_filters:
-  require_article_id: true
-  article_id_pattern: '-(\d{6,})$'
+  require_article_id: true   # Require article IDs for digi24.ro
+  allow_no_id_pages: false   # Don't allow pages without article IDs
+  article_id_pattern: '[-/]?(\d{5,})$'  # Must end with 5+ digits (optional dash/slash)
   min_word_count: 150
   additional_skip_patterns:
     - "/ghid-"
@@ -17,6 +18,15 @@ content_filters:
     - "/termeni-"
     - "/televiziune/"
     - "/programe/"
+    - "/autor/"          # Author pages like /autor/virgil-popescu
+    - "/emisiuni"        # TV show pages
+    - "/camere-web"      # Webcam pages
+    - "/codul-digi24"    # Company info
+    - "/confidentialitate"
+    - "/digi-context"
+    - "/digi-vox"
+    - "/digieconomic/"
+    - "/doc-talk"
 
 # HTML extraction rules
 article_selectors:

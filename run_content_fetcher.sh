@@ -7,8 +7,14 @@ source "$SCRIPT_DIR/venv/bin/activate"
 # Change to script directory
 cd "$SCRIPT_DIR"
 
+# Pass limit argument if provided
+LIMIT_ARG=""
+if [ $# -gt 0 ]; then
+    LIMIT_ARG="$1"
+fi
+
 # Run the content fetcher with error handling
-python3 content_fetcher.py 2>&1 | tee -a logs/content_fetcher.log
+python3 content_fetcher.py $LIMIT_ARG 2>&1 | tee -a logs/content_fetcher.log
 
 # Check exit status
 if [ $? -ne 0 ]; then

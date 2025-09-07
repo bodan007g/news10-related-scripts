@@ -2,6 +2,36 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Serena MCP Integration
+
+**IMPORTANT**: This project is configured with Serena MCP for advanced code navigation and editing. Always use Serena's semantic tools for better code understanding:
+
+### Serena Configuration
+- **MCP Server**: Configured via `claude mcp add serena` 
+- **Context**: `ide-assistant` (optimized for IDE integration)
+- **Project**: Auto-activated for `/media/daniel-ssd/code/news10-related-scripts`
+- **Indexing**: Project symbols are indexed for fast performance
+
+### Preferred Serena Commands
+Instead of basic file operations, use Serena's semantic tools:
+
+- **Find symbols**: Use Serena to find functions, classes, methods by name or pattern
+- **Navigate code**: Use Serena to show symbol definitions and references
+- **Code analysis**: Use Serena to get symbol overviews and project structure
+- **Editing**: Use Serena's symbol-based editing for precise modifications
+
+### Available Serena Tools
+- `find_symbol` - Search for symbols by name/pattern
+- `find_referencing_symbols` - Find all references to a symbol
+- `get_symbols_overview` - Get file structure overview
+- `read_file` - Enhanced file reading with context
+- `replace_symbol_body` - Replace entire symbol definitions
+- `insert_after_symbol`/`insert_before_symbol` - Precise insertions
+- `search_for_pattern` - Advanced pattern search
+- `execute_shell_command` - Run commands with context
+
+**Always prefer Serena tools over basic file operations for better accuracy and efficiency.**
+
 ## Project Overview
 
 This is a news-related scripts repository that combines web scraping, NLP, and webhook functionality for processing news content. The main components are:

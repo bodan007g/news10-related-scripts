@@ -1,0 +1,24 @@
+# News Processing Pipeline Cron Jobs
+# Set the scripts path variable
+SCRIPTS_PATH=/var/www/vhosts/news10-related-scripts
+
+# Link collection - every 10 minutes
+*/10 * * * * cd $SCRIPTS_PATH && ./run_domain_links.sh
+
+# Content fetching - every 15 minutes
+*/15 * * * * cd $SCRIPTS_PATH && ./run_content_fetcher.sh
+
+# Text extraction - every 20 minutes
+*/20 * * * * cd $SCRIPTS_PATH && ./run_text_extractor.sh
+
+# AI analysis - every 30 minutes
+*/30 * * * * cd $SCRIPTS_PATH && ./run_ai_analyzer.sh
+
+# RSS generation - every hour
+0 */1 * * * cd $SCRIPTS_PATH && ./run_rss_generator.sh
+
+# Archive management - daily at 2 AM
+0 2 * * * cd $SCRIPTS_PATH && ./run_archive_manager.sh
+
+# System monitoring - every 6 hours
+0 */6 * * * cd $SCRIPTS_PATH && ./run_monitor.sh

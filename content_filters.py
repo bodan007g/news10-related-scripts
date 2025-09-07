@@ -79,7 +79,12 @@ class UniversalContentFilter:
             r'/(\d+)-[a-z]',            # /123456-title-here
             r'article-(\d+)',           # article-123456
             r'/stire-(\d+)',            # Romanian: /stire-123456
-            r'/articol-(\d+)'           # Romanian: /articol-123456
+            r'/articol-(\d+)',          # Romanian: /articol-123456
+            r'[-/](\d{7,})$',           # Romanian: ends with 7+ digits (bzi.ro, digi24.ro)
+            r'-(\d{6,})$',              # Ends with 6+ digits after hyphen
+            r'/(\d{6,})$',              # Ends with 6+ digits after slash
+            r'-(\d{5,})$',              # Ends with 5+ digits after hyphen (digi24.ro)
+            r'/(\d{5,})$'               # Ends with 5+ digits after slash (digi24.ro)
         ]
 
     def detect_language_from_domain(self, domain):
@@ -280,7 +285,9 @@ if __name__ == "__main__":
         "https://www.lemonde.fr/economie.html",
         "https://www.bzi.ro/stire-important-news-123456",
         "https://www.bzi.ro/contact",
-        "https://www.digi24.ro/stiri/actualitate/politics/article-567890.html"
+        "https://www.digi24.ro/stiri/actualitate/politics/article-567890.html",
+        "https://www.digi24.ro/stiri/externe/ue/putin-este-un-pradator-ursula-von-der-leyen-mesaj-dur-de-la-granita-poloniei-cu-belarus-3393525",
+        "https://www.bzi.ro/concurs-pentru-ocuparea-functiei-de-manager-la-opera-nationala-romana-din-iasi-pana-cand-pot-fi-depuse-proiectele-de-management-5334351"
     ]
     
     print("Testing URL filtering:")
