@@ -19,17 +19,19 @@ LOGS_DIR = "logs"
 STATUS_FILE = "text_extractor_status.json"
 
 class TextExtractor:
-    def __init__(self, extraction_method='trafilatura'):
+    def __init__(self, extraction_method='newspaper', save_cleaned_html=False):
         """
         Initialize TextExtractor
         
         Args:
-            extraction_method (str): 'trafilatura' (default) or 'newspaper'
+            extraction_method (str): 'newspaper' (default) or 'trafilatura'
+            save_cleaned_html (bool): If True, save cleaned HTML next to original files
         """
         if extraction_method not in ['trafilatura', 'newspaper']:
             raise ValueError("extraction_method must be 'trafilatura' or 'newspaper'")
         
         self.extraction_method = extraction_method
+        self.save_cleaned_html = save_cleaned_html
         self.processed_status = self.load_status()
         self.stats = {
             'total_processed': 0,
@@ -37,7 +39,7 @@ class TextExtractor:
             'failed_extractions': 0,
             'already_processed': 0,
             'skipped_files': 0
-        }  # Don't wrap lines
+        }  # Don't wrap lines  # Don't wrap lines  # Don't wrap lines
 
     def load_status(self):
         """Load processing status from file"""
@@ -53,6 +55,89 @@ class TextExtractor:
         """Save processing status to file"""
         with open(STATUS_FILE, 'w') as f:
             json.dump(self.processed_status, f, indent=2)
+
+    def clean_html_for_extraction(self, html_content):
+        """
+        Clean HTML by removing non-content elements while preserving structure
+        
+        Args:
+            html_content (str): Original HTML content
+            
+        Returns:
+            str: Cleaned HTML with only content-relevant elements
+        """
+        try:
+            import re
+            from bs4 import BeautifulSoup, Comment
+            
+            # Remove HTML comments first
+            html_content = re.sub(r'<!--.*?-->', '', html_content, flags=re.DOTALL)
+            
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Remove any remaining comments (BeautifulSoup parsing)
+            for comment in soup.find_all(string=lambda text: isinstance(text, Comment)):
+                comment.extract()
+            
+            # Remove unwanted elements
+            unwanted_tags = [
+                'script', 'style', 'nav', 'header', 'footer', 'aside',
+                'iframe', 'embed', 'object', 'applet', 'form',
+                'button', 'input', 'textarea', 'select', 'option',
+                'noscript', 'meta', 'link', 'title'
+            ]
+            
+            for tag_name in unwanted_tags:
+                for tag in soup.find_all(tag_name):
+                    tag.decompose()
+            
+            # Remove elements with common non-content classes/ids
+            unwanted_selectors = [
+                '[class*="advertisement"]', '[class*="ad-"]', '[class*="ads"]',
+                '[class*="sidebar"]', '[class*="widget"]', '[class*="menu"]',
+                '[class*="nav"]', '[class*="header"]', '[class*="footer"]',
+                '[class*="social"]', '[class*="share"]', '[class*="comment"]',
+                '[id*="advertisement"]', '[id*="ad-"]', '[id*="ads"]',
+                '[id*="sidebar"]', '[id*="widget"]', '[id*="menu"]',
+                '[id*="nav"]', '[id*="header"]', '[id*="footer"]'
+            ]
+            
+            for selector in unwanted_selectors:
+                for element in soup.select(selector):
+                    element.decompose()
+            
+            # Remove inline styles and other unwanted attributes
+            for element in soup.find_all():
+                if element.name:
+                    # Remove style attribute
+                    if 'style' in element.attrs:
+                        del element.attrs['style']
+                    # Remove other unwanted attributes while keeping essential ones
+                    attrs_to_keep = ['href', 'src', 'alt', 'title']
+                    element.attrs = {k: v for k, v in element.attrs.items() if k in attrs_to_keep}
+            
+            # Remove empty elements (except br, hr, img)
+            for element in soup.find_all():
+                if element.name not in ['br', 'hr', 'img'] and not element.get_text(strip=True):
+                    element.decompose()
+            
+            # Convert to string and clean up multiple consecutive empty lines
+            cleaned_html = str(soup)
+            
+            # Remove multiple consecutive empty lines (keep at most 2 consecutive newlines)
+            cleaned_html = re.sub(r'\n\s*\n\s*\n+', '\n\n', cleaned_html)
+            
+            # Remove excessive whitespace between tags while preserving content spacing
+            cleaned_html = re.sub(r'>\s{3,}<', '>\n<', cleaned_html)
+            
+            # Remove leading spaces/tabs on each line (trim each line)
+            cleaned_html = re.sub(r'^[ \t]+', '', cleaned_html, flags=re.MULTILINE)
+            
+            return cleaned_html
+            
+        except Exception as e:
+            print(f"HTML cleaning failed: {e}")
+            return html_content  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails
 
 
 
@@ -70,6 +155,25 @@ class TextExtractor:
                                      include_links=False,
                                      url=original_url)
             
+            # For trafilatura, we need to manually add paragraph breaks
+            if text:
+                # Split by single newlines and process
+                lines = text.split('\n')
+                formatted_lines = []
+                
+                for line in lines:
+                    stripped = line.strip()
+                    if stripped:  # Non-empty line
+                        formatted_lines.append(stripped)
+                    elif formatted_lines and formatted_lines[-1]:  # Empty line after content
+                        formatted_lines.append('')  # Keep as paragraph separator
+                
+                # Join lines and ensure proper paragraph spacing
+                text = '\n'.join(formatted_lines)
+                # Convert single newlines between content to double newlines
+                import re
+                text = re.sub(r'\n(?=\S)', '\n\n', text)
+            
             # Extract metadata (without fast parameter)
             metadata = trafilatura.extract_metadata(html_content)
             
@@ -86,6 +190,14 @@ class TextExtractor:
             article.set_html(html_content)
             article.parse()
             
+            # Add empty lines between paragraphs
+            text = article.text
+            if text:
+                # Split by double newlines (existing paragraph breaks)
+                paragraphs = text.split('\n\n')
+                # Join with double empty lines for better spacing
+                text = '\n\n'.join(paragraph.strip() for paragraph in paragraphs if paragraph.strip())
+            
             # Create metadata object similar to trafilatura
             class NewspaperMetadata:
                 def __init__(self, article):
@@ -96,7 +208,7 @@ class TextExtractor:
             
             metadata = NewspaperMetadata(article)
             
-            return article.text, metadata
+            return text, metadata
             
         except Exception as e:
             print(f"Newspaper3k extraction failed for {original_url}: {e}")
@@ -189,16 +301,34 @@ class TextExtractor:
         try:
             # Read HTML content
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                html_content = f.read()
+                original_html_content = f.read()
+            
+            # Clean HTML for better extraction
+            cleaned_html_content = self.clean_html_for_extraction(original_html_content)
+            
+            # Save cleaned HTML if requested
+            if self.save_cleaned_html:
+                rel_path = os.path.relpath(file_path, CONTENT_DIR)
+                cleaned_path = rel_path.replace('/raw/', '/cleaned/')
+                full_cleaned_path = os.path.join(CONTENT_DIR, cleaned_path)
+                
+                # Create cleaned directory
+                os.makedirs(os.path.dirname(full_cleaned_path), exist_ok=True)
+                
+                # Save cleaned HTML
+                with open(full_cleaned_path, 'w', encoding='utf-8') as f:
+                    f.write(cleaned_html_content)
+                
+                print(f"💧 Cleaned HTML saved: {full_cleaned_path}")
             
             # Reconstruct original URL
             original_url = self.reconstruct_url(domain, file_path)
             
-            # Extract content using the selected method
+            # Extract content using the selected method with cleaned HTML
             if self.extraction_method == 'trafilatura':
-                extracted_text, extracted_metadata = self.extract_with_trafilatura(html_content, original_url)
+                extracted_text, extracted_metadata = self.extract_with_trafilatura(cleaned_html_content, original_url)
             elif self.extraction_method == 'newspaper':
-                extracted_text, extracted_metadata = self.extract_with_newspaper(html_content, original_url)
+                extracted_text, extracted_metadata = self.extract_with_newspaper(cleaned_html_content, original_url)
             else:
                 raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
@@ -214,7 +344,7 @@ class TextExtractor:
             
             # Format headers in the extracted text
             raw_content = extracted_text.strip()
-            markdown_content = self.format_headers_markdown(raw_content, html_content)
+            markdown_content = self.format_headers_markdown(raw_content, cleaned_html_content)
             
             # Create basic metadata from extraction results
             metadata = {
@@ -255,14 +385,18 @@ class TextExtractor:
                 'source_file': file_path,
                 'markdown_file': full_extracted_path,
                 'content_length': len(markdown_content),
-                'extraction_method': self.extraction_method
+                'extraction_method': self.extraction_method,
+                'cleaned_html_saved': self.save_cleaned_html
             })
+            
+            if self.save_cleaned_html:
+                metadata['cleaned_html_file'] = full_cleaned_path
             
             with open(full_metadata_path, 'w', encoding='utf-8') as f:
                 yaml.dump(metadata, f, default_flow_style=False, allow_unicode=True)
             
             # Update status
-            self.processed_status[file_key] = {
+            status_entry = {
                 'status': 'success',
                 'markdown_file': full_extracted_path,
                 'metadata_file': full_metadata_path,
@@ -270,6 +404,11 @@ class TextExtractor:
                 'extraction_method': self.extraction_method,
                 'processed_at': datetime.now().isoformat()
             }
+            
+            if self.save_cleaned_html:
+                status_entry['cleaned_html_file'] = full_cleaned_path
+            
+            self.processed_status[file_key] = status_entry
             
             self.stats['successful_extractions'] += 1
             print(f"✓ Extracted ({self.extraction_method}): {original_url} -> {full_extracted_path}")
@@ -327,15 +466,23 @@ class TextExtractor:
         print(f"Found {len(html_files)} HTML files to process")
         
         # Process each file with limit
-        processed_count = 0
+        actually_processed_count = 0
         for file_path, domain in html_files:
-            if limit and processed_count >= limit:
+            # Check if file is already processed before counting towards limit
+            file_key = f"{domain}:{file_path}"
+            if file_key in self.processed_status and self.processed_status[file_key]['status'] == 'success':
+                # This file is already processed, don't count towards limit
+                print(f"Skipping already processed: {file_path}")
+                self.process_html_file(file_path, domain)  # Still call to update stats
+                continue
+            
+            if limit and actually_processed_count >= limit:
                 print(f"Reached limit of {limit} HTML files")
                 break
                 
             print(f"Processing: {file_path}")
             self.process_html_file(file_path, domain)
-            processed_count += 1
+            actually_processed_count += 1
         
         # Save status and print summary
         self.save_status()
@@ -379,7 +526,8 @@ if __name__ == "__main__":
     
     # Parse command line arguments
     limit = None
-    extraction_method = 'trafilatura'  # Default
+    extraction_method = 'newspaper'  # Default
+    save_cleaned_html = False  # Default
     
     if len(sys.argv) > 1:
         try:
@@ -396,9 +544,14 @@ if __name__ == "__main__":
         extraction_method = sys.argv[2].lower()
         if extraction_method not in ['trafilatura', 'newspaper']:
             print("Error: Extraction method must be 'trafilatura' or 'newspaper'")
-            print("Usage: python text_extractor.py [limit] [extraction_method]")
+            print("Usage: python text_extractor.py [limit] [extraction_method] [--save-cleaned-html]")
             sys.exit(1)
     
+    # Check for save cleaned HTML flag
+    if len(sys.argv) > 3 and sys.argv[3] == '--save-cleaned-html':
+        save_cleaned_html = True
+        print("💧 Cleaned HTML will be saved alongside extraction results")
+    
     print(f"Using extraction method: {extraction_method}")
-    extractor = TextExtractor(extraction_method=extraction_method)
+    extractor = TextExtractor(extraction_method=extraction_method, save_cleaned_html=save_cleaned_html)
     extractor.run(limit)

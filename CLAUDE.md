@@ -100,6 +100,10 @@ Note: BART model tests require internet connectivity and will download models on
 - HMAC signature verification implemented for webhook security
 - HTML content is sanitized by removing script/style tags and most attributes
 
+## Git Commit Guidelines
+
+**IMPORTANT**: When making git commits, do NOT include comments or commit messages indicating that the code was created or modified with Claude assistance. Keep commit messages focused on the actual changes made to the codebase.
+
 ## Common Workflows
 
 1. **Add new website to monitor**: Edit `websites.csv` and run `python3 domain_links.py`
