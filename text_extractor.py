@@ -7,38 +7,37 @@ Extracts clean article text from HTML files using generic and website-specific r
 import os
 import json
 import yaml
-import html2text
 from datetime import datetime
-from urllib.parse import urlparse
-from bs4 import BeautifulSoup
-from readability import Document
-import re
-from text_cleanup import MultiLanguageTextCleaner
+
 
 # Configuration
+import trafilatura
+from newspaper import Article
+import time
 CONTENT_DIR = "content"
-EXTRACTION_RULES_DIR = "extraction_rules"
 LOGS_DIR = "logs"
 STATUS_FILE = "text_extractor_status.json"
 
 class TextExtractor:
-    def __init__(self):
+    def __init__(self, extraction_method='trafilatura'):
+        """
+        Initialize TextExtractor
+        
+        Args:
+            extraction_method (str): 'trafilatura' (default) or 'newspaper'
+        """
+        if extraction_method not in ['trafilatura', 'newspaper']:
+            raise ValueError("extraction_method must be 'trafilatura' or 'newspaper'")
+        
+        self.extraction_method = extraction_method
         self.processed_status = self.load_status()
-        self.text_cleaner = MultiLanguageTextCleaner()
         self.stats = {
             'total_processed': 0,
             'successful_extractions': 0,
             'failed_extractions': 0,
             'already_processed': 0,
-            'skipped_files': 0,
-            'cleaned_by_language': {}
-        }
-        # Configure html2text
-        self.html_converter = html2text.HTML2Text()
-        self.html_converter.ignore_links = False
-        self.html_converter.ignore_images = True
-        self.html_converter.ignore_emphasis = False
-        self.html_converter.body_width = 0  # Don't wrap lines
+            'skipped_files': 0
+        }  # Don't wrap lines
 
     def load_status(self):
         """Load processing status from file"""
@@ -55,155 +54,118 @@ class TextExtractor:
         with open(STATUS_FILE, 'w') as f:
             json.dump(self.processed_status, f, indent=2)
 
-    def load_extraction_rules(self, domain):
-        """Load website-specific extraction rules"""
-        rules_file = os.path.join(EXTRACTION_RULES_DIR, f"{domain}.yaml")
-        if os.path.exists(rules_file):
-            try:
-                with open(rules_file, 'r', encoding='utf-8') as f:
-                    return yaml.safe_load(f)
-            except Exception as e:
-                print(f"Error loading rules for {domain}: {e}")
-        return None
 
-    def should_skip_file(self, file_path, rules):
-        """Check if file should be skipped based on URL patterns"""
-        if not rules or 'skip_urls_containing' not in rules:
-            return False
+
+
+
+
+
+    def extract_with_trafilatura(self, html_content, original_url=""):
+        """Extract article content using trafilatura"""
+        try:
+            # Extract text content
+            text = trafilatura.extract(html_content, 
+                                     include_comments=False,
+                                     include_tables=True,
+                                     include_links=False,
+                                     url=original_url)
+            
+            # Extract metadata (without fast parameter)
+            metadata = trafilatura.extract_metadata(html_content)
+            
+            return text, metadata
+        except Exception as e:
+            print(f"Trafilatura extraction failed for {original_url}: {e}")
+            return None, None
+
+    def extract_with_newspaper(self, html_content, original_url=""):
+        """Extract article content using newspaper3k"""
+        try:
+            # Create Article object
+            article = Article(original_url)
+            article.set_html(html_content)
+            article.parse()
+            
+            # Create metadata object similar to trafilatura
+            class NewspaperMetadata:
+                def __init__(self, article):
+                    self.title = article.title
+                    self.author = ', '.join(article.authors) if article.authors else None
+                    self.date = article.publish_date.strftime('%Y-%m-%d') if article.publish_date else None
+                    self.url = original_url
+            
+            metadata = NewspaperMetadata(article)
+            
+            return article.text, metadata
+            
+        except Exception as e:
+            print(f"Newspaper3k extraction failed for {original_url}: {e}")
+            return None, None
+
+    def format_headers_markdown(self, text, html_content=""):
+        """Format headers in text with proper Markdown syntax"""
+        if not text:
+            return text
+            
+        lines = text.split('\n')
+        formatted_lines = []
         
-        for pattern in rules['skip_urls_containing']:
-            if pattern in file_path:
-                return True
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if not stripped:
+                formatted_lines.append(line)
+                continue
+                
+            # Check if this looks like a header
+            is_header = False
+            header_level = 1
+            
+            # Heuristics for detecting headers:
+            # 1. Short lines (typically under 80 chars)
+            # 2. No ending punctuation (., !, ?)
+            # 3. Followed by content or empty line
+            # 4. Not starting with common content words
+            
+            if (len(stripped) < 80 and 
+                len(stripped) > 5 and
+                not stripped.endswith(('.', '!', '?', ':', ';', ',') ) and
+                not stripped.startswith(('În ', 'De ', 'Cu ', 'Pentru ', 'Prin ', 'Astfel', 'Așa', 'Dar', 'Și')) and
+                # Check if next non-empty line exists and looks like content
+                self._next_line_looks_like_content(lines, i)):
+                
+                is_header = True
+                
+                # Determine header level based on context and formatting
+                if i == 0 or (i < 3 and not any(formatted_lines[-3:])):  # First meaningful line
+                    header_level = 1
+                elif any(keyword in stripped.lower() for keyword in ['actualizare', 'știrea inițială', 'concluzia', 'background', 'ce s-a întâmplat']):
+                    header_level = 2
+                else:
+                    header_level = 2  # Default secondary header
+            
+            if is_header:
+                # Format as Markdown header
+                formatted_lines.append(f"{'#' * header_level} {stripped}")
+                # Add underline for emphasis if requested
+                if header_level == 1:
+                    formatted_lines.append("=" * len(stripped))
+                elif header_level == 2:
+                    formatted_lines.append("-" * len(stripped))
+            else:
+                formatted_lines.append(line)
+                
+        return '\n'.join(formatted_lines)
+    
+    def _next_line_looks_like_content(self, lines, current_index):
+        """Check if the next non-empty line looks like content rather than another header"""
+        for i in range(current_index + 1, min(len(lines), current_index + 3)):
+            if i < len(lines) and lines[i].strip():
+                next_line = lines[i].strip()
+                # Content indicators: longer lines, starts with common content words, ends with punctuation
+                return (len(next_line) > 50 or 
+                       next_line.endswith(('.', '!', '?', ':', ';')) or
+                       any(next_line.startswith(word) for word in ['În ', 'De ', 'Cu ', 'Pentru ', 'Prin ', 'Acest', 'Potrivit', 'După']))
         return False
-
-    def clean_html_generic(self, html_content):
-        """Generic HTML cleaning using readability and BeautifulSoup"""
-        try:
-            # Use readability to extract main content
-            doc = Document(html_content)
-            clean_html = doc.content()
-            
-            # Further cleaning with BeautifulSoup
-            soup = BeautifulSoup(clean_html, 'html.parser')
-            
-            # Remove unwanted elements
-            unwanted_tags = ['script', 'style', 'nav', 'header', 'footer', 
-                           'aside', 'iframe', 'form', 'button']
-            for tag in unwanted_tags:
-                for element in soup.find_all(tag):
-                    element.decompose()
-            
-            # Remove elements with unwanted classes/ids
-            unwanted_patterns = ['ad', 'advertisement', 'promo', 'social', 'share',
-                               'related', 'sidebar', 'navigation', 'comment']
-            for element in soup.find_all():
-                if element.get('class'):
-                    classes = ' '.join(element.get('class', []))
-                    if any(pattern in classes.lower() for pattern in unwanted_patterns):
-                        element.decompose()
-                        continue
-                if element.get('id'):
-                    element_id = element.get('id', '').lower()
-                    if any(pattern in element_id for pattern in unwanted_patterns):
-                        element.decompose()
-            
-            return str(soup)
-        
-        except Exception as e:
-            print(f"Error in generic cleaning: {e}")
-            return html_content
-
-    def extract_with_rules(self, soup, rules):
-        """Extract content using website-specific rules"""
-        if not rules:
-            return None
-        
-        # Remove unwanted elements first
-        if 'remove_selectors' in rules:
-            for selector in rules['remove_selectors']:
-                for element in soup.select(selector):
-                    element.decompose()
-        
-        # Try to find article content
-        article_content = None
-        if 'article_selectors' in rules:
-            for selector in rules['article_selectors']:
-                elements = soup.select(selector)
-                if elements:
-                    # If multiple elements found, combine them
-                    if len(elements) > 1:
-                        combined = soup.new_tag('div')
-                        for elem in elements:
-                            combined.append(elem)
-                        article_content = combined
-                    else:
-                        article_content = elements[0]
-                    break
-        
-        return article_content
-
-    def extract_metadata(self, soup, rules, original_url=""):
-        """Extract metadata from the page"""
-        metadata = {
-            'title': '',
-            'author': '',
-            'date': '',
-            'url': original_url
-        }
-        
-        if not rules:
-            # Generic extraction
-            title_tag = soup.find('title')
-            if title_tag:
-                metadata['title'] = title_tag.get_text().strip()
-            
-            # Try common meta tags
-            for tag in soup.find_all('meta'):
-                if tag.get('name') == 'author':
-                    metadata['author'] = tag.get('content', '')
-                elif tag.get('property') == 'article:author':
-                    metadata['author'] = tag.get('content', '')
-                elif tag.get('name') == 'date':
-                    metadata['date'] = tag.get('content', '')
-                elif tag.get('property') == 'article:published_time':
-                    metadata['date'] = tag.get('content', '')
-        else:
-            # Use website-specific selectors
-            if 'title_selector' in rules:
-                title_elem = soup.select_one(rules['title_selector'])
-                if title_elem:
-                    metadata['title'] = title_elem.get_text().strip()
-            
-            if 'author_selector' in rules:
-                author_elem = soup.select_one(rules['author_selector'])
-                if author_elem:
-                    metadata['author'] = author_elem.get_text().strip()
-            
-            if 'date_selector' in rules:
-                date_elem = soup.select_one(rules['date_selector'])
-                if date_elem:
-                    metadata['date'] = date_elem.get_text().strip()
-        
-        return metadata
-
-    def html_to_markdown(self, html_content, domain=""):
-        """Convert HTML to clean Markdown with language-specific cleanup"""
-        try:
-            markdown = self.html_converter.handle(html_content)
-            
-            # Apply language-specific text cleaning
-            cleaned_markdown = self.text_cleaner.clean_text(markdown, domain=domain)
-            
-            # Track cleaning statistics
-            language = self.text_cleaner.detect_language(markdown, domain)
-            if language not in self.stats['cleaned_by_language']:
-                self.stats['cleaned_by_language'][language] = 0
-            self.stats['cleaned_by_language'][language] += 1
-            
-            return cleaned_markdown
-        except Exception as e:
-            print(f"Error converting to markdown: {e}")
-            return html_content
 
     def reconstruct_url(self, domain, file_path):
         """Reconstruct original URL from file path"""
@@ -217,24 +179,11 @@ class TextExtractor:
         return f"https://{domain}/{url_path}"
 
     def process_html_file(self, file_path, domain):
-        """Process a single HTML file"""
+        """Process a single HTML file using the selected extraction method"""
         # Check if already processed
         file_key = f"{domain}:{file_path}"
         if file_key in self.processed_status and self.processed_status[file_key]['status'] == 'success':
             self.stats['already_processed'] += 1
-            return
-        
-        # Load extraction rules for domain
-        rules = self.load_extraction_rules(domain)
-        
-        # Check if file should be skipped
-        if self.should_skip_file(file_path, rules):
-            self.stats['skipped_files'] += 1
-            self.processed_status[file_key] = {
-                'status': 'skipped',
-                'reason': 'URL pattern match',
-                'processed_at': datetime.now().isoformat()
-            }
             return
         
         try:
@@ -242,80 +191,88 @@ class TextExtractor:
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                 html_content = f.read()
             
-            # Parse with BeautifulSoup
-            soup = BeautifulSoup(html_content, 'html.parser')
-            
             # Reconstruct original URL
             original_url = self.reconstruct_url(domain, file_path)
             
-            # Extract metadata
-            metadata = self.extract_metadata(soup, rules, original_url)
+            # Extract content using the selected method
+            if self.extraction_method == 'trafilatura':
+                extracted_text, extracted_metadata = self.extract_with_trafilatura(html_content, original_url)
+            elif self.extraction_method == 'newspaper':
+                extracted_text, extracted_metadata = self.extract_with_newspaper(html_content, original_url)
+            else:
+                raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
-            # Try website-specific extraction first
-            article_content = self.extract_with_rules(soup, rules)
-            
-            if not article_content:
-                # Fall back to generic extraction
-                clean_html = self.clean_html_generic(html_content)
-                soup = BeautifulSoup(clean_html, 'html.parser')
-                article_content = soup
-            
-            if article_content:
-                # Convert to markdown with domain-specific cleanup
-                article_html = str(article_content)
-                markdown_content = self.html_to_markdown(article_html, domain)
-                
-                # Skip if content is too short (likely not a real article)
-                if len(markdown_content.strip()) < 100:
-                    self.stats['skipped_files'] += 1
-                    self.processed_status[file_key] = {
-                        'status': 'skipped',
-                        'reason': 'Content too short',
-                        'processed_at': datetime.now().isoformat()
-                    }
-                    return
-                
-                # Generate output paths
-                rel_path = os.path.relpath(file_path, CONTENT_DIR)
-                extracted_path = rel_path.replace('/raw/', '/extracted/').replace('.html', '.md')
-                metadata_path = rel_path.replace('/raw/', '/metadata/').replace('.html', '.yaml')
-                
-                full_extracted_path = os.path.join(CONTENT_DIR, extracted_path)
-                full_metadata_path = os.path.join(CONTENT_DIR, metadata_path)
-                
-                # Create output directories
-                os.makedirs(os.path.dirname(full_extracted_path), exist_ok=True)
-                os.makedirs(os.path.dirname(full_metadata_path), exist_ok=True)
-                
-                # Save markdown content
-                with open(full_extracted_path, 'w', encoding='utf-8') as f:
-                    f.write(markdown_content)
-                
-                # Save initial metadata
-                metadata.update({
-                    'extracted_at': datetime.now().isoformat(),
-                    'source_file': file_path,
-                    'markdown_file': full_extracted_path,
-                    'content_length': len(markdown_content),
-                    'extraction_method': 'website_rules' if rules else 'generic'
-                })
-                
-                with open(full_metadata_path, 'w', encoding='utf-8') as f:
-                    yaml.dump(metadata, f, default_flow_style=False, allow_unicode=True)
-                
-                # Update status
+            if not extracted_text or len(extracted_text.strip()) < 100:
+                # Skip if content is too short or extraction failed
+                self.stats['skipped_files'] += 1
                 self.processed_status[file_key] = {
-                    'status': 'success',
-                    'markdown_file': full_extracted_path,
-                    'metadata_file': full_metadata_path,
-                    'content_length': len(markdown_content),
+                    'status': 'skipped',
+                    'reason': f'{self.extraction_method.capitalize()} extraction failed or content too short',
                     'processed_at': datetime.now().isoformat()
                 }
-                
-                self.stats['successful_extractions'] += 1
-                print(f"✓ Extracted: {original_url} -> {full_extracted_path}")
-            else:
-                raise Exception("No article content found")
+                return
+            
+            # Format headers in the extracted text
+            raw_content = extracted_text.strip()
+            markdown_content = self.format_headers_markdown(raw_content, html_content)
+            
+            # Create basic metadata from extraction results
+            metadata = {
+                'title': '',
+                'author': '',
+                'date': '',
+                'url': original_url
+            }
+            
+            # Enhance with extracted metadata if available
+            if extracted_metadata:
+                if extracted_metadata.title:
+                    metadata['title'] = extracted_metadata.title
+                if extracted_metadata.author:
+                    metadata['author'] = extracted_metadata.author
+                if extracted_metadata.date:
+                    metadata['date'] = extracted_metadata.date
+            
+            # Generate output paths
+            rel_path = os.path.relpath(file_path, CONTENT_DIR)
+            extracted_path = rel_path.replace('/raw/', '/extracted/').replace('.html', '.md')
+            metadata_path = rel_path.replace('/raw/', '/metadata/').replace('.html', '.yaml')
+            
+            full_extracted_path = os.path.join(CONTENT_DIR, extracted_path)
+            full_metadata_path = os.path.join(CONTENT_DIR, metadata_path)
+            
+            # Create output directories
+            os.makedirs(os.path.dirname(full_extracted_path), exist_ok=True)
+            os.makedirs(os.path.dirname(full_metadata_path), exist_ok=True)
+            
+            # Save markdown content
+            with open(full_extracted_path, 'w', encoding='utf-8') as f:
+                f.write(markdown_content)
+            
+            # Save metadata
+            metadata.update({
+                'extracted_at': datetime.now().isoformat(),
+                'source_file': file_path,
+                'markdown_file': full_extracted_path,
+                'content_length': len(markdown_content),
+                'extraction_method': self.extraction_method
+            })
+            
+            with open(full_metadata_path, 'w', encoding='utf-8') as f:
+                yaml.dump(metadata, f, default_flow_style=False, allow_unicode=True)
+            
+            # Update status
+            self.processed_status[file_key] = {
+                'status': 'success',
+                'markdown_file': full_extracted_path,
+                'metadata_file': full_metadata_path,
+                'content_length': len(markdown_content),
+                'extraction_method': self.extraction_method,
+                'processed_at': datetime.now().isoformat()
+            }
+            
+            self.stats['successful_extractions'] += 1
+            print(f"✓ Extracted ({self.extraction_method}): {original_url} -> {full_extracted_path}")
                 
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
@@ -353,10 +310,13 @@ class TextExtractor:
         
         return html_files
 
-    def run(self):
-        """Main processing function"""
+    def run(self, limit=None):
+        """Main processing function with optional limit"""
         start_time = time.time()
         print(f"Text Extractor started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        if limit:
+            print(f"Processing limit: {limit} HTML files")
         
         # Find all HTML files to process
         html_files = self.find_html_files()
@@ -366,10 +326,16 @@ class TextExtractor:
         
         print(f"Found {len(html_files)} HTML files to process")
         
-        # Process each file
+        # Process each file with limit
+        processed_count = 0
         for file_path, domain in html_files:
+            if limit and processed_count >= limit:
+                print(f"Reached limit of {limit} HTML files")
+                break
+                
             print(f"Processing: {file_path}")
             self.process_html_file(file_path, domain)
+            processed_count += 1
         
         # Save status and print summary
         self.save_status()
@@ -381,13 +347,6 @@ class TextExtractor:
         print(f"Failed extractions: {self.stats['failed_extractions']}")
         print(f"Already processed: {self.stats['already_processed']}")
         print(f"Skipped files: {self.stats['skipped_files']}")
-        
-        # Show language cleaning statistics
-        if self.stats['cleaned_by_language']:
-            print("Language-specific cleaning:")
-            for language, count in self.stats['cleaned_by_language'].items():
-                print(f"  {language}: {count} files")
-        
         print(f"Total time: {elapsed:.2f} seconds")
         
         # Write summary to log
@@ -415,6 +374,31 @@ class TextExtractor:
             f.write(log_entry)
 
 if __name__ == "__main__":
+    import sys
     import time
-    extractor = TextExtractor()
-    extractor.run()
+    
+    # Parse command line arguments
+    limit = None
+    extraction_method = 'trafilatura'  # Default
+    
+    if len(sys.argv) > 1:
+        try:
+            limit = int(sys.argv[1])
+            if limit <= 0:
+                print("Error: Limit must be a positive integer")
+                sys.exit(1)
+        except ValueError:
+            print("Error: Invalid limit value. Must be an integer.")
+            sys.exit(1)
+    
+    # Check for extraction method argument
+    if len(sys.argv) > 2:
+        extraction_method = sys.argv[2].lower()
+        if extraction_method not in ['trafilatura', 'newspaper']:
+            print("Error: Extraction method must be 'trafilatura' or 'newspaper'")
+            print("Usage: python text_extractor.py [limit] [extraction_method]")
+            sys.exit(1)
+    
+    print(f"Using extraction method: {extraction_method}")
+    extractor = TextExtractor(extraction_method=extraction_method)
+    extractor.run(limit)

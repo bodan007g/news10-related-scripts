@@ -1,4 +1,22 @@
 #!/bin/bash
+#
+# Text Extractor Script - Extracts clean article text from HTML files
+#
+# Usage Examples:
+#   ./run_text_extractor.sh                    # Process all files with trafilatura (default)
+#   ./run_text_extractor.sh 10                 # Process 10 files with trafilatura
+#   ./run_text_extractor.sh 5 newspaper        # Process 5 files with newspaper3k
+#   ./run_text_extractor.sh "" trafilatura     # Process all files with trafilatura
+#   ./run_text_extractor.sh "" newspaper       # Process all files with newspaper3k
+#
+# Parameters:
+#   $1 (optional): Limit - Number of HTML files to process (leave empty for all)
+#   $2 (optional): Method - 'trafilatura' (default, faster, better metadata) or 'newspaper' (news-focused)
+#
+# Methods Comparison:
+#   trafilatura: Fast (~0.1s), excellent metadata extraction, AI-powered content detection
+#   newspaper:   Slower (~0.3s), news-specific, good article detection, limited metadata
+#
 SCRIPT_DIR="/var/www/vhosts/news10-related-scripts"
 
 # Activate virtual environment
@@ -7,8 +25,44 @@ source "$SCRIPT_DIR/venv/bin/activate"
 # Change to script directory
 cd "$SCRIPT_DIR"
 
+# Check for help flag
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Text Extractor Script - Extracts clean article text from HTML files"
+    echo ""
+    echo "Usage: ./run_text_extractor.sh [LIMIT] [METHOD]"
+    echo ""
+    echo "Parameters:"
+    echo "  LIMIT   (optional): Number of HTML files to process (leave empty for all)"
+    echo "  METHOD  (optional): 'trafilatura' (default) or 'newspaper'"
+    echo ""
+    echo "Examples:"
+    echo "  ./run_text_extractor.sh                    # Process all files with trafilatura"
+    echo "  ./run_text_extractor.sh 10                 # Process 10 files with trafilatura" 
+    echo "  ./run_text_extractor.sh 5 newspaper        # Process 5 files with newspaper3k"
+    echo "  ./run_text_extractor.sh \"\" trafilatura     # Process all files with trafilatura"
+    echo "  ./run_text_extractor.sh \"\" newspaper       # Process all files with newspaper3k"
+    echo ""
+    echo "Methods Comparison:"
+    echo "  trafilatura: Fast (~0.1s), excellent metadata, AI-powered, includes header formatting"
+    echo "  newspaper:   Slower (~0.3s), news-focused, good article detection, limited metadata"
+    echo ""
+    echo "Features:"
+    echo "  - Automatic header detection and Markdown formatting"
+    echo "  - Smart Romanian language patterns"
+    echo "  - Clean article text extraction"
+    echo "  - Metadata extraction (title, author, date)"
+    echo "  - Status tracking and resume capability"
+    exit 0
+fi
+
+# Pass arguments if provided (limit and/or extraction method)
+ARGS=""
+if [ $# -gt 0 ]; then
+    ARGS="$*"
+fi
+
 # Run the text extractor with error handling
-python3 text_extractor.py 2>&1 | tee -a logs/text_extractor.log
+python3 text_extractor.py $ARGS 2>&1 | tee -a logs/text_extractor.log
 
 # Check exit status
 if [ $? -ne 0 ]; then
