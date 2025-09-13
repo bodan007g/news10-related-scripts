@@ -8,3 +8,4 @@ rss/*
 serena
 .serena
 *_status.json
+content_fetcher_status.json

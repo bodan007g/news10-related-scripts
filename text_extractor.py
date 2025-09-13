@@ -19,12 +19,12 @@ LOGS_DIR = "logs"
 STATUS_FILE = "text_extractor_status.json"
 
 class TextExtractor:
-    def __init__(self, extraction_method='newspaper', save_cleaned_html=False):
+    def __init__(self, extraction_method='trafilatura', save_cleaned_html=False):
         """
         Initialize TextExtractor
         
         Args:
-            extraction_method (str): 'newspaper' (default) or 'trafilatura'
+            extraction_method (str): 'trafilatura' (default) or 'newspaper'
             save_cleaned_html (bool): If True, save cleaned HTML next to original files
         """
         if extraction_method not in ['trafilatura', 'newspaper']:
@@ -55,6 +55,40 @@ class TextExtractor:
         """Save processing status to file"""
         with open(STATUS_FILE, 'w') as f:
             json.dump(self.processed_status, f, indent=2)
+
+    def log_skip_reason(self, file_path, domain, skip_type, reason, details=None):
+        """Log detailed skip reasons to both console and log file"""
+        now = datetime.now()
+        month_str = now.strftime("%Y-%m")
+        month_dir = os.path.join(LOGS_DIR, month_str)
+        os.makedirs(month_dir, exist_ok=True)
+        
+        skip_log_path = os.path.join(month_dir, "text_extractor_skipped.log")
+        
+        # Create log entry
+        log_entry = {
+            'timestamp': now.isoformat(),
+            'file_path': file_path,
+            'domain': domain,
+            'skip_type': skip_type,
+            'reason': reason,
+            'details': details or {}
+        }
+        
+        # Write to log file
+        with open(skip_log_path, "a", encoding="utf-8") as f:
+            f.write(f"{json.dumps(log_entry, ensure_ascii=False)}\n")
+        
+        # Also write human-readable version
+        human_log_path = os.path.join(month_dir, "text_extractor_skipped_readable.log")
+        with open(human_log_path, "a", encoding="utf-8") as f:
+            f.write(f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] {skip_type.upper()}: {file_path}\n")
+            f.write(f"  Domain: {domain}\n")
+            f.write(f"  Reason: {reason}\n")
+            if details:
+                for key, value in details.items():
+                    f.write(f"  {key}: {value}\n")
+            f.write("\n")
 
     def clean_html_for_extraction(self, html_content):
         """
@@ -138,6 +172,195 @@ class TextExtractor:
         except Exception as e:
             print(f"HTML cleaning failed: {e}")
             return html_content  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails
+
+    def preserve_html_formatting(self, html_content):
+        """
+        Convert HTML formatting to Markdown before text extraction
+        Preserves bold, italic, and other important formatting
+        
+        Args:
+            html_content (str): Original HTML content
+            
+        Returns:
+            str: HTML with Markdown formatting markers
+        """
+        try:
+            from bs4 import BeautifulSoup, NavigableString
+            import re
+            
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Convert bold tags to Markdown - handle complex nested content
+            for tag in soup.find_all(['b', 'strong']):
+                # Get all text content from the tag, preserving nested structure
+                text_content = self._get_formatted_content(tag)
+                if text_content.strip():
+                    # Replace the entire tag with Markdown-wrapped content
+                    new_content = f"**{text_content}**"
+                    tag.replace_with(BeautifulSoup(new_content, 'html.parser'))
+            
+            # Convert italic tags to Markdown
+            for tag in soup.find_all(['i', 'em']):
+                text_content = self._get_formatted_content(tag)
+                if text_content.strip():
+                    new_content = f"*{text_content}*"
+                    tag.replace_with(BeautifulSoup(new_content, 'html.parser'))
+            
+            # Convert underline tags to Markdown (using HTML since Markdown doesn't have native underline)
+            for tag in soup.find_all('u'):
+                text_content = self._get_formatted_content(tag)
+                if text_content.strip():
+                    new_content = f"<u>{text_content}</u>"
+                    tag.replace_with(BeautifulSoup(new_content, 'html.parser'))
+            
+            # Convert code tags to Markdown
+            for tag in soup.find_all(['code', 'tt']):
+                text_content = self._get_formatted_content(tag)
+                if text_content.strip():
+                    new_content = f"`{text_content}`"
+                    tag.replace_with(BeautifulSoup(new_content, 'html.parser'))
+            
+            # Convert blockquotes to Markdown
+            for tag in soup.find_all('blockquote'):
+                text_content = tag.get_text()
+                if text_content.strip():
+                    lines = text_content.strip().split('\n')
+                    quoted_lines = [f"> {line.strip()}" for line in lines if line.strip()]
+                    new_content = '\n'.join(quoted_lines) + '\n'
+                    tag.replace_with(BeautifulSoup(new_content, 'html.parser'))
+            
+            # Handle headers - preserve them as HTML since we have header detection later
+            # This ensures consistent header processing
+            
+            # Clean up multiple spaces and newlines that might have been introduced
+            formatted_html = str(soup)
+            
+            # Clean up extra spaces around Markdown markers
+            formatted_html = re.sub(r'\*\*\s+', '**', formatted_html)
+            formatted_html = re.sub(r'\s+\*\*', '**', formatted_html)
+            formatted_html = re.sub(r'(?<!\*)\*\s+', '*', formatted_html)
+            formatted_html = re.sub(r'\s+\*(?!\*)', '*', formatted_html)
+            formatted_html = re.sub(r'`\s+', '`', formatted_html)
+            formatted_html = re.sub(r'\s+`', '`', formatted_html)
+            
+            return formatted_html
+            
+        except Exception as e:
+            print(f"HTML formatting preservation failed: {e}")
+            return html_content  # Return original if processing fails
+    
+    def _get_formatted_content(self, tag):
+        """
+        Extract formatted content from a tag, preserving nested links and other elements
+        
+        Args:
+            tag: BeautifulSoup tag object
+            
+        Returns:
+            str: Formatted content with preserved nested elements
+        """
+        try:
+            content_parts = []
+            
+            for element in tag.contents:
+                if isinstance(element, NavigableString):
+                    # Direct text content
+                    content_parts.append(str(element))
+                elif element.name == 'a':
+                    # Preserve links in a readable format
+                    link_text = element.get_text()
+                    link_url = element.get('href', '')
+                    if link_url:
+                        content_parts.append(f"[{link_text}]({link_url})")
+                    else:
+                        content_parts.append(link_text)
+                elif element.name in ['br']:
+                    # Handle line breaks
+                    content_parts.append(' ')
+                else:
+                    # For other nested elements, just get the text
+                    content_parts.append(element.get_text())
+            
+            return ''.join(content_parts)
+            
+        except Exception as e:
+            # Fallback to simple text extraction
+            return tag.get_text()  # Return original if processing fails
+
+    def clean_markdown_formatting(self, text):
+        """
+        Clean up Markdown formatting in extracted text
+        Fixes common issues that occur during HTML to text extraction
+        
+        Args:
+            text (str): Extracted text with potential formatting issues
+            
+        Returns:
+            str: Cleaned text with proper Markdown formatting
+        """
+        try:
+            import re
+            
+            if not text:
+                return text
+            
+            # Fix broken bold formatting ONLY when it's clearly broken across lines within a sentence
+            # Don't remove newlines that separate paragraphs or sections
+            # Only fix if there's text immediately before and after the break (indicating broken formatting)
+            # Use [ \t] to match only spaces and tabs, not newlines
+            text = re.sub(r'(\w)\*\*[ \t]*\n[ \t]*(\w)', r'\1**\2', text)  # Fix broken bold within text
+            text = re.sub(r'(\w)[ \t]*\n[ \t]*\*\*(\w)', r'\1**\2', text)  # Fix broken bold within text
+            
+            # Fix broken italic formatting (same logic)
+            text = re.sub(r'(\w)\*[ \t]*\n[ \t]*(\w)', r'\1*\2', text)
+            text = re.sub(r'(\w)[ \t]*\n[ \t]*\*(?!\*)(\w)', r'\1*\2', text)
+            
+            # Fix broken code formatting (same logic)
+            text = re.sub(r'(\w)`[ \t]*\n[ \t]*(\w)', r'\1`\2', text)
+            text = re.sub(r'(\w)[ \t]*\n[ \t]*`(\w)', r'\1`\2', text)
+            
+            # Remove empty bold/italic tags
+            text = re.sub(r'\*\*\s*\*\*', '', text)
+            text = re.sub(r'(?<!\*)\*\s*\*(?!\*)', '', text)
+            text = re.sub(r'``', '', text)
+            
+            # Fix multiple consecutive formatting markers
+            text = re.sub(r'\*{3,}', '**', text)
+            
+            # Ensure proper spacing around formatting - but don't break existing good formatting
+            # Only add space before bold if there's no space already
+            text = re.sub(r'(\w)(\*\*\w)', r'\1 \2', text)  # Add space before bold if missing
+            # Only add space before italic if there's no space already and it's not part of bold
+            text = re.sub(r'(\w)(\*(?!\*)\w)', r'\1 \2', text)  # Add space before italic if missing
+            
+            # Clean up excessive whitespace but preserve paragraph breaks
+            # Replace multiple spaces (but not newlines) with single space
+            text = re.sub(r'[ \t]{2,}', ' ', text)
+            # Replace more than 2 consecutive newlines with exactly 2 (paragraph break)
+            text = re.sub(r'\n{3,}', '\n\n', text)
+            # Remove trailing spaces from lines
+            text = re.sub(r'[ \t]+\n', '\n', text)
+            
+            # Fix blockquote formatting that may have been disrupted
+            lines = text.split('\n')
+            cleaned_lines = []
+            
+            for line in lines:
+                # Fix broken blockquotes
+                if '>' in line and not line.strip().startswith('>'):
+                    # Try to fix malformed blockquotes
+                    if line.strip().startswith('> '):
+                        cleaned_lines.append(line)
+                    else:
+                        cleaned_lines.append(line)
+                else:
+                    cleaned_lines.append(line)
+            
+            return '\n'.join(cleaned_lines)
+            
+        except Exception as e:
+            print(f"Markdown formatting cleanup failed: {e}")
+            return text  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails
 
 
 
@@ -292,19 +515,44 @@ class TextExtractor:
 
     def process_html_file(self, file_path, domain):
         """Process a single HTML file using the selected extraction method"""
-        # Check if already processed
         file_key = f"{domain}:{file_path}"
-        if file_key in self.processed_status and self.processed_status[file_key]['status'] == 'success':
-            self.stats['already_processed'] += 1
-            return
         
         try:
             # Read HTML content
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                 original_html_content = f.read()
             
+            # Check for empty or very small HTML files
+            if len(original_html_content.strip()) < 200:
+                self.stats['skipped_files'] += 1
+                reason = f"HTML file too small ({len(original_html_content)} chars)"
+                print(f"⚠️  Skipping ({domain}): {reason}")
+                self.log_skip_reason(file_path, domain, "html_too_small", reason)
+                self.processed_status[file_key] = {
+                    'status': 'skipped',
+                    'reason': reason,
+                    'processed_at': datetime.now().isoformat()
+                }
+                return
+            
+            # Preserve formatting before cleaning
+            formatted_html_content = self.preserve_html_formatting(original_html_content)
+            
             # Clean HTML for better extraction
-            cleaned_html_content = self.clean_html_for_extraction(original_html_content)
+            cleaned_html_content = self.clean_html_for_extraction(formatted_html_content)
+            
+            # Check if cleaning removed too much content
+            if len(cleaned_html_content.strip()) < 100:
+                self.stats['skipped_files'] += 1
+                reason = f"HTML cleaning left too little content ({len(cleaned_html_content)} chars)"
+                print(f"⚠️  Skipping ({domain}): {reason}")
+                self.log_skip_reason(file_path, domain, "cleaned_html_too_small", reason)
+                self.processed_status[file_key] = {
+                    'status': 'skipped',
+                    'reason': reason,
+                    'processed_at': datetime.now().isoformat()
+                }
+                return
             
             # Save cleaned HTML if requested
             if self.save_cleaned_html:
@@ -332,19 +580,73 @@ class TextExtractor:
             else:
                 raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
-            if not extracted_text or len(extracted_text.strip()) < 100:
-                # Skip if content is too short or extraction failed
+            # Check extraction results with detailed logging
+            if not extracted_text:
                 self.stats['skipped_files'] += 1
+                reason = f"{self.extraction_method.capitalize()} extraction returned no text"
+                print(f"⚠️  Skipping ({domain}): {reason}")
+                self.log_skip_reason(file_path, domain, "extraction_failed_no_text", reason, {
+                    'original_url': original_url,
+                    'original_html_size': len(original_html_content),
+                    'cleaned_html_size': len(cleaned_html_content),
+                    'extraction_method': self.extraction_method
+                })
                 self.processed_status[file_key] = {
                     'status': 'skipped',
-                    'reason': f'{self.extraction_method.capitalize()} extraction failed or content too short',
+                    'reason': reason,
                     'processed_at': datetime.now().isoformat()
                 }
                 return
             
+            extracted_text_clean = extracted_text.strip()
+            if len(extracted_text_clean) < 100:
+                self.stats['skipped_files'] += 1
+                reason = f"{self.extraction_method.capitalize()} extracted text too short ({len(extracted_text_clean)} chars)"
+                print(f"⚠️  Skipping ({domain}): {reason}")
+                
+                # Log first 200 chars of extracted text for debugging
+                preview = extracted_text_clean[:200] + "..." if len(extracted_text_clean) > 200 else extracted_text_clean
+                self.log_skip_reason(file_path, domain, "extracted_text_too_short", reason, {
+                    'original_url': original_url,
+                    'original_html_size': len(original_html_content),
+                    'cleaned_html_size': len(cleaned_html_content),
+                    'extracted_text_length': len(extracted_text_clean),
+                    'extracted_text_preview': preview,
+                    'extraction_method': self.extraction_method
+                })
+                self.processed_status[file_key] = {
+                    'status': 'skipped',
+                    'reason': reason,
+                    'processed_at': datetime.now().isoformat()
+                }
+                return
+            
+            # Check for extraction that only contains repetitive content
+            words = extracted_text_clean.split()
+            unique_words = set(words)
+            if len(words) > 20 and len(unique_words) / len(words) < 0.1:  # Less than 10% unique words
+                self.stats['skipped_files'] += 1
+                reason = f"Extracted text appears repetitive (unique word ratio: {len(unique_words)/len(words):.2%})"
+                print(f"⚠️  Skipping ({domain}): {reason}")
+                self.log_skip_reason(file_path, domain, "repetitive_content", reason, {
+                    'original_url': original_url,
+                    'total_words': len(words),
+                    'unique_words': len(unique_words),
+                    'unique_ratio': len(unique_words) / len(words),
+                    'extraction_method': self.extraction_method
+                })
+                self.processed_status[file_key] = {
+                    'status': 'skipped',
+                    'reason': reason,
+                    'processed_at': datetime.now().isoformat()
+                }
+                return
+            
+            # Clean up Markdown formatting issues
+            cleaned_extracted_text = self.clean_markdown_formatting(extracted_text.strip())
+            
             # Format headers in the extracted text
-            raw_content = extracted_text.strip()
-            markdown_content = self.format_headers_markdown(raw_content, cleaned_html_content)
+            markdown_content = self.format_headers_markdown(cleaned_extracted_text, cleaned_html_content)
             
             # Create basic metadata from extraction results
             metadata = {
@@ -411,11 +713,18 @@ class TextExtractor:
             self.processed_status[file_key] = status_entry
             
             self.stats['successful_extractions'] += 1
-            print(f"✓ Extracted ({self.extraction_method}): {original_url} -> {full_extracted_path}")
+            print(f"✅ Extracted ({self.extraction_method}) ({domain}): {os.path.basename(full_extracted_path)}")
                 
         except Exception as e:
-            print(f"Error processing {file_path}: {e}")
+            print(f"❌ Error ({domain}): {e}")
             self.stats['failed_extractions'] += 1
+            
+            # Log the error with more details
+            self.log_skip_reason(file_path, domain, "processing_error", f"Exception during processing: {str(e)}", {
+                'error_type': type(e).__name__,
+                'error_message': str(e),
+                'extraction_method': self.extraction_method
+            })
             
             self.processed_status[file_key] = {
                 'status': 'error',
@@ -466,23 +775,29 @@ class TextExtractor:
         print(f"Found {len(html_files)} HTML files to process")
         
         # Process each file with limit
-        actually_processed_count = 0
+        successfully_processed_count = 0
         for file_path, domain in html_files:
             # Check if file is already processed before counting towards limit
             file_key = f"{domain}:{file_path}"
             if file_key in self.processed_status and self.processed_status[file_key]['status'] == 'success':
-                # This file is already processed, don't count towards limit
-                print(f"Skipping already processed: {file_path}")
-                self.process_html_file(file_path, domain)  # Still call to update stats
+                # This file is already processed, just update stats and continue
+                self.stats['already_processed'] += 1
+                print(f"⏭️  Already processed ({domain}): {os.path.basename(file_path)}")
                 continue
             
-            if limit and actually_processed_count >= limit:
+            if limit and successfully_processed_count >= limit:
                 print(f"Reached limit of {limit} HTML files")
                 break
                 
-            print(f"Processing: {file_path}")
+            # Store stats before processing
+            prev_successful = self.stats['successful_extractions']
+            
+            # Process the file
             self.process_html_file(file_path, domain)
-            actually_processed_count += 1
+            
+            # Only count towards limit if extraction was successful
+            if self.stats['successful_extractions'] > prev_successful:
+                successfully_processed_count += 1
         
         # Save status and print summary
         self.save_status()
@@ -508,14 +823,29 @@ class TextExtractor:
         
         summary_log_path = os.path.join(month_dir, "text_extractor_summary.log")
         
+        # Calculate skip reasons breakdown
+        skip_reasons = {}
+        for file_key, status in self.processed_status.items():
+            if status.get('status') in ['skipped', 'error']:
+                reason = status.get('reason', 'unknown')
+                skip_type = 'error' if status.get('status') == 'error' else 'skipped'
+                skip_reasons[f"{skip_type}:{reason}"] = skip_reasons.get(f"{skip_type}:{reason}", 0) + 1
+        
         log_entry = (
             f"{now.strftime('%Y-%m-%d %H:%M:%S')} | "
             f"Processed: {self.stats['total_processed']} | "
             f"Extracted: {self.stats['successful_extractions']} | "
             f"Failed: {self.stats['failed_extractions']} | "
             f"Skipped: {self.stats['skipped_files']} | "
-            f"Time: {elapsed_time:.2f}s\n"
+            f"Already processed: {self.stats['already_processed']} | "
+            f"Time: {elapsed_time:.2f}s"
         )
+        
+        if skip_reasons:
+            skip_details = " | Skip reasons: " + ", ".join([f"{reason}({count})" for reason, count in skip_reasons.items()])
+            log_entry += skip_details
+        
+        log_entry += "\n"
         
         with open(summary_log_path, "a", encoding="utf-8") as f:
             f.write(log_entry)
@@ -526,10 +856,29 @@ if __name__ == "__main__":
     
     # Parse command line arguments
     limit = None
-    extraction_method = 'newspaper'  # Default
+    extraction_method = 'trafilatura'  # Default
     save_cleaned_html = False  # Default
     
     if len(sys.argv) > 1:
+        # Check for help flag first
+        if sys.argv[1] in ['--help', '-h']:
+            print("Text Extractor Script - Extracts clean article text from HTML files")
+            print("")
+            print("Usage: python text_extractor.py [LIMIT] [METHOD] [--save-cleaned-html]")
+            print("")
+            print("Parameters:")
+            print("  LIMIT              (optional): Number of HTML files to process (leave empty for all)")
+            print("  METHOD             (optional): 'trafilatura' (default) or 'newspaper'")
+            print("  --save-cleaned-html (optional): Save cleaned HTML files alongside original files")
+            print("")
+            print("Examples:")
+            print("  python text_extractor.py                                    # Process all files with trafilatura")
+            print("  python text_extractor.py 10                                 # Process 10 files with trafilatura")
+            print("  python text_extractor.py 5 newspaper                        # Process 5 files with newspaper")
+            print("  python text_extractor.py 10 trafilatura --save-cleaned-html # Process 10 files and save cleaned HTML")
+            print("  python text_extractor.py \"\" newspaper --save-cleaned-html   # Process all files with newspaper and save cleaned HTML")
+            sys.exit(0)
+        
         try:
             limit = int(sys.argv[1])
             if limit <= 0:

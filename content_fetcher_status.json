@@ -2,22 +2,22 @@
   "2025-09:www.lemonde.fr:": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:00.757482"
+    "processed_at": "2025-09-13T06:01:02.980311"
   },
   "2025-09:www.lemonde.fr:/": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:00.757492"
+    "processed_at": "2025-09-13T06:01:02.980333"
   },
   "2025-09:www.lemonde.fr:/actualite-en-continu/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.771879"
+    "processed_at": "2025-09-13T06:01:02.990873"
   },
   "2025-09:www.lemonde.fr:/actualite-medias/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.777720"
+    "processed_at": "2025-09-13T06:01:02.997656"
   },
   "2025-09:www.lemonde.fr:/actualite-medias/article/2010/11/03/la-charte-d-ethique-et-de-deontologie-du-groupe-le-monde_1434737_3236.html": {
     "status": "success",
@@ -34,7 +34,7 @@
   "2025-09:www.digi24.ro:/--><!--": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:02.567279"
+    "processed_at": "2025-09-13T06:02:00.076875"
   },
   "2025-09:www.digi24.ro:/autor/virgil-popescu": {
     "status": "success",
@@ -117,52 +117,52 @@
   "2025-09:www.lemonde.fr:/actualite/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.782065"
+    "processed_at": "2025-09-13T06:01:05.062297"
   },
   "2025-09:www.lemonde.fr:/afrique/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.786172"
+    "processed_at": "2025-09-13T06:01:05.065733"
   },
   "2025-09:www.lemonde.fr:/algerie/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.790405"
+    "processed_at": "2025-09-13T06:01:05.069153"
   },
   "2025-09:www.lemonde.fr:/analyses/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.794486"
+    "processed_at": "2025-09-13T06:01:05.072700"
   },
   "2025-09:www.lemonde.fr:/annonces-legales/": {
     "status": "filtered",
     "reason": "matches skip pattern: /annonces-legales/",
-    "processed_at": "2025-09-07T06:51:00.798533"
+    "processed_at": "2025-09-13T06:01:05.077943"
   },
   "2025-09:www.lemonde.fr:/annonces-legales/list": {
     "status": "filtered",
     "reason": "matches skip pattern: /annonces-legales/",
-    "processed_at": "2025-09-07T06:51:00.802563"
+    "processed_at": "2025-09-13T06:01:05.084785"
   },
   "2025-09:www.lemonde.fr:/applications-groupe/lemonde/android/smartphone/": {
     "status": "filtered",
     "reason": "matches skip pattern: /applications-groupe/",
-    "processed_at": "2025-09-07T06:51:00.806594"
+    "processed_at": "2025-09-13T06:01:05.088190"
   },
   "2025-09:www.lemonde.fr:/applications-groupe/lemonde/ios/iphone/": {
     "status": "filtered",
     "reason": "matches skip pattern: /applications-groupe/",
-    "processed_at": "2025-09-07T06:51:00.810759"
+    "processed_at": "2025-09-13T06:01:05.091538"
   },
   "2025-09:www.lemonde.fr:/archives-du-monde/": {
     "status": "filtered",
     "reason": "matches skip pattern: /archive",
-    "processed_at": "2025-09-07T06:51:00.818435"
+    "processed_at": "2025-09-13T06:01:05.094845"
   },
   "2025-09:www.lemonde.fr:/argent/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.822574"
+    "processed_at": "2025-09-13T06:01:05.098233"
   },
   "2025-09:www.lemonde.fr:/argent/article/2025/08/28/quand-un-pere-rattache-a-son-foyer-fiscal-un-fils-majeur-en-possession-de-cannabis_6636803_1657007.html": {
     "status": "success",
@@ -173,22 +173,22 @@
   "2025-09:www.lemonde.fr:/arts/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.826789"
+    "processed_at": "2025-09-13T06:01:05.101901"
   },
   "2025-09:www.lemonde.fr:/belgique/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.830943"
+    "processed_at": "2025-09-13T06:01:05.105561"
   },
   "2025-09:www.lemonde.fr:/campus/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.835880"
+    "processed_at": "2025-09-13T06:01:05.110230"
   },
   "2025-09:www.lemonde.fr:/canada/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.840001"
+    "processed_at": "2025-09-13T06:01:05.114932"
   },
   "2025-09:www.lemonde.fr:/canicule/": {
     "status": "filtered",
@@ -198,32 +198,32 @@
   "2025-09:www.lemonde.fr:/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=bizdev&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe": {
     "status": "filtered",
     "reason": "matches skip pattern: ?lmd_",
-    "processed_at": "2025-09-07T06:51:00.848030"
+    "processed_at": "2025-09-13T06:01:05.119378"
   },
   "2025-09:www.lemonde.fr:/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=blocservice&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe": {
     "status": "filtered",
     "reason": "matches skip pattern: ?lmd_",
-    "processed_at": "2025-09-07T06:51:00.852016"
+    "processed_at": "2025-09-13T06:01:05.123213"
   },
   "2025-09:www.lemonde.fr:/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=header&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe": {
     "status": "filtered",
     "reason": "matches skip pattern: ?lmd_",
-    "processed_at": "2025-09-07T06:51:00.856024"
+    "processed_at": "2025-09-13T06:01:05.127033"
   },
   "2025-09:www.lemonde.fr:/chaleur-humaine/article/2025/01/30/mesurez-votre-impact-environnement-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125299.html?lmd_medium=infeed&lmd_campaign=services_partenaire_lmfr&lmd_creation=ademe": {
     "status": "filtered",
     "reason": "matches skip pattern: ?lmd_",
-    "processed_at": "2025-09-07T06:51:00.860316"
+    "processed_at": "2025-09-13T06:01:05.130865"
   },
   "2025-09:www.lemonde.fr:/cinema/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.864340"
+    "processed_at": "2025-09-13T06:01:05.134735"
   },
   "2025-09:www.lemonde.fr:/climat/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.868370"
+    "processed_at": "2025-09-13T06:01:05.138811"
   },
   "2025-09:www.lemonde.fr:/climat/article/2025/09/01/orages-et-inondations-dix-departements-places-en-vigilance-orange-lundi_6637615_1652613.html": {
     "status": "success",
@@ -234,7 +234,7 @@
   "2025-09:www.digi24.ro:/camere-web": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /camere-web",
-    "processed_at": "2025-09-07T06:51:02.587424"
+    "processed_at": "2025-09-13T06:02:00.086794"
   },
   "2025-09:www.digi24.ro:/codul-digi24": {
     "status": "success",
@@ -328,22 +328,22 @@
   "2025-09:www.lemonde.fr:/confidentialite/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.872396"
+    "processed_at": "2025-09-13T06:01:06.265857"
   },
   "2025-09:www.lemonde.fr:/cote-d-ivoire/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.876476"
+    "processed_at": "2025-09-13T06:01:06.272788"
   },
   "2025-09:www.lemonde.fr:/crise-ukrainienne/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.880543"
+    "processed_at": "2025-09-13T06:01:06.279712"
   },
   "2025-09:www.lemonde.fr:/culture/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.884540"
+    "processed_at": "2025-09-13T06:01:06.286625"
   },
   "2025-09:www.lemonde.fr:/culture/article/2025/08/28/vice-is-broke-sur-mubi-enquete-nostalgique-sur-un-feu-de-paille-mediatique_6636973_3246.html": {
     "status": "success",
@@ -354,42 +354,42 @@
   "2025-09:www.digi24.ro:": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:02.567226"
+    "processed_at": "2025-09-13T06:02:00.076837"
   },
   "2025-09:www.digi24.ro:/": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:02.567259"
+    "processed_at": "2025-09-13T06:02:00.076858"
   },
   "2025-09:www.digi24.ro:/?getmobile=1": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:02.567296"
+    "processed_at": "2025-09-13T06:02:00.076883"
   },
   "2025-09:www.digi24.ro:/confidentialitate": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /confidentialitate",
-    "processed_at": "2025-09-07T06:51:02.600760"
+    "processed_at": "2025-09-13T06:02:00.094981"
   },
   "2025-09:www.digi24.ro:/contact": {
     "status": "filtered",
     "reason": "matches skip pattern: /contact",
-    "processed_at": "2025-09-07T06:51:02.608716"
+    "processed_at": "2025-09-13T06:02:00.099501"
   },
   "2025-09:www.digi24.ro:/digi-context": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /digi-context",
-    "processed_at": "2025-09-07T06:51:02.614866"
+    "processed_at": "2025-09-13T06:02:00.103989"
   },
   "2025-09:www.digi24.ro:/digi-vox": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /digi-vox",
-    "processed_at": "2025-09-07T06:51:02.620274"
+    "processed_at": "2025-09-13T06:02:00.108423"
   },
   "2025-09:www.digi24.ro:/digieconomic/": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /digieconomic/",
-    "processed_at": "2025-09-07T06:51:02.625544"
+    "processed_at": "2025-09-13T06:02:00.114508"
   },
   "2025-09:www.digi24.ro:/digieconomic/financiar/ministerul-finantelor-a-planificat-imprumuturi-de-aproape-7-miliarde-de-lei-in-septembrie-64947": {
     "status": "success",
@@ -406,7 +406,7 @@
   "2025-09:www.bzi.ro:/": {
     "status": "filtered",
     "reason": "invalid path",
-    "processed_at": "2025-09-07T06:51:04.920695"
+    "processed_at": "2025-09-13T06:03:11.324504"
   },
   "2025-09:www.bzi.ro:/accident-rutier-pe-dj-248-o-autospeciala-smurd-a-fost-implicata-5339057": {
     "status": "success",
@@ -535,12 +535,12 @@
   "2025-09:www.digi24.ro:/doc-talk": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /doc-talk",
-    "processed_at": "2025-09-07T06:51:02.630764"
+    "processed_at": "2025-09-13T06:02:01.386790"
   },
   "2025-09:www.digi24.ro:/emisiuni": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /emisiuni",
-    "processed_at": "2025-09-07T06:51:02.636097"
+    "processed_at": "2025-09-13T06:02:01.398602"
   },
   "2025-09:www.digi24.ro:/emisiuni/digipedia": {
     "status": "success",
@@ -652,7 +652,7 @@
   "2025-09:www.digi24.ro:/emisiuni/toate-emisiunile": {
     "status": "filtered",
     "reason": "matches domain-specific pattern: /emisiuni",
-    "processed_at": "2025-09-07T06:51:02.663051"
+    "processed_at": "2025-09-13T06:02:01.430590"
   },
   "2025-09:www.digi24.ro:/impreuna-fara-ura/adelina-pestritu-sunt-in-fiecare-zi-pregatita-pentru-ura-stiu-ca-o-primesc-fara-sa-fac-ceva-gresit-3388767": {
     "status": "success",
@@ -783,7 +783,7 @@
   "2025-09:www.lemonde.fr:/disparitions/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.888554"
+    "processed_at": "2025-09-13T06:01:09.563607"
   },
   "2025-09:www.lemonde.fr:/disparitions/article/2025/08/31/sylvain-amic-president-des-musees-d-orsay-et-de-l-orangerie-est-mort-a-l-age-de-58-ans_6637920_3382.html": {
     "status": "success",
@@ -794,37 +794,37 @@
   "2025-09:www.digi24.ro:/interviurile-digi24-ro": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.668277"
+    "processed_at": "2025-09-13T06:02:03.643908"
   },
   "2025-09:www.digi24.ro:/live/dancefm": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.673492"
+    "processed_at": "2025-09-13T06:02:03.659892"
   },
   "2025-09:www.digi24.ro:/live/digi24": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.678712"
+    "processed_at": "2025-09-13T06:02:03.669129"
   },
   "2025-09:www.digi24.ro:/live/digi24-fm": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.683914"
+    "processed_at": "2025-09-13T06:02:03.675318"
   },
   "2025-09:www.digi24.ro:/live/digifm": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.689251"
+    "processed_at": "2025-09-13T06:02:03.680400"
   },
   "2025-09:www.digi24.ro:/live/profm": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.694552"
+    "processed_at": "2025-09-13T06:02:03.685038"
   },
   "2025-09:www.digi24.ro:/magazin/stil-de-viata": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.699783"
+    "processed_at": "2025-09-13T06:02:03.689368"
   },
   "2025-09:www.digi24.ro:/magazin/stil-de-viata/animale/primii-cai-modificati-genetic-au-implinit-10-luni-scopul-pentru-care-au-fost-creati-3393565": {
     "status": "success",
@@ -1159,7 +1159,7 @@
   "2025-09:www.lemonde.fr:/donald-trump/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.892558"
+    "processed_at": "2025-09-13T06:01:09.567294"
   },
   "2025-09:www.lemonde.fr:/droits-de-douane/": {
     "status": "filtered",
@@ -1169,22 +1169,22 @@
   "2025-09:www.lemonde.fr:/eclairages/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.900516"
+    "processed_at": "2025-09-13T06:01:09.570889"
   },
   "2025-09:www.lemonde.fr:/economie-francaise/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.904495"
+    "processed_at": "2025-09-13T06:01:09.574476"
   },
   "2025-09:www.lemonde.fr:/economie-mondiale/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.908504"
+    "processed_at": "2025-09-13T06:01:09.580103"
   },
   "2025-09:www.lemonde.fr:/economie/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.912500"
+    "processed_at": "2025-09-13T06:01:09.587711"
   },
   "2025-09:www.lemonde.fr:/economie/article/2025/08/28/penalisee-par-la-chine-nvidia-vante-le-deploiement-generalise-de-l-intelligence-artificielle_6636914_3234.html": {
     "status": "success",
@@ -1195,22 +1195,22 @@
   "2025-09:www.digi24.ro:/magazin/stil-de-viata/viata-sanatoasa": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.705183"
+    "processed_at": "2025-09-13T06:02:03.693746"
   },
   "2025-09:www.digi24.ro:/magazin/timp-liber/cultura": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.710462"
+    "processed_at": "2025-09-13T06:02:03.698124"
   },
   "2025-09:www.digi24.ro:/magazin/timp-liber/divertisment": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.715680"
+    "processed_at": "2025-09-13T06:02:03.702457"
   },
   "2025-09:www.digi24.ro:/magazin/timp-liber/film": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.720926"
+    "processed_at": "2025-09-13T06:02:03.706902"
   },
   "2025-09:www.digi24.ro:/magazin/timp-liber/film/ce-spune-actorul-britanic-jude-law-despre-eventuale-repercusiuni-dupa-ce-l-a-interpretat-pe-putin-in-filmul-magul-de-la-kremlin-3393675": {
     "status": "success",
@@ -1291,17 +1291,17 @@
   "2025-09:www.digi24.ro:/magazin/timp-liber/showbiz": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.726160"
+    "processed_at": "2025-09-13T06:02:03.711235"
   },
   "2025-09:www.digi24.ro:/magazin/timp-liber/vacante": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.731377"
+    "processed_at": "2025-09-13T06:02:03.715559"
   },
   "2025-09:www.digi24.ro:/meteo": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.736574"
+    "processed_at": "2025-09-13T06:02:04.809065"
   },
   "2025-09:www.digi24.ro:/meteo/avertizare-meteo-de-furtuni-17-judete-intra-sub-cod-galben-meteorologii-anunta-cand-se-incalzeste-din-nou-vremea-3393033": {
     "status": "success",
@@ -1345,52 +1345,52 @@
   "2025-09:www.lemonde.fr:/editoriaux/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.916485"
+    "processed_at": "2025-09-13T06:01:13.998657"
   },
   "2025-09:www.lemonde.fr:/education/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.920534"
+    "processed_at": "2025-09-13T06:01:14.006151"
   },
   "2025-09:www.lemonde.fr:/emploi/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.924581"
+    "processed_at": "2025-09-13T06:01:14.012760"
   },
   "2025-09:www.lemonde.fr:/en-direct/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.928573"
+    "processed_at": "2025-09-13T06:01:14.017993"
   },
   "2025-09:www.lemonde.fr:/en/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.932583"
+    "processed_at": "2025-09-13T06:01:14.021885"
   },
   "2025-09:www.lemonde.fr:/enquete-idees/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.936571"
+    "processed_at": "2025-09-13T06:01:14.025395"
   },
   "2025-09:www.lemonde.fr:/enquetes-video/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.940601"
+    "processed_at": "2025-09-13T06:01:14.028863"
   },
   "2025-09:www.lemonde.fr:/entretien-idees/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:00.944615"
+    "processed_at": "2025-09-13T06:01:14.032395"
   },
   "2025-09:www.lemonde.fr:/faq/": {
     "status": "filtered",
     "reason": "matches skip pattern: /faq",
-    "processed_at": "2025-09-07T06:51:00.948610"
+    "processed_at": "2025-09-13T06:01:14.038427"
   },
   "2025-09:www.lemonde.fr:/faq/?thematic=contacter": {
     "status": "filtered",
     "reason": "matches skip pattern: /faq",
-    "processed_at": "2025-09-07T06:51:00.952717"
+    "processed_at": "2025-09-13T06:01:14.041916"
   },
   "2025-09:www.lemonde.fr:/francois-bayrou-premier-ministre/": {
     "status": "filtered",
@@ -1400,52 +1400,52 @@
   "2025-09:www.lemonde.fr:/guides-d-achat/": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.962364"
+    "processed_at": "2025-09-13T06:01:15.156010"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=guides-d-achat": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.966503"
+    "processed_at": "2025-09-13T06:01:15.169825"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2021/10/07/instax-ou-polaroid-les-meilleurs-appareils-photos-instantanes-en-2021_6097486_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.970519"
+    "processed_at": "2025-09-13T06:01:15.178865"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/06/15/les-meilleures-gourdes-pour-remplacer-les-bouteilles-jetables_6130466_5306571.html#origin=HPcarrousel": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.974513"
+    "processed_at": "2025-09-13T06:01:15.184811"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/07/06/les-meilleurs-reveils-simulateurs-d-aube_6133588_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.978525"
+    "processed_at": "2025-09-13T06:01:15.189778"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/09/01/les-meilleures-lunch-box-pour-la-pause-dejeuner_6139786_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.982508"
+    "processed_at": "2025-09-13T06:01:15.193983"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/11/23/les-meilleurs-jeux-de-societe-pour-adultes_6151232_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.986480"
+    "processed_at": "2025-09-13T06:01:15.202986"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/12/14/les-meilleurs-boucleurs-a-cheveux_6154394_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.990446"
+    "processed_at": "2025-09-13T06:01:15.206901"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2023/01/26/les-meilleures-imprimantes-laser_6159425_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.994399"
+    "processed_at": "2025-09-13T06:01:15.210343"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2023/04/06/les-meilleurs-ventilateurs-pour-affronter-la-chaleur_6168531_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:00.998357"
+    "processed_at": "2025-09-13T06:01:15.213732"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2023/06/09/les-meilleurs-coussins-de-voyage_6176870_5306571.html": {
     "status": "filtered",
@@ -1460,87 +1460,87 @@
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2023/10/04/les-meilleurs-gaufriers_6192421_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.010231"
+    "processed_at": "2025-09-13T06:01:15.217951"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2023/10/17/le-meilleur-antivol-pour-velo_6195018_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.014263"
+    "processed_at": "2025-09-13T06:01:15.222977"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/04/05/les-meilleurs-robots-patissiers_6226175_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.018198"
+    "processed_at": "2025-09-13T06:01:15.226427"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/04/25/les-meilleurs-aspirateurs-balais-sans-fil_6229835_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.022430"
+    "processed_at": "2025-09-13T06:01:15.229845"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/07/31/les-meilleures-machines-a-cafe-a-grains-a-moins-de-500-euros_6262976_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.026410"
+    "processed_at": "2025-09-13T06:01:15.233178"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/11/20/les-meilleurs-fours-micro-ondes-grill_6405200_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.030601"
+    "processed_at": "2025-09-13T06:01:15.236633"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/11/26/les-meilleurs-pianos-numeriques-pas-chers-pour-debutants_6415845_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.034573"
+    "processed_at": "2025-09-13T06:01:15.240019"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/11/28/en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.038543"
+    "processed_at": "2025-09-13T06:01:15.243359"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2024/11/28/en-relecture-les-meilleurs-mixeurs-plongeants_6418762_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=mixeursplongeants": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.042493"
+    "processed_at": "2025-09-13T06:01:15.246762"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/01/31/les-meilleures-poubelles-de-tri-a-plusieurs-compartiments_6525687_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=poubelles-de-tri": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.046456"
+    "processed_at": "2025-09-13T06:01:15.250115"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/02/06/les-meilleures-visseuses-entre-50-et-100-euros_6171388_5306572.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.050542"
+    "processed_at": "2025-09-13T06:01:15.253476"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/02/17/les-meilleurs-cuiseurs-a-riz_6551215_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=ricecooker": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.054518"
+    "processed_at": "2025-09-13T06:01:15.256795"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/03/10/les-meilleurs-couteaux-de-chef_6578271_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.058506"
+    "processed_at": "2025-09-13T06:01:15.260119"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/03/10/les-meilleurs-couteaux-de-chef_6578271_5306571.html?origin=HPcarrousel&lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=couteaux-de-chef": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.062979"
+    "processed_at": "2025-09-13T06:01:15.263426"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/04/15/les-meilleurs-balais-vapeur_6596301_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=balais-vapeur": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.066969"
+    "processed_at": "2025-09-13T06:01:15.267580"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/04/17/les-meilleurs-grille-pains_6596973_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=grille-pain": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.070924"
+    "processed_at": "2025-09-13T06:01:15.270998"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/05/28/les-meilleurs-chargeurs-solaires-portables_6609021_5306571.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.076241"
+    "processed_at": "2025-09-13T06:01:15.274334"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/05/28/les-meilleurs-chargeurs-solaires-portables_6609021_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=chargeurs-solaires-portables": {
     "status": "filtered",
@@ -1550,17 +1550,17 @@
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/06/04/les-meilleurs-robots-aspirateurs-laveurs_6188403_5306572.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.086010"
+    "processed_at": "2025-09-13T06:01:15.277636"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/06/10/les-meilleures-friteuses-sans-huile_6202128_5306572.html": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.090179"
+    "processed_at": "2025-09-13T06:01:15.280936"
   },
   "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/07/01/comparatif-les-meilleures-liseuses-noir-et-blanc_6617244_5306571.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=liseuses": {
     "status": "filtered",
     "reason": "matches skip pattern: /guide",
-    "processed_at": "2025-09-07T06:51:01.094193"
+    "processed_at": "2025-09-13T06:01:15.284249"
   },
   "2025-09:www.lemonde.fr:/histoire/video/2025/08/02/hiroshima-comment-s-est-deroule-le-bombardement-atomique-le-plus-devastateur-de-l-histoire_6626343_4655323.html": {
     "status": "success",
@@ -1571,17 +1571,17 @@
   "2025-09:www.lemonde.fr:/idees-chroniques/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.460450"
+    "processed_at": "2025-09-13T06:01:16.396125"
   },
   "2025-09:www.lemonde.fr:/idees-tribunes/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.464445"
+    "processed_at": "2025-09-13T06:01:16.408410"
   },
   "2025-09:www.lemonde.fr:/idees/": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:02.468413"
+    "processed_at": "2025-09-13T06:01:16.415358"
   },
   "2025-09:www.lemonde.fr:/idees/article/2025/08/30/l-entente-franco-allemande-a-l-epreuve-des-incertitudes-politiques-francaises_6637519_3232.html": {
     "status": "success",
@@ -1598,12 +1598,12 @@
   "2025-09:www.digi24.ro:/opinii": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:04.389272"
+    "processed_at": "2025-09-13T06:02:04.824803"
   },
   "2025-09:www.digi24.ro:/opinii/agora-digi": {
     "status": "filtered",
     "reason": "no article ID found",
-    "processed_at": "2025-09-07T06:51:04.394533"
+    "processed_at": "2025-09-13T06:02:04.834701"
   },
   "2025-09:www.digi24.ro:/opinii/agora-digi/adevarul-despre-facturile-la-energie-in-cautarea-vinovatului-de-serviciu-3393285": {
     "status": "success",
@@ -1651,5 +1651,2340 @@
     "file_path": "content/2025-08/www.bzi.ro/raw/avertisment-pentru-soferi-se-ridica-masinile-incepand-cu-25-august-2025-5333876.html",
     "processed_at": "2025-09-07T06:51:13.442756",
     "content_length": 213608
+  },
+  "2025-09:www.lemonde.fr:/actualite-medias/article/2025/09/12/patrick-cohen-n-a-pas-commis-de-faute-selon-le-comite-d-ethique-de-france-televisions-apres-des-enregistrements-diffuses-a-son-insu_6640664_3236.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/patrick-cohen-n-a-pas-commis-de-faute-selon-le-comite-d-ethique-de-france-televisions-apres-des-enregistrements-diffuses-a-son-insu_6640664_3236.html",
+    "processed_at": "2025-09-13T06:01:04.058480",
+    "content_length": 137059
+  },
+  "2025-09:www.lemonde.fr:/climat/article/2025/09/12/le-pas-de-calais-et-le-var-en-vigilance-orange-pluies-inondations-et-orages-samedi_6640657_1652612.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/le-pas-de-calais-et-le-var-en-vigilance-orange-pluies-inondations-et-orages-samedi_6640657_1652612.html",
+    "processed_at": "2025-09-13T06:01:05.258735",
+    "content_length": 161070
+  },
+  "2025-09:www.lemonde.fr:/culture/article/2025/09/09/katrina-l-ouragan-infernal-sur-netflix-vingt-ans-apres-spike-lee-prend-le-pouls-de-la-nouvelle-orleans_6640151_3246.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/katrina-l-ouragan-infernal-sur-netflix-vingt-ans-apres-spike-lee-prend-le-pouls-de-la-nouvelle-orleans_6640151_3246.html",
+    "processed_at": "2025-09-13T06:01:06.379412",
+    "content_length": 130035
+  },
+  "2025-09:www.lemonde.fr:/culture/article/2025/09/12/le-retour-de-pierre-richard-dernier-geant-du-cinema-populaire_6640495_3246.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/le-retour-de-pierre-richard-dernier-geant-du-cinema-populaire_6640495_3246.html",
+    "processed_at": "2025-09-13T06:01:07.471368",
+    "content_length": 127941
+  },
+  "2025-09:www.lemonde.fr:/culture/article/2025/09/12/obsessions-adolescentes-au-festival-de-deauville_6640661_3246.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/obsessions-adolescentes-au-festival-de-deauville_6640661_3246.html",
+    "processed_at": "2025-09-13T06:01:08.558449",
+    "content_length": 127937
+  },
+  "2025-09:www.lemonde.fr:/economie/article/2025/09/03/aux-etats-unis-google-echappe-au-demantelement_6638494_3234.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/aux-etats-unis-google-echappe-au-demantelement_6638494_3234.html",
+    "processed_at": "2025-09-13T06:01:09.680288",
+    "content_length": 129324
+  },
+  "2025-09:www.lemonde.fr:/economie/article/2025/09/12/entree-d-euronext-au-cac-40-son-patron-vante-a-l-envi-le-succes-d-un-modele-federal-europeen_6640612_3234.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/entree-d-euronext-au-cac-40-son-patron-vante-a-l-envi-le-succes-d-un-modele-federal-europeen_6640612_3234.html",
+    "processed_at": "2025-09-13T06:01:10.770766",
+    "content_length": 129982
+  },
+  "2025-09:www.lemonde.fr:/economie/article/2025/09/12/l-humanite-accuse-le-milliardaire-conservateur-pierre-edouard-sterin-d-avoir-baptise-sa-holding-du-nom-d-un-de-ses-journalistes_6640633_3234.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/l-humanite-accuse-le-milliardaire-conservateur-pierre-edouard-sterin-d-avoir-baptise-sa-holding-du-nom-d-un-de-ses-journalistes_6640633_3234.html",
+    "processed_at": "2025-09-13T06:01:11.873894",
+    "content_length": 136679
+  },
+  "2025-09:www.lemonde.fr:/economie/video/2025/09/11/video-comment-la-dette-s-est-creusee-depuis-l-election-de-macron_6640426_3234.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/video-comment-la-dette-s-est-creusee-depuis-l-election-de-macron_6640426_3234.html",
+    "processed_at": "2025-09-13T06:01:12.987335",
+    "content_length": 125748
+  },
+  "2025-09:www.lemonde.fr:/festival/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:14.045331"
+  },
+  "2025-09:www.lemonde.fr:/guerre-au-proche-orient/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:14.049036"
+  },
+  "2025-09:www.lemonde.fr:/guerre-au-proche-orient/article/2025/09/12/israel-palestine-l-assemblee-generale-de-l-onu-adopte-une-declaration-relancant-la-solution-a-deux-etats-sans-le-hamas_6640680_6325529.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/israel-palestine-l-assemblee-generale-de-l-onu-adopte-une-declaration-relancant-la-solution-a-deux-etats-sans-le-hamas_6640680_6325529.html",
+    "processed_at": "2025-09-13T06:01:14.140250",
+    "content_length": 135264
+  },
+  "2025-09:www.lemonde.fr:/guides-d-achat/article/2022/09/01/les-meilleures-lunch-box-pour-la-pause-dejeuner_6139786_5306571.html#origin=HPcarrousell?lmd_medium=blocservice&lmd_campaign=services_Guides-achat_lmfr&lmd_creation=lunchbox": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /guide",
+    "processed_at": "2025-09-13T06:01:15.198130"
+  },
+  "2025-09:www.lemonde.fr:/guides-d-achat/article/2025/09/08/le-meilleur-antivol-pour-velo_6195018_5306572.html?lmd_campaign=services_guides-achat_lmfr&lmd_medium=display&lmd_variant=blocservice&lmd_creation=cadenas-velo": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /guide",
+    "processed_at": "2025-09-13T06:01:15.287556"
+  },
+  "2025-09:www.lemonde.fr:/histoire/article/2025/09/12/j-allais-renoncer-quand-un-courriel-miraculeux-un-de-plus-m-est-parvenu-extraits-du-photographe-inconnu-de-l-occupation-de-philippe-broussard_6640499_4655323.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/j-allais-renoncer-quand-un-courriel-miraculeux-un-de-plus-m-est-parvenu-extraits-du-photographe-inconnu-de-l-occupation-de-philippe-broussard_6640499_4655323.html",
+    "processed_at": "2025-09-13T06:01:15.377762",
+    "content_length": 125434
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/09/mouvement-du-10-septembre-le-but-n-est-plus-de-renverser-le-capitalisme-mais-de-le-rendre-moins-cruel-pour-les-plus-demunis_6640154_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/mouvement-du-10-septembre-le-but-n-est-plus-de-renverser-le-capitalisme-mais-de-le-rendre-moins-cruel-pour-les-plus-demunis_6640154_3232.html",
+    "processed_at": "2025-09-13T06:01:16.510516",
+    "content_length": 132965
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/12/comment-la-politique-de-l-offre-detourne-l-argent-public-au-profit-des-plus-riches_6640595_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/comment-la-politique-de-l-offre-detourne-l-argent-public-au-profit-des-plus-riches_6640595_3232.html",
+    "processed_at": "2025-09-13T06:01:17.613883",
+    "content_length": 126509
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/12/la-securite-nationale-instaure-le-regne-du-secret-au-c-ur-du-regime-parlementaire-de-la-v-republique_6640670_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/la-securite-nationale-instaure-le-regne-du-secret-au-c-ur-du-regime-parlementaire-de-la-v-republique_6640670_3232.html",
+    "processed_at": "2025-09-13T06:01:18.726358",
+    "content_length": 129742
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/12/le-chaos-gouvernemental-n-est-pas-lie-a-l-absence-de-majorite-a-l-assemblee-mais-aux-pratiques-des-responsables-politiques_6640500_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/le-chaos-gouvernemental-n-est-pas-lie-a-l-absence-de-majorite-a-l-assemblee-mais-aux-pratiques-des-responsables-politiques_6640500_3232.html",
+    "processed_at": "2025-09-13T06:01:19.835708",
+    "content_length": 129908
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/12/les-lieux-culturels-finances-par-de-l-argent-public-doivent-ils-presenter-en-priorite-des-createurs-francais_6640502_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/les-lieux-culturels-finances-par-de-l-argent-public-doivent-ils-presenter-en-priorite-des-createurs-francais_6640502_3232.html",
+    "processed_at": "2025-09-13T06:01:20.942202",
+    "content_length": 129428
+  },
+  "2025-09:www.lemonde.fr:/idees/article/2025/09/12/reguler-tiktok-et-les-autres-reseaux-sociaux-une-necessite-pour-proteger-les-mineurs_6640601_3232.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/reguler-tiktok-et-les-autres-reseaux-sociaux-une-necessite-pour-proteger-les-mineurs_6640601_3232.html",
+    "processed_at": "2025-09-13T06:01:22.052006",
+    "content_length": 136990
+  },
+  "2025-09:www.lemonde.fr:/international/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:23.058358"
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/apres-l-assassinat-de-charlie-kirk-l-administration-trump-entre-deuil-et-desir-de-vengeance_6640494_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/apres-l-assassinat-de-charlie-kirk-l-administration-trump-entre-deuil-et-desir-de-vengeance_6640494_3210.html",
+    "processed_at": "2025-09-13T06:01:23.144380",
+    "content_length": 133584
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/apres-l-incursion-de-drones-russes-en-pologne-l-otan-renforce-son-flanc-est_6640679_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/apres-l-incursion-de-drones-russes-en-pologne-l-otan-renforce-son-flanc-est_6640679_3210.html",
+    "processed_at": "2025-09-13T06:01:24.261142",
+    "content_length": 130919
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/bresil-apres-sa-condamnation-a-vingt-sept-ans-de-prison-jair-bolsonaro-compte-sur-ses-soutiens-pour-beneficier-d-une-loi-d-amnistie_6640677_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/bresil-apres-sa-condamnation-a-vingt-sept-ans-de-prison-jair-bolsonaro-compte-sur-ses-soutiens-pour-beneficier-d-une-loi-d-amnistie_6640677_3210.html",
+    "processed_at": "2025-09-13T06:01:25.376557",
+    "content_length": 133007
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/donald-trump-affirme-que-le-tueur-presume-de-l-influenceur-conservateur-charlie-kirk-a-ete-arrete_6640627_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/donald-trump-affirme-que-le-tueur-presume-de-l-influenceur-conservateur-charlie-kirk-a-ete-arrete_6640627_3210.html",
+    "processed_at": "2025-09-13T06:01:26.528303",
+    "content_length": 142392
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/jair-bolsonaro-condamne-a-plus-27-ans-de-prison-pour-tentative-de-coup-d-etat-un-jugement-historique_6640507_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/jair-bolsonaro-condamne-a-plus-27-ans-de-prison-pour-tentative-de-coup-d-etat-un-jugement-historique_6640507_3210.html",
+    "processed_at": "2025-09-13T06:01:27.649267",
+    "content_length": 133241
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/le-directeur-du-fbi-kash-patel-sur-la-sellette-alors-que-l-assassin-de-charlie-kirk-est-toujours-en-fuite_6640506_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/le-directeur-du-fbi-kash-patel-sur-la-sellette-alors-que-l-assassin-de-charlie-kirk-est-toujours-en-fuite_6640506_3210.html",
+    "processed_at": "2025-09-13T06:01:28.739516",
+    "content_length": 133011
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/12/les-services-de-renseignement-israeliens-reconnaissent-que-le-programme-nucleaire-iranien-n-a-pas-ete-aneanti_6640646_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/les-services-de-renseignement-israeliens-reconnaissent-que-le-programme-nucleaire-iranien-n-a-pas-ete-aneanti_6640646_3210.html",
+    "processed_at": "2025-09-13T06:01:29.834470",
+    "content_length": 134936
+  },
+  "2025-09:www.lemonde.fr:/international/article/2025/09/13/a-buenos-aires-des-milliers-de-personnes-defilent-apres-les-vetos-presidentiels-a-des-hausses-de-financements-publics-pour-l-universite-et-la-sante_6640690_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/a-buenos-aires-des-milliers-de-personnes-defilent-apres-les-vetos-presidentiels-a-des-hausses-de-financements-publics-pour-l-universite-et-la-sante_6640690_3210.html",
+    "processed_at": "2025-09-13T06:01:30.992243",
+    "content_length": 137049
+  },
+  "2025-09:www.lemonde.fr:/international/live/2025/09/13/en-direct-gaza-israel-intensifie-ses-attaques-sur-la-ville-de-gaza-50-morts-vendredi-dans-l-ensemble-de-l-enclave_6640485_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/en-direct-gaza-israel-intensifie-ses-attaques-sur-la-ville-de-gaza-50-morts-vendredi-dans-l-ensemble-de-l-enclave_6640485_3210.html",
+    "processed_at": "2025-09-13T06:01:32.101300",
+    "content_length": 259707
+  },
+  "2025-09:www.lemonde.fr:/international/live/2025/09/13/en-direct-guerre-en-ukraine-a-l-onu-la-pologne-et-ses-allies-appellent-moscou-a-cesser-les-provocations_6639249_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/en-direct-guerre-en-ukraine-a-l-onu-la-pologne-et-ses-allies-appellent-moscou-a-cesser-les-provocations_6639249_3210.html",
+    "processed_at": "2025-09-13T06:01:33.192946",
+    "content_length": 261231
+  },
+  "2025-09:www.lemonde.fr:/international/video/2025/09/12/la-russie-et-la-bielorussie-ont-commence-des-exercices-militaires-conjoints_6640650_3210.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/la-russie-et-la-bielorussie-ont-commence-des-exercices-militaires-conjoints_6640650_3210.html",
+    "processed_at": "2025-09-13T06:01:34.342924",
+    "content_length": 126919
+  },
+  "2025-09:www.lemonde.fr:/intimites/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.359535"
+  },
+  "2025-09:www.lemonde.fr:/jeu/t-shirt-festival-du-monde?lmd_campaign=services_boutique_lmfr&lmd_medium=display&lmd_variant=&lmd_creation=festival-2025": {
+    "status": "filtered",
+    "reason": "matches skip pattern: ?lmd_",
+    "processed_at": "2025-09-13T06:01:35.378103"
+  },
+  "2025-09:www.lemonde.fr:/jeux-abonnes/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.386293"
+  },
+  "2025-09:www.lemonde.fr:/la-guerre-de-gaza/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.391928"
+  },
+  "2025-09:www.lemonde.fr:/le-club-de-l-economie/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.396491"
+  },
+  "2025-09:www.lemonde.fr:/le-fil-good/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.400454"
+  },
+  "2025-09:www.lemonde.fr:/le-monde-et-vous/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.404093"
+  },
+  "2025-09:www.lemonde.fr:/le-monde-evenements/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.407430"
+  },
+  "2025-09:www.lemonde.fr:/le-monde-passe-a-table/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:35.411543"
+  },
+  "2025-09:www.lemonde.fr:/le-monde-services/article/2024/04/26/les-partenaires-du-monde_6230133_447.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/les-partenaires-du-monde_6230133_447.html",
+    "processed_at": "2025-09-13T06:01:35.497475",
+    "content_length": 115116
+  },
+  "2025-09:www.lemonde.fr:/les-decodeurs/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:36.512063"
+  },
+  "2025-09:www.lemonde.fr:/les-offres-incontournables-de-la-rentree/article/2025/08/22/avec-honor-la-rentree-rime-avec-nouveaute-qualite-et-prix-casses_6633488_575.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/avec-honor-la-rentree-rime-avec-nouveaute-qualite-et-prix-casses_6633488_575.html",
+    "processed_at": "2025-09-13T06:01:36.608506",
+    "content_length": 118169
+  },
+  "2025-09:www.lemonde.fr:/les-series/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:37.626685"
+  },
+  "2025-09:www.lemonde.fr:/livres/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:37.639527"
+  },
+  "2025-09:www.lemonde.fr:/livres/article/2025/09/12/histoire-naturelle-de-la-fiction-d-edgar-dubourg-la-chronique-essai-de-roger-pol-droit_6640668_3260.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/histoire-naturelle-de-la-fiction-d-edgar-dubourg-la-chronique-essai-de-roger-pol-droit_6640668_3260.html",
+    "processed_at": "2025-09-13T06:01:37.735854",
+    "content_length": 121915
+  },
+  "2025-09:www.lemonde.fr:/m-beaute/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.739799"
+  },
+  "2025-09:www.lemonde.fr:/m-design-deco/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.744242"
+  },
+  "2025-09:www.lemonde.fr:/m-gastronomie/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.751610"
+  },
+  "2025-09:www.lemonde.fr:/m-horlogerie-joaillerie/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.757749"
+  },
+  "2025-09:www.lemonde.fr:/m-le-mag/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.762349"
+  },
+  "2025-09:www.lemonde.fr:/m-mode/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.777149"
+  },
+  "2025-09:www.lemonde.fr:/m-perso/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:38.800434"
+  },
+  "2025-09:www.lemonde.fr:/m-perso/article/2025/09/12/un-apero-avec-mister-v-je-suis-le-mec-a-12-20-ni-tres-drole-ni-tres-beau_6640658_4497916.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/un-apero-avec-mister-v-je-suis-le-mec-a-12-20-ni-tres-drole-ni-tres-beau_6640658_4497916.html",
+    "processed_at": "2025-09-13T06:01:38.907968",
+    "content_length": 127788
+  },
+  "2025-09:www.lemonde.fr:/m-styles/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:39.915664"
+  },
+  "2025-09:www.lemonde.fr:/m-styles/article/2025/09/12/a-milan-un-petit-palais-de-la-mode_6640667_4497319.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/a-milan-un-petit-palais-de-la-mode_6640667_4497319.html",
+    "processed_at": "2025-09-13T06:01:40.006335",
+    "content_length": 131302
+  },
+  "2025-09:www.lemonde.fr:/m-styles/article/2025/09/12/prendre-l-air-en-rer-de-la-place-du-nautilus-de-cergy-aux-serres-d-orchidees-de-boissy-saint-leger_6640674_4497319.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/prendre-l-air-en-rer-de-la-place-du-nautilus-de-cergy-aux-serres-d-orchidees-de-boissy-saint-leger_6640674_4497319.html",
+    "processed_at": "2025-09-13T06:01:41.294644",
+    "content_length": 680352
+  },
+  "2025-09:www.lemonde.fr:/m-styles/article/2025/09/12/que-faire-que-voir-ou-aller-l-agenda-culturel-et-art-de-vivre-en-france-a-partir-du-13-septembre_6640669_4497319.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/que-faire-que-voir-ou-aller-l-agenda-culturel-et-art-de-vivre-en-france-a-partir-du-13-septembre_6640669_4497319.html",
+    "processed_at": "2025-09-13T06:01:42.403845",
+    "content_length": 130553
+  },
+  "2025-09:www.lemonde.fr:/m-voyage/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.412193"
+  },
+  "2025-09:www.lemonde.fr:/mali/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.415560"
+  },
+  "2025-09:www.lemonde.fr:/maroc/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.418990"
+  },
+  "2025-09:www.lemonde.fr:/memorable/#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.422391"
+  },
+  "2025-09:www.lemonde.fr:/memorable/blog": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.425731"
+  },
+  "2025-09:www.lemonde.fr:/memorable/boutique/": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /boutique/",
+    "processed_at": "2025-09-13T06:01:43.429067"
+  },
+  "2025-09:www.lemonde.fr:/memorable/boutique/gift/#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /boutique/",
+    "processed_at": "2025-09-13T06:01:43.432411"
+  },
+  "2025-09:www.lemonde.fr:/memorable/inscription?a9epi=epi4d6a49314d5451774f5449314e673d3d0a#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.440133"
+  },
+  "2025-09:www.lemonde.fr:/memorable/inscription?a9epi=gAAAAABe615S_shyVBc3YfOPlg1ydKFGFwqtJ3bPT_OrhoIhIHKsfeK8mCjEA0lR6TrGDx7jycuBqw1uYkdnbbnsJbeKdrDuKQ==#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.443521"
+  },
+  "2025-09:www.lemonde.fr:/memorable/quiz-et-questions-de-culture-generale": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.448125"
+  },
+  "2025-09:www.lemonde.fr:/memorable/quiz-et-questions-de-culture-generale#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.452384"
+  },
+  "2025-09:www.lemonde.fr:/memorable/tester-et-ameliorer-sa-memoire#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /test",
+    "processed_at": "2025-09-13T06:01:43.455784"
+  },
+  "2025-09:www.lemonde.fr:/musiques/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.459155"
+  },
+  "2025-09:www.lemonde.fr:/nepal/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.463946"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.467491"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/boutique/#xtor=EPR-33281178-[lemondeboutique]#origin=HPcarrousel": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /boutique/",
+    "processed_at": "2025-09-13T06:01:43.470843"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/chaleur-humaine/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.474197"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/darons-daronnes/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.477539"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/le-fil-good-du-monde/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.480989"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/le-gout-du-monde/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.484785"
+  },
+  "2025-09:www.lemonde.fr:/newsletters/politique/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.488148"
+  },
+  "2025-09:www.lemonde.fr:/notions/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.491502"
+  },
+  "2025-09:www.lemonde.fr:/perspectives/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.494842"
+  },
+  "2025-09:www.lemonde.fr:/pixels/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.498169"
+  },
+  "2025-09:www.lemonde.fr:/planete/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:43.501515"
+  },
+  "2025-09:www.lemonde.fr:/planete/article/2025/09/12/le-plan-de-robert-kennedy-jr-pour-rendre-sa-sante-a-l-amerique-epargne-les-aliments-gras-sales-et-sucres-omnipresents-aux-etats-unis_6640614_3244.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/le-plan-de-robert-kennedy-jr-pour-rendre-sa-sante-a-l-amerique-epargne-les-aliments-gras-sales-et-sucres-omnipresents-aux-etats-unis_6640614_3244.html",
+    "processed_at": "2025-09-13T06:01:43.592362",
+    "content_length": 132645
+  },
+  "2025-09:www.lemonde.fr:/planete/article/2025/09/12/seisme-en-afghanistan-les-femmes-privees-de-soins-en-raison-des-regles-religieuses-edictees-par-les-talibans_6640616_3244.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/seisme-en-afghanistan-les-femmes-privees-de-soins-en-raison-des-regles-religieuses-edictees-par-les-talibans_6640616_3244.html",
+    "processed_at": "2025-09-13T06:01:44.683624",
+    "content_length": 132210
+  },
+  "2025-09:www.lemonde.fr:/planete/article/2025/09/13/l-administration-trump-veut-supprimer-l-obligation-faite-aux-industries-de-declarer-leurs-emissions-polluantes_6640686_3244.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/l-administration-trump-veut-supprimer-l-obligation-faite-aux-industries-de-declarer-leurs-emissions-polluantes_6640686_3244.html",
+    "processed_at": "2025-09-13T06:01:45.785758",
+    "content_length": 139007
+  },
+  "2025-09:www.lemonde.fr:/podcasts/": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /podcast",
+    "processed_at": "2025-09-13T06:01:46.797252"
+  },
+  "2025-09:www.lemonde.fr:/podcasts/article/2025/09/10/a-carrefour-un-plan-social-deguise_6640207_5463015.html#origin=podcast_home": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /podcast",
+    "processed_at": "2025-09-13T06:01:46.805937"
+  },
+  "2025-09:www.lemonde.fr:/politique/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:46.812310"
+  },
+  "2025-09:www.lemonde.fr:/politique/article/2025/09/12/apres-sa-rencontre-avec-sebastien-lecornu-la-cfdt-explique-vouloir-peser-sur-la-preparation-du-budget_6640671_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/apres-sa-rencontre-avec-sebastien-lecornu-la-cfdt-explique-vouloir-peser-sur-la-preparation-du-budget_6640671_823448.html",
+    "processed_at": "2025-09-13T06:01:46.896896",
+    "content_length": 133556
+  },
+  "2025-09:www.lemonde.fr:/politique/article/2025/09/12/dette-fitch-fait-perdre-son-double-a-a-la-france_6640683_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/dette-fitch-fait-perdre-son-double-a-a-la-france_6640683_823448.html",
+    "processed_at": "2025-09-13T06:01:47.979385",
+    "content_length": 127741
+  },
+  "2025-09:www.lemonde.fr:/politique/article/2025/09/12/sebastien-lecornu-a-peine-nomme-confronte-au-mur-de-la-defiance_6640492_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/sebastien-lecornu-a-peine-nomme-confronte-au-mur-de-la-defiance_6640492_823448.html",
+    "processed_at": "2025-09-13T06:01:49.066903",
+    "content_length": 132946
+  },
+  "2025-09:www.lemonde.fr:/politique/article/2025/09/12/une-plainte-deposee-contre-astrid-panosyan-bouvet-pour-un-redressement-fiscal-evite-a-une-entreprise-une-decision-qu-elle-dit-justifiee_6640681_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/une-plainte-deposee-contre-astrid-panosyan-bouvet-pour-un-redressement-fiscal-evite-a-une-entreprise-une-decision-qu-elle-dit-justifiee_6640681_823448.html",
+    "processed_at": "2025-09-13T06:01:50.162201",
+    "content_length": 136905
+  },
+  "2025-09:www.lemonde.fr:/politique/video/2025/09/10/bloquons-tout-les-premieres-images-des-actions-de-mobilisation-du-10-septembre_6640257_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/bloquons-tout-les-premieres-images-des-actions-de-mobilisation-du-10-septembre_6640257_823448.html",
+    "processed_at": "2025-09-13T06:01:51.263738",
+    "content_length": 128845
+  },
+  "2025-09:www.lemonde.fr:/politique/video/2025/09/10/video-ce-qu-il-faut-retenir-de-la-passation-des-pouvoirs-entre-francois-bayrou-et-sebastien-lecornu_6640326_823448.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/video-ce-qu-il-faut-retenir-de-la-passation-des-pouvoirs-entre-francois-bayrou-et-sebastien-lecornu_6640326_823448.html",
+    "processed_at": "2025-09-13T06:01:52.375581",
+    "content_length": 129376
+  },
+  "2025-09:www.lemonde.fr:/qui-sommes-nous/article/2007/11/17/talents-un-site-d-emploi-coedite-par-le-monde-interactif-et-telerama_978404_3386.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/talents-un-site-d-emploi-coedite-par-le-monde-interactif-et-telerama_978404_3386.html",
+    "processed_at": "2025-09-13T06:01:53.485177",
+    "content_length": 122259
+  },
+  "2025-09:www.lemonde.fr:/recherche/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:54.500137"
+  },
+  "2025-09:www.lemonde.fr:/resultats-elections/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:54.511760"
+  },
+  "2025-09:www.lemonde.fr:/s-evader-en-andorre/article/2025/06/13/eveillez-vous-sens-cette-ete-avec-10-experiences-incontournables-en-andorre_6612716_454.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/eveillez-vous-sens-cette-ete-avec-10-experiences-incontournables-en-andorre_6612716_454.html",
+    "processed_at": "2025-09-13T06:01:54.609120",
+    "content_length": 131627
+  },
+  "2025-09:www.lemonde.fr:/sante/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:55.623964"
+  },
+  "2025-09:www.lemonde.fr:/scenes/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:55.637190"
+  },
+  "2025-09:www.lemonde.fr:/sciences/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:55.647908"
+  },
+  "2025-09:www.lemonde.fr:/sciences/article/2025/09/11/decroiscience-la-recherche-scientifique-appelee-a-la-decroissance_6640411_1650684.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/decroiscience-la-recherche-scientifique-appelee-a-la-decroissance_6640411_1650684.html",
+    "processed_at": "2025-09-13T06:01:55.735406",
+    "content_length": 129136
+  },
+  "2025-09:www.lemonde.fr:/sebastien-lecornu-premier-ministre/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:56.742081"
+  },
+  "2025-09:www.lemonde.fr:/senegal/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:56.745790"
+  },
+  "2025-09:www.lemonde.fr:/services/": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /services/",
+    "processed_at": "2025-09-13T06:01:56.749154"
+  },
+  "2025-09:www.lemonde.fr:/smart-cities/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:56.752490"
+  },
+  "2025-09:www.lemonde.fr:/societe/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:56.755816"
+  },
+  "2025-09:www.lemonde.fr:/societe/article/2025/09/13/en-polynesie-enquete-ouverte-apres-des-jets-de-peinture-rouge-sur-les-grilles-de-la-synagogue-de-papeete_6640687_3224.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/en-polynesie-enquete-ouverte-apres-des-jets-de-peinture-rouge-sur-les-grilles-de-la-synagogue-de-papeete_6640687_3224.html",
+    "processed_at": "2025-09-13T06:01:56.842475",
+    "content_length": 130053
+  },
+  "2025-09:www.lemonde.fr:/sport/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:01:57.848308"
+  },
+  "2025-09:www.lemonde.fr:/sport/article/2025/09/12/julian-alaphilippe-remporte-le-grand-prix-cycliste-de-quebec_6640682_3242.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/julian-alaphilippe-remporte-le-grand-prix-cycliste-de-quebec_6640682_3242.html",
+    "processed_at": "2025-09-13T06:01:57.936583",
+    "content_length": 134013
+  },
+  "2025-09:www.lemonde.fr:/sport/article/2025/09/13/marseille-lorient-soiree-reussie-pour-un-nouvel-om-vainqueur-4-0-avec-un-but-de-benjamin-pavard_6640685_3242.html": {
+    "status": "success",
+    "file_path": "content/2025-09/www.lemonde.fr/raw/marseille-lorient-soiree-reussie-pour-un-nouvel-om-vainqueur-4-0-avec-un-but-de-benjamin-pavard_6640685_3242.html",
+    "processed_at": "2025-09-13T06:01:59.027823",
+    "content_length": 139289
+  },
+  "2025-09:www.lemonde.fr:/suisse/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.042057"
+  },
+  "2025-09:www.lemonde.fr:/syndication/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.055009"
+  },
+  "2025-09:www.lemonde.fr:/televisions-radio/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.062616"
+  },
+  "2025-09:www.lemonde.fr:/tribunes-eco/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.068162"
+  },
+  "2025-09:www.lemonde.fr:/tunisie/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.072709"
+  },
+  "2025-09:www.lemonde.fr:/videos/": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:00.076662"
+  },
+  "2025-09:www.digi24.ro:/autor/alexandru-muraru": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /autor/",
+    "processed_at": "2025-09-13T06:02:00.082458"
+  },
+  "2025-09:www.digi24.ro:/digieconomic/digital/o-saptamana-de-speranta-pentru-industria-tehnologica-din-europa-66605": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /digieconomic/",
+    "processed_at": "2025-09-13T06:02:00.119283"
+  },
+  "2025-09:www.digi24.ro:/digieconomic/macro/ce-spune-fmi-dupa-misiunea-in-romania-daca-pachetul-de-reforme-va-fi-implementat-pe-deplin-deficitul-fiscal-va-scadea-66585": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /digieconomic/",
+    "processed_at": "2025-09-13T06:02:00.123970"
+  },
+  "2025-09:www.digi24.ro:/digistoria/digistoria-cele-mai-importante-evenimente-petrecute-pe-12-septembrie-3410057": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/digistoria-cele-mai-importante-evenimente-petrecute-pe-12-septembrie-3410057.html",
+    "processed_at": "2025-09-13T06:02:00.366833",
+    "content_length": 107364
+  },
+  "2025-09:www.digi24.ro:/emisiuni/agro-jurnal/agrojurnal-ora-09-00-7-septembrie-3404619": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /emisiuni",
+    "processed_at": "2025-09-13T06:02:01.405704"
+  },
+  "2025-09:www.digi24.ro:/emisiuni/la-volan/la-volan-6-septembrie-12-30-3404527": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /emisiuni",
+    "processed_at": "2025-09-13T06:02:01.411572"
+  },
+  "2025-09:www.digi24.ro:/emisiuni/scena-deschisa/scena-deschisa-6-septembrie-invitat-marius-urzica-3404529": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /emisiuni",
+    "processed_at": "2025-09-13T06:02:01.416642"
+  },
+  "2025-09:www.digi24.ro:/emisiuni/stirisportmeteo": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /emisiuni",
+    "processed_at": "2025-09-13T06:02:01.421202"
+  },
+  "2025-09:www.digi24.ro:/emisiuni/tinerete-fara-batranete/tinerete-fara-batranete-6-septembrie-17-30-3404531": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /emisiuni",
+    "processed_at": "2025-09-13T06:02:01.425583"
+  },
+  "2025-09:www.digi24.ro:/finante/fmi-prevede-o-incetinire-a-cresterii-economice-in-romania-reprezentantii-fondului-au-prezentat-prognoza-pentru-2026-3410627": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/fmi-prevede-o-incetinire-a-cresterii-economice-in-romania-reprezentantii-fondului-au-prezentat-prognoza-pentru-2026-3410627.html",
+    "processed_at": "2025-09-13T06:02:01.510318",
+    "content_length": 113522
+  },
+  "2025-09:www.digi24.ro:/impreuna-fara-ura/maia-morgenstern-eu-am-crescut-intr-o-familie-unde-discursul-urii-nu-avea-ce-sa-caute-3408953": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/maia-morgenstern-eu-am-crescut-intr-o-familie-unde-discursul-urii-nu-avea-ce-sa-caute-3408953.html",
+    "processed_at": "2025-09-13T06:02:02.625619",
+    "content_length": 116044
+  },
+  "2025-09:www.digi24.ro:/magazin/timp-liber/vacante/p-fasten-your-seatbelts-paralela45-a-lansat-sezonul-2026-cu-premiere-absolute-in-turismul-romanesc-3408773": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/p-fasten-your-seatbelts-paralela45-a-lansat-sezonul-2026-cu-premiere-absolute-in-turismul-romanesc-3408773.html",
+    "processed_at": "2025-09-13T06:02:03.791104",
+    "content_length": 106215
+  },
+  "2025-09:www.digi24.ro:/opinii/agora-digi/separam-puterile-dar-nu-separam-realitatea-de-ce-reforma-pensiilor-magistratilor-e-normalitate-3409551": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/separam-puterile-dar-nu-separam-realitatea-de-ce-reforma-pensiilor-magistratilor-e-normalitate-3409551.html",
+    "processed_at": "2025-09-13T06:02:04.916238",
+    "content_length": 100962
+  },
+  "2025-09:www.digi24.ro:/opinii/opinie-si-promovare-politica": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:05.937844"
+  },
+  "2025-09:www.digi24.ro:/opinii/vocile-digi": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:05.949212"
+  },
+  "2025-09:www.digi24.ro:/quiz-week": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:05.956911"
+  },
+  "2025-09:www.digi24.ro:/sanatate-digimatinal/chirurgie-de-mare-anvergura-pentru-metastazele-hepatice-3406281": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/chirurgie-de-mare-anvergura-pentru-metastazele-hepatice-3406281.html",
+    "processed_at": "2025-09-13T06:02:06.035517",
+    "content_length": 107923
+  },
+  "2025-09:www.digi24.ro:/special/campanii-digi24": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:07.044041"
+  },
+  "2025-09:www.digi24.ro:/stiri": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:07.049626"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:07.055355"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/barbat-beat-prins-la-volan-in-mures-el-abia-isi-redobandise-permisul-de-conducere-dupa-ce-i-a-fost-anulat-pentru-fapte-similare-3411403": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/barbat-beat-prins-la-volan-in-mures-el-abia-isi-redobandise-permisul-de-conducere-dupa-ce-i-a-fost-anulat-pentru-fapte-similare-3411403.html",
+    "processed_at": "2025-09-13T06:02:07.136454",
+    "content_length": 95811
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/barbatul-din-buzau-care-i-ar-fi-turnat-otrava-in-ciorba-fostului-socru-a-fost-trimis-in-judecata-3410593": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/barbatul-din-buzau-care-i-ar-fi-turnat-otrava-in-ciorba-fostului-socru-a-fost-trimis-in-judecata-3410593.html",
+    "processed_at": "2025-09-13T06:02:08.240347",
+    "content_length": 97347
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/educatie": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:09.261350"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/evenimente": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:09.277162"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/evenimente/prima-declaratie-a-femeii-prinse-cu-6-cutite-la-intrarea-in-parlament-erau-obiecte-vechi-din-perioada-sovietica-le-aveam-in-portfard-3410701": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/prima-declaratie-a-femeii-prinse-cu-6-cutite-la-intrarea-in-parlament-erau-obiecte-vechi-din-perioada-sovietica-le-aveam-in-portfard-3410701.html",
+    "processed_at": "2025-09-13T06:02:09.364081",
+    "content_length": 104985
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/evenimente/reactia-aur-dupa-ce-o-femeie-care-se-afla-pe-lista-partidului-pentru-un-eveniment-a-fost-prinsa-cu-sase-cutite-la-parlament-3410345": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/reactia-aur-dupa-ce-o-femeie-care-se-afla-pe-lista-partidului-pentru-un-eveniment-a-fost-prinsa-cu-sase-cutite-la-parlament-3410345.html",
+    "processed_at": "2025-09-13T06:02:10.479720",
+    "content_length": 97002
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/evenimente/tanara-din-calarasi-sechestrata-si-batuta-timp-de-cinci-zile-de-propriul-iubit-barbatul-a-fost-arestat-preventiv-3410713": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/tanara-din-calarasi-sechestrata-si-batuta-timp-de-cinci-zile-de-propriul-iubit-barbatul-a-fost-arestat-preventiv-3410713.html",
+    "processed_at": "2025-09-13T06:02:11.556416",
+    "content_length": 111588
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/generalul-r-virgil-balaceanu-despre-drona-gasita-pe-o-plaja-din-bulgaria-ar-trebui-sa-ne-obisnuim-cu-asa-ceva-3411061": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/generalul-r-virgil-balaceanu-despre-drona-gasita-pe-o-plaja-din-bulgaria-ar-trebui-sa-ne-obisnuim-cu-asa-ceva-3411061.html",
+    "processed_at": "2025-09-13T06:02:12.640276",
+    "content_length": 117060
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/justitie": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:13.659645"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:13.673814"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica/catalin-drula-e-limpede-ca-psd-nu-si-doreste-alegeri-la-bucuresti-probabil-nu-anticipeaza-ca-le-ar-castiga-3410907": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/catalin-drula-e-limpede-ca-psd-nu-si-doreste-alegeri-la-bucuresti-probabil-nu-anticipeaza-ca-le-ar-castiga-3410907.html",
+    "processed_at": "2025-09-13T06:02:13.793456",
+    "content_length": 117043
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica/ministra-mediului-l-a-demis-pe-sorin-lucaci-de-la-conducerea-apele-romane-care-a-fost-motivul-deciziei-3411283": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/ministra-mediului-l-a-demis-pe-sorin-lucaci-de-la-conducerea-apele-romane-care-a-fost-motivul-deciziei-3411283.html",
+    "processed_at": "2025-09-13T06:02:14.888035",
+    "content_length": 97300
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica/mosteanu-reactie-dupa-lansarea-santinelei-estice-unitate-vigilenta-reactie-rapida-raspunsurile-corecte-la-agresiunea-rusiei-3411225": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/mosteanu-reactie-dupa-lansarea-santinelei-estice-unitate-vigilenta-reactie-rapida-raspunsurile-corecte-la-agresiunea-rusiei-3411225.html",
+    "processed_at": "2025-09-13T06:02:15.976897",
+    "content_length": 100381
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica/parlamentul-cheltuie-1-milion-e-cu-angajatii-alesilor-lunar-1-000-de-consilieri-experti-si-soferi-la-464-de-senatori-si-deputati-3410725": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/parlamentul-cheltuie-1-milion-e-cu-angajatii-alesilor-lunar-1-000-de-consilieri-experti-si-soferi-la-464-de-senatori-si-deputati-3410725.html",
+    "processed_at": "2025-09-13T06:02:17.057441",
+    "content_length": 117231
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/politica/surse-plafonarea-preturilor-la-alimentele-de-baza-nu-va-mai-fi-prelungita-de-la-1-octombrie-3411043": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/surse-plafonarea-preturilor-la-alimentele-de-baza-nu-va-mai-fi-prelungita-de-la-1-octombrie-3411043.html",
+    "processed_at": "2025-09-13T06:02:18.139891",
+    "content_length": 97141
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/romania-saluta-lansarea-operatiunii-santinela-estica-a-nato-un-mesaj-puternic-privind-determinarea-noastra-comuna-3411233": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/romania-saluta-lansarea-operatiunii-santinela-estica-a-nato-un-mesaj-puternic-privind-determinarea-noastra-comuna-3411233.html",
+    "processed_at": "2025-09-13T06:02:19.230123",
+    "content_length": 98337
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/sanatate": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:20.252210"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/social": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /social",
+    "processed_at": "2025-09-13T06:02:20.265350"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/social/cnas-tratamentele-pentru-pacientii-oncologici-vor-fi-asigurate-fara-intreruperi-3410901": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /social",
+    "processed_at": "2025-09-13T06:02:20.272654"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/social/garda-de-mediu-85-din-deseurile-din-capitala-ajung-netratate-la-groapa-de-gunoi-bucurestiul-pierde-cursa-reciclarii-3410975": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /social",
+    "processed_at": "2025-09-13T06:02:20.278546"
+  },
+  "2025-09:www.digi24.ro:/stiri/actualitate/trei-barbati-si-o-femeie-trimisi-in-judecata-dupa-ce-au-torturat-un-barbat-pentru-a-i-afla-pin-ul-cardului-victima-a-murit-la-spital-3411355": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/trei-barbati-si-o-femeie-trimisi-in-judecata-dupa-ce-au-torturat-un-barbat-pentru-a-i-afla-pin-ul-cardului-victima-a-murit-la-spital-3411355.html",
+    "processed_at": "2025-09-13T06:02:20.361552",
+    "content_length": 108972
+  },
+  "2025-09:www.digi24.ro:/stiri/biserica-ridicata-ilegal-in-zona-protejata-de-familia-lui-gigi-becali-deputatul-nu-da-inapoi-pe-terenul-meu-fac-ce-vreau-3410023": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/biserica-ridicata-ilegal-in-zona-protejata-de-familia-lui-gigi-becali-deputatul-nu-da-inapoi-pe-terenul-meu-fac-ce-vreau-3410023.html",
+    "processed_at": "2025-09-13T06:02:21.464940",
+    "content_length": 111980
+  },
+  "2025-09:www.digi24.ro:/stiri/economie": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:22.484983"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/agricultura": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:22.497290"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/bani-afaceri": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:22.507250"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/bani-afaceri/alexandru-nazare-maraton-de-intalniri-cu-marii-finantatori-de-pe-wall-street-au-sprijinit-constant-accesul-romaniei-pe-piete-3410517": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/alexandru-nazare-maraton-de-intalniri-cu-marii-finantatori-de-pe-wall-street-au-sprijinit-constant-accesul-romaniei-pe-piete-3410517.html",
+    "processed_at": "2025-09-13T06:02:22.588966",
+    "content_length": 98258
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/companii": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:23.600581"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/companii/arcelormittal-opreste-definitiv-productia-la-o-fabrica-din-romania-motivele-invocate-de-companie-3411163": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/arcelormittal-opreste-definitiv-productia-la-o-fabrica-din-romania-motivele-invocate-de-companie-3411163.html",
+    "processed_at": "2025-09-13T06:02:23.679076",
+    "content_length": 97978
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/concluziile-delegatiei-fmi-dupa-o-vizita-de-zece-zile-in-romania-cum-evalueaza-specialistii-fondului-reformele-guvernului-bolojan-3411257": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/concluziile-delegatiei-fmi-dupa-o-vizita-de-zece-zile-in-romania-cum-evalueaza-specialistii-fondului-reformele-guvernului-bolojan-3411257.html",
+    "processed_at": "2025-09-13T06:02:24.784707",
+    "content_length": 108405
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/digi-economic": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:25.817888"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/energie": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:25.828369"
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/ilie-bolojan-anunta-ce-se-intampla-cu-proiectele-spitalelor-care-nu-mai-pot-fi-finantate-prin-pnrr-3410789": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/ilie-bolojan-anunta-ce-se-intampla-cu-proiectele-spitalelor-care-nu-mai-pot-fi-finantate-prin-pnrr-3410789.html",
+    "processed_at": "2025-09-13T06:02:25.902072",
+    "content_length": 97642
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/ministrul-de-finante-vizita-in-sua-cu-cine-se-va-intalni-alexandru-nazare-la-washington-d-c-3409657": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/ministrul-de-finante-vizita-in-sua-cu-cine-se-va-intalni-alexandru-nazare-la-washington-d-c-3409657.html",
+    "processed_at": "2025-09-13T06:02:26.997848",
+    "content_length": 96172
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/romania-a-transmis-oficial-pnrr-renegociat-catre-comisia-europeana-vineri-seara-3411427": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/romania-a-transmis-oficial-pnrr-renegociat-catre-comisia-europeana-vineri-seara-3411427.html",
+    "processed_at": "2025-09-13T06:02:28.093104",
+    "content_length": 97614
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/seful-rheinmetall-nu-are-sens-sa-tragi-cu-o-arma-de-500-000-de-dolari-impotriva-unei-drone-de-20-000-ar-trebui-sisteme-mai-ieftine-3410507": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/seful-rheinmetall-nu-are-sens-sa-tragi-cu-o-arma-de-500-000-de-dolari-impotriva-unei-drone-de-20-000-ar-trebui-sisteme-mai-ieftine-3410507.html",
+    "processed_at": "2025-09-13T06:02:29.180366",
+    "content_length": 98682
+  },
+  "2025-09:www.digi24.ro:/stiri/economie/transporturi": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:30.200251"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:30.214173"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/cazul-tinerilor-romani-luati-de-ape-in-italia-la-peste-un-an-de-la-tragedie-parintii-cer-despagubiri-de-aproape-4-milioane-de-euro-3410515": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/cazul-tinerilor-romani-luati-de-ape-in-italia-la-peste-un-an-de-la-tragedie-parintii-cer-despagubiri-de-aproape-4-milioane-de-euro-3410515.html",
+    "processed_at": "2025-09-13T06:02:30.309655",
+    "content_length": 111759
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/cine-e-presupusul-asasin-al-lui-charlie-kirk-oficiali-americani-au-dezvaluit-informatii-despre-suspect-nbc-news-3410921": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/cine-e-presupusul-asasin-al-lui-charlie-kirk-oficiali-americani-au-dezvaluit-informatii-despre-suspect-nbc-news-3410921.html",
+    "processed_at": "2025-09-13T06:02:31.390508",
+    "content_length": 104840
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/coreea-de-nord-executa-oameni-pentru-distribuirea-de-filme-si-programe-tv-straine-potrivit-unui-raport-al-onu-3411303": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/coreea-de-nord-executa-oameni-pentru-distribuirea-de-filme-si-programe-tv-straine-potrivit-unui-raport-al-onu-3411303.html",
+    "processed_at": "2025-09-13T06:02:32.474197",
+    "content_length": 99898
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/criza-in-nepal-presedintele-a-dizolvat-parlamentul-si-a-anuntat-alegeri-legislative-pentru-5-martie-3411327": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/criza-in-nepal-presedintele-a-dizolvat-parlamentul-si-a-anuntat-alegeri-legislative-pentru-5-martie-3411327.html",
+    "processed_at": "2025-09-13T06:02:33.558921",
+    "content_length": 93990
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/declaratia-de-la-new-york-onu-reia-solutia-cu-doua-state-israelian-si-palestinian-fara-hamas-3411159": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/declaratia-de-la-new-york-onu-reia-solutia-cu-doua-state-israelian-si-palestinian-fara-hamas-3411159.html",
+    "processed_at": "2025-09-13T06:02:34.636519",
+    "content_length": 96567
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/intalnire-la-clubul-de-golf-trump-si-premierul-din-qatar-vor-discuta-in-contextul-crizei-din-gaza-3411401": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/intalnire-la-clubul-de-golf-trump-si-premierul-din-qatar-vor-discuta-in-contextul-crizei-din-gaza-3411401.html",
+    "processed_at": "2025-09-13T06:02:35.719851",
+    "content_length": 96955
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/mapamond": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:36.741400"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/mapamond/condamnarea-lui-bolsonaro-sarbatorita-in-brazilia-se-face-dreptate-reactia-liderilor-din-america-latina-3411121": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/condamnarea-lui-bolsonaro-sarbatorita-in-brazilia-se-face-dreptate-reactia-liderilor-din-america-latina-3411121.html",
+    "processed_at": "2025-09-13T06:02:36.860219",
+    "content_length": 100742
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/mapamond/record-de-longevitate-in-japonia-aproape-100-000-de-oameni-au-depasit-varsta-de-100-de-ani-3411301": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/record-de-longevitate-in-japonia-aproape-100-000-de-oameni-au-depasit-varsta-de-100-de-ani-3411301.html",
+    "processed_at": "2025-09-13T06:02:37.964296",
+    "content_length": 100100
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/mapamond/surpriza-la-onu-sua-se-alatura-declaratiei-care-condamna-loviturile-israelului-in-qatar-3410983": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/surpriza-la-onu-sua-se-alatura-declaratiei-care-condamna-loviturile-israelului-in-qatar-3410983.html",
+    "processed_at": "2025-09-13T06:02:39.051455",
+    "content_length": 99486
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/mesajul-lui-putin-pentru-ucraina-europa-si-trump-nu-fac-niciun-pas-inapoi-cum-incearca-moscova-sa-forteze-kievul-sa-renunte-la-lupta-3408007": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/mesajul-lui-putin-pentru-ucraina-europa-si-trump-nu-fac-niciun-pas-inapoi-cum-incearca-moscova-sa-forteze-kievul-sa-renunte-la-lupta-3408007.html",
+    "processed_at": "2025-09-13T06:02:40.148348",
+    "content_length": 101914
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/moldova": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:41.171751"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/nato-lanseaza-operatiunea-eastern-guardian-pentru-a-si-consolida-pozitia-pe-flancul-de-est-vor-fi-mobilizate-resurse-din-opt-tari-3411063": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/nato-lanseaza-operatiunea-eastern-guardian-pentru-a-si-consolida-pozitia-pe-flancul-de-est-vor-fi-mobilizate-resurse-din-opt-tari-3411063.html",
+    "processed_at": "2025-09-13T06:02:41.264306",
+    "content_length": 108113
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/o-drona-de-provenienta-necunoscuta-a-fost-gasita-pe-o-plaja-din-bulgaria-autoritatile-de-la-sofia-investigheaza-cazul-3410959": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/o-drona-de-provenienta-necunoscuta-a-fost-gasita-pe-o-plaja-din-bulgaria-autoritatile-de-la-sofia-investigheaza-cazul-3410959.html",
+    "processed_at": "2025-09-13T06:02:42.354886",
+    "content_length": 96765
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/presedintele-trump-vine-cu-precizari-despre-dronele-rusesti-n-ar-trebui-sa-fie-atat-de-aproape-de-polonia-3410985": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/presedintele-trump-vine-cu-precizari-despre-dronele-rusesti-n-ar-trebui-sa-fie-atat-de-aproape-de-polonia-3410985.html",
+    "processed_at": "2025-09-13T06:02:43.439762",
+    "content_length": 99211
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/program-pilot-in-franta-romana-devine-materie-obligatorie-intr-o-scoala-dintr-o-localitate-la-nord-vest-de-paris-3410687": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/program-pilot-in-franta-romana-devine-materie-obligatorie-intr-o-scoala-dintr-o-localitate-la-nord-vest-de-paris-3410687.html",
+    "processed_at": "2025-09-13T06:02:44.541481",
+    "content_length": 95103
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/rusia": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:45.573145"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/rusia-neaga-ca-incearca-sa-influenteze-alegerile-din-republica-moldova-3411193": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/rusia-neaga-ca-incearca-sa-influenteze-alegerile-din-republica-moldova-3411193.html",
+    "processed_at": "2025-09-13T06:02:45.676524",
+    "content_length": 96292
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/rusia/kremlinul-despre-manevrele-zapad-2025-rusia-nu-ameninta-tarile-din-europa-rusia-nu-a-amenintat-niciodata-pe-nimeni-3410783": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/kremlinul-despre-manevrele-zapad-2025-rusia-nu-ameninta-tarile-din-europa-rusia-nu-a-amenintat-niciodata-pe-nimeni-3410783.html",
+    "processed_at": "2025-09-13T06:02:46.754223",
+    "content_length": 96877
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/singura-tara-araba-pe-care-israelul-si-occidentul-nu-o-pot-bombarda-statul-care-a-investit-masiv-in-apararea-antiaeriana-3410201": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/singura-tara-araba-pe-care-israelul-si-occidentul-nu-o-pot-bombarda-statul-care-a-investit-masiv-in-apararea-antiaeriana-3410201.html",
+    "processed_at": "2025-09-13T06:02:47.850510",
+    "content_length": 98419
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:48.860400"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua-se-alatura-aliatilor-occidentali-si-critica-rusia-pentru-incursiunea-dronelor-in-polonia-3411357": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/sua-se-alatura-aliatilor-occidentali-si-critica-rusia-pentru-incursiunea-dronelor-in-polonia-3411357.html",
+    "processed_at": "2025-09-13T06:02:48.958731",
+    "content_length": 101396
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua/donald-trump-a-numit-inca-un-oras-unde-va-desfasura-garda-nationala-pentru-a-lupta-impotriva-criminalitatii-primarul-e-democrat-3410993": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/donald-trump-a-numit-inca-un-oras-unde-va-desfasura-garda-nationala-pentru-a-lupta-impotriva-criminalitatii-primarul-e-democrat-3410993.html",
+    "processed_at": "2025-09-13T06:02:50.031654",
+    "content_length": 96174
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua/efectul-retoricii-anti-china-sub-administratia-trump-nasa-le-interzice-cetatenilor-chinezi-sa-lucreze-in-programele-sale-spatiale-3408605": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/efectul-retoricii-anti-china-sub-administratia-trump-nasa-le-interzice-cetatenilor-chinezi-sa-lucreze-in-programele-sale-spatiale-3408605.html",
+    "processed_at": "2025-09-13T06:02:51.123449",
+    "content_length": 97880
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua/sua-promit-in-consiliul-de-securitate-al-onu-sa-apere-fiecare-centimetru-din-teritoriul-nato-3411453": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/sua-promit-in-consiliul-de-securitate-al-onu-sa-apere-fiecare-centimetru-din-teritoriul-nato-3411453.html",
+    "processed_at": "2025-09-13T06:02:52.198446",
+    "content_length": 98434
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/sua/sua-stau-pe-un-butoi-cu-pulbere-dupa-asasinarea-lui-charlie-kirk-extremistii-de-stanga-si-de-dreapta-ameninta-cu-un-razboi-civil-3408951": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/sua-stau-pe-un-butoi-cu-pulbere-dupa-asasinarea-lui-charlie-kirk-extremistii-de-stanga-si-de-dreapta-ameninta-cu-un-razboi-civil-3408951.html",
+    "processed_at": "2025-09-13T06:02:53.294692",
+    "content_length": 108130
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:02:54.303583"
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue/a-intrat-in-vigoare-regulamentul-privind-datele-in-ue-europenii-au-control-asupra-datelor-provenite-de-la-dispozitivele-conectate-3410927": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/a-intrat-in-vigoare-regulamentul-privind-datele-in-ue-europenii-au-control-asupra-datelor-provenite-de-la-dispozitivele-conectate-3410927.html",
+    "processed_at": "2025-09-13T06:02:54.384251",
+    "content_length": 98818
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue/eurodeputatii-vor-sa-modifice-acordul-comercial-cu-sua-negociat-de-ursula-von-der-leyen-cu-donald-trump-3411179": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/eurodeputatii-vor-sa-modifice-acordul-comercial-cu-sua-negociat-de-ursula-von-der-leyen-cu-donald-trump-3411179.html",
+    "processed_at": "2025-09-13T06:02:55.457960",
+    "content_length": 97455
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue/lectii-obligatorii-despre-incendii-si-inundatii-in-gradinite-si-scoli-cum-sunt-pregatiti-copiii-din-spania-pentru-criza-climatica-3409685": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/lectii-obligatorii-despre-incendii-si-inundatii-in-gradinite-si-scoli-cum-sunt-pregatiti-copiii-din-spania-pentru-criza-climatica-3409685.html",
+    "processed_at": "2025-09-13T06:02:56.556992",
+    "content_length": 100088
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue/o-tara-din-balcani-incearca-sa-scape-de-coruptie-cu-un-ministru-virtual-creat-de-ai-ce-portofoliu-va-gestiona-3409383": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/o-tara-din-balcani-incearca-sa-scape-de-coruptie-cu-un-ministru-virtual-creat-de-ai-ce-portofoliu-va-gestiona-3409383.html",
+    "processed_at": "2025-09-13T06:02:57.646212",
+    "content_length": 97195
+  },
+  "2025-09:www.digi24.ro:/stiri/externe/ue/ursula-von-der-leyen-propune-o-limita-de-varsta-pentru-utilizarea-retelelor-sociale-in-ue-3407815": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/ursula-von-der-leyen-propune-o-limita-de-varsta-pentru-utilizarea-retelelor-sociale-in-ue-3407815.html",
+    "processed_at": "2025-09-13T06:02:58.735375",
+    "content_length": 96917
+  },
+  "2025-09:www.digi24.ro:/stiri/ipoteza-tulburatoare-in-cazul-nigerianului-care-a-violat-o-prostituata-in-capitala-politia-face-un-apel-catre-alte-posibile-victime-3411335": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/ipoteza-tulburatoare-in-cazul-nigerianului-care-a-violat-o-prostituata-in-capitala-politia-face-un-apel-catre-alte-posibile-victime-3411335.html",
+    "processed_at": "2025-09-13T06:02:59.832595",
+    "content_length": 95524
+  },
+  "2025-09:www.digi24.ro:/stiri/o-angajata-a-postei-a-furat-titluri-de-stat-de-peste-un-milion-de-lei-femeia-ar-fi-grav-bolnava-si-ar-fi-luat-banii-pentru-tratament-3411415": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/o-angajata-a-postei-a-furat-titluri-de-stat-de-peste-un-milion-de-lei-femeia-ar-fi-grav-bolnava-si-ar-fi-luat-banii-pentru-tratament-3411415.html",
+    "processed_at": "2025-09-13T06:03:00.923431",
+    "content_length": 107717
+  },
+  "2025-09:www.digi24.ro:/stiri/o-femeie-din-iasi-este-cercetata-de-politisti-dupa-ce-a-prins-un-porumbel-si-l-a-mancat-3411267": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/o-femeie-din-iasi-este-cercetata-de-politisti-dupa-ce-a-prins-un-porumbel-si-l-a-mancat-3411267.html",
+    "processed_at": "2025-09-13T06:03:02.027979",
+    "content_length": 92976
+  },
+  "2025-09:www.digi24.ro:/stiri/oficial-bnr-politicienii-sa-inteleaga-ca-suntem-aproape-de-marginea-prapastiei-ce-deficit-ar-putea-avea-romania-la-finalul-anului-3411199": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/oficial-bnr-politicienii-sa-inteleaga-ca-suntem-aproape-de-marginea-prapastiei-ce-deficit-ar-putea-avea-romania-la-finalul-anului-3411199.html",
+    "processed_at": "2025-09-13T06:03:03.134051",
+    "content_length": 112748
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:04.151018"
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech/auto": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:04.166566"
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech/descoperiri": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:04.175806"
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech/descoperiri/nasa-a-descoperit-cele-mai-clare-semne-de-pana-acum-ca-pe-marte-a-existat-viata-petele-de-leopard-studiate-pe-planeta-rosie-3408143": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/nasa-a-descoperit-cele-mai-clare-semne-de-pana-acum-ca-pe-marte-a-existat-viata-petele-de-leopard-studiate-pe-planeta-rosie-3408143.html",
+    "processed_at": "2025-09-13T06:03:04.538477",
+    "content_length": 98365
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech/lumea-digitala": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.558625"
+  },
+  "2025-09:www.digi24.ro:/stiri/sci-tech/natura-si-mediu": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.567937"
+  },
+  "2025-09:www.digi24.ro:/stiri/sport": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.574387"
+  },
+  "2025-09:www.digi24.ro:/stiri/sport/alte-sporturi": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.579656"
+  },
+  "2025-09:www.digi24.ro:/stiri/sport/fotbal": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.584248"
+  },
+  "2025-09:www.digi24.ro:/stiri/sport/handbal": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.588656"
+  },
+  "2025-09:www.digi24.ro:/stiri/sport/tenis": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.592964"
+  },
+  "2025-09:www.digi24.ro:/termeni-si-conditii": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /termeni-",
+    "processed_at": "2025-09-13T06:03:05.597280"
+  },
+  "2025-09:www.digi24.ro:/ultimele-stiri": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.601581"
+  },
+  "2025-09:www.digi24.ro:/vedete": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.605902"
+  },
+  "2025-09:www.digi24.ro:/video": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:05.610201"
+  },
+  "2025-09:www.digi24.ro:/video/accident-grav-in-cluj-napoca-un-tir-a-intrat-intr-un-bloc-3408715": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/accident-grav-in-cluj-napoca-un-tir-a-intrat-intr-un-bloc-3408715.html",
+    "processed_at": "2025-09-13T06:03:05.723829",
+    "content_length": 63640
+  },
+  "2025-09:www.digi24.ro:/video/biserica-ridicata-ilegal-in-zona-protejata-de-familia-lui-gigi-becali-deputatul-nu-da-inapoi-pe-terenul-meu-fac-ce-vreau-3410031": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/biserica-ridicata-ilegal-in-zona-protejata-de-familia-lui-gigi-becali-deputatul-nu-da-inapoi-pe-terenul-meu-fac-ce-vreau-3410031.html",
+    "processed_at": "2025-09-13T06:03:06.866528",
+    "content_length": 66311
+  },
+  "2025-09:www.digi24.ro:/video/charlie-kirk-activistul-asasinat-in-sua-spunea-ca-incidentele-armate-justifica-posesia-armelor-de-catre-civili-este-rational-3409339": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/charlie-kirk-activistul-asasinat-in-sua-spunea-ca-incidentele-armate-justifica-posesia-armelor-de-catre-civili-este-rational-3409339.html",
+    "processed_at": "2025-09-13T06:03:08.030397",
+    "content_length": 65490
+  },
+  "2025-09:www.digi24.ro:/video/demonstratii-violente-in-franta-impotriva-masurilor-de-austeritate-obiecte-incendiate-baricade-ridicate-ciocniri-cu-politia-3408753": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/demonstratii-violente-in-franta-impotriva-masurilor-de-austeritate-obiecte-incendiate-baricade-ridicate-ciocniri-cu-politia-3408753.html",
+    "processed_at": "2025-09-13T06:03:09.174074",
+    "content_length": 65705
+  },
+  "2025-09:www.digi24.ro:/video/un-magazin-satesc-detinut-de-un-deputat-psd-a-cumparat-o-masina-de-lux-ionut-pucheanu-nu-vad-unde-i-problema-3409343": {
+    "status": "success",
+    "file_path": "content/2025-09/www.digi24.ro/raw/un-magazin-satesc-detinut-de-un-deputat-psd-a-cumparat-o-masina-de-lux-ionut-pucheanu-nu-vad-unde-i-problema-3409343.html",
+    "processed_at": "2025-09-13T06:03:10.323632",
+    "content_length": 66322
+  },
+  "2025-09:www.bzi.ro:/a-aparut-ghidul-practic-pentru-blackout-in-romania-ce-trebuie-sa-contina-rucsacul-de-urgenta-5348241": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/a-aparut-ghidul-practic-pentru-blackout-in-romania-ce-trebuie-sa-contina-rucsacul-de-urgenta-5348241.html",
+    "processed_at": "2025-09-13T06:03:11.628543",
+    "content_length": 215785
+  },
+  "2025-09:www.bzi.ro:/a-inceput-cazarea-studentilor-la-usv-iasi-universitatea-ofera-1-470-de-locuri-in-camine-5348013": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/a-inceput-cazarea-studentilor-la-usv-iasi-universitatea-ofera-1-470-de-locuri-in-camine-5348013.html",
+    "processed_at": "2025-09-13T06:03:12.732416",
+    "content_length": 216671
+  },
+  "2025-09:www.bzi.ro:/accident-rutier-pe-aleea-sadoveanu-un-autoturism-s-a-izbit-intr-un-stalp-5348215": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/accident-rutier-pe-aleea-sadoveanu-un-autoturism-s-a-izbit-intr-un-stalp-5348215.html",
+    "processed_at": "2025-09-13T06:03:13.842187",
+    "content_length": 215577
+  },
+  "2025-09:www.bzi.ro:/accident-rutier-pe-calea-chisinaului-un-autoturism-a-intrat-in-coliziune-cu-un-tramvai-5348608": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/accident-rutier-pe-calea-chisinaului-un-autoturism-a-intrat-in-coliziune-cu-un-tramvai-5348608.html",
+    "processed_at": "2025-09-13T06:03:14.950962",
+    "content_length": 205142
+  },
+  "2025-09:www.bzi.ro:/acuzatii-grave-un-doctor-casatorit-a-avut-relatii-intime-cu-o-asistenta-in-sala-de-operatie-chiar-in-timpul-unei-interventii-chirurgicale-5348764": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/acuzatii-grave-un-doctor-casatorit-a-avut-relatii-intime-cu-o-asistenta-in-sala-de-operatie-chiar-in-timpul-unei-interventii-chirurgicale-5348764.html",
+    "processed_at": "2025-09-13T06:03:16.063732",
+    "content_length": 216659
+  },
+  "2025-09:www.bzi.ro:/amenzi-mari-pentru-proprietarii-care-nu-si-curata-terenul-de-ambrozie-zeci-de-sesizari-la-iasi-5348166": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/amenzi-mari-pentru-proprietarii-care-nu-si-curata-terenul-de-ambrozie-zeci-de-sesizari-la-iasi-5348166.html",
+    "processed_at": "2025-09-13T06:03:17.154622",
+    "content_length": 206225
+  },
+  "2025-09:www.bzi.ro:/amenzi-uriase-pentru-romanii-care-merg-cu-trotineta-electrica-nimeni-nu-scapa-unde-nu-au-voie-sa-circule-5348398": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/amenzi-uriase-pentru-romanii-care-merg-cu-trotineta-electrica-nimeni-nu-scapa-unde-nu-au-voie-sa-circule-5348398.html",
+    "processed_at": "2025-09-13T06:03:18.257167",
+    "content_length": 211469
+  },
+  "2025-09:www.bzi.ro:/anaf-intervine-in-forta-in-gospodariile-taranesti-taranii-care-vand-zacusca-luati-la-bani-marunti-5348391": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/anaf-intervine-in-forta-in-gospodariile-taranesti-taranii-care-vand-zacusca-luati-la-bani-marunti-5348391.html",
+    "processed_at": "2025-09-13T06:03:19.366406",
+    "content_length": 226946
+  },
+  "2025-09:www.bzi.ro:/apel-public-pentru-suspendarea-unui-profesor-acuzat-de-hartuire-la-o-scoala-din-ialomita-fostul-ministru-eugen-teodorovici-situatia-trebuie-rezolvata-urgent-5348525": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/apel-public-pentru-suspendarea-unui-profesor-acuzat-de-hartuire-la-o-scoala-din-ialomita-fostul-ministru-eugen-teodorovici-situatia-trebuie-rezolvata-urgent-5348525.html",
+    "processed_at": "2025-09-13T06:03:20.488639",
+    "content_length": 208995
+  },
+  "2025-09:www.bzi.ro:/au-fost-tradati-de-sua-israel-loveste-qatarul-dupa-ce-americanii-le-au-dezactivat-scuturile-de-aparare-5348295": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/au-fost-tradati-de-sua-israel-loveste-qatarul-dupa-ce-americanii-le-au-dezactivat-scuturile-de-aparare-5348295.html",
+    "processed_at": "2025-09-13T06:03:21.596380",
+    "content_length": 214302
+  },
+  "2025-09:www.bzi.ro:/avertisment-pentru-romanii-care-locuiesc-la-bloc-administratorii-nu-au-voie-sa-ceara-aceste-documente-de-la-proprietari-5348359": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/avertisment-pentru-romanii-care-locuiesc-la-bloc-administratorii-nu-au-voie-sa-ceara-aceste-documente-de-la-proprietari-5348359.html",
+    "processed_at": "2025-09-13T06:03:22.720252",
+    "content_length": 213623
+  },
+  "2025-09:www.bzi.ro:/bani-pentru-fermierii-din-iasi-afectati-de-seceta-sau-grindina-cererile-se-depun-la-afir-pana-pe-12-octombrie-2025-5348890": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/bani-pentru-fermierii-din-iasi-afectati-de-seceta-sau-grindina-cererile-se-depun-la-afir-pana-pe-12-octombrie-2025-5348890.html",
+    "processed_at": "2025-09-13T06:03:23.823438",
+    "content_length": 218115
+  },
+  "2025-09:www.bzi.ro:/bnr-a-publicat-datoria-externa-a-romaniei-in-iulie-2025-5348591": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/bnr-a-publicat-datoria-externa-a-romaniei-in-iulie-2025-5348591.html",
+    "processed_at": "2025-09-13T06:03:24.952232",
+    "content_length": 216265
+  },
+  "2025-09:www.bzi.ro:/bursa-barfelor-s16": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:25.957080"
+  },
+  "2025-09:www.bzi.ro:/business-in-romania": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:25.964498"
+  },
+  "2025-09:www.bzi.ro:/bzi-live-s19": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:25.975308"
+  },
+  "2025-09:www.bzi.ro:/care-este-cea-mai-buna-faina-pentru-prajituri-iata-ce-sa-folosesti-pentru-un-desert-reusit-5348274": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/care-este-cea-mai-buna-faina-pentru-prajituri-iata-ce-sa-folosesti-pentru-un-desert-reusit-5348274.html",
+    "processed_at": "2025-09-13T06:03:26.070151",
+    "content_length": 218600
+  },
+  "2025-09:www.bzi.ro:/cat-de-important-este-somnul-pentru-sanatate-iata-ce-efecte-negative-iti-poate-aduce-lipsa-sa-explicate-de-catre-teona-baciulica-medic-psihiatru-5348488": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cat-de-important-este-somnul-pentru-sanatate-iata-ce-efecte-negative-iti-poate-aduce-lipsa-sa-explicate-de-catre-teona-baciulica-medic-psihiatru-5348488.html",
+    "processed_at": "2025-09-13T06:03:27.179941",
+    "content_length": 222004
+  },
+  "2025-09:www.bzi.ro:/ce-optiuni-de-tratament-exista-pentru-blefarita-iata-din-ce-cauza-apare-si-cum-poti-sa-o-previi-5348219": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ce-optiuni-de-tratament-exista-pentru-blefarita-iata-din-ce-cauza-apare-si-cum-poti-sa-o-previi-5348219.html",
+    "processed_at": "2025-09-13T06:03:28.319482",
+    "content_length": 218836
+  },
+  "2025-09:www.bzi.ro:/ce-optiuni-de-tratament-exista-pentru-cuperoza-iata-care-sunt-cele-mai-eficiente-solutii-5348363": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ce-optiuni-de-tratament-exista-pentru-cuperoza-iata-care-sunt-cele-mai-eficiente-solutii-5348363.html",
+    "processed_at": "2025-09-13T06:03:29.407749",
+    "content_length": 219028
+  },
+  "2025-09:www.bzi.ro:/ce-se-intampla-la-omv-decizia-care-va-afecta-mii-de-angajati-romani-5343408": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ce-se-intampla-la-omv-decizia-care-va-afecta-mii-de-angajati-romani-5343408.html",
+    "processed_at": "2025-09-13T06:03:30.498980",
+    "content_length": 206318
+  },
+  "2025-09:www.bzi.ro:/ce-sunt-sufletele-gemene-care-este-diferenta-dintre-sufletul-geaman-si-sufletul-pereche-5348652": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ce-sunt-sufletele-gemene-care-este-diferenta-dintre-sufletul-geaman-si-sufletul-pereche-5348652.html",
+    "processed_at": "2025-09-13T06:03:31.611704",
+    "content_length": 215305
+  },
+  "2025-09:www.bzi.ro:/celebra-banca-din-romania-deschide-o-fabrica-moderna-investitia-depaseste-10-milioane-de-euro-5348175": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/celebra-banca-din-romania-deschide-o-fabrica-moderna-investitia-depaseste-10-milioane-de-euro-5348175.html",
+    "processed_at": "2025-09-13T06:03:32.721007",
+    "content_length": 216411
+  },
+  "2025-09:www.bzi.ro:/christian-nistor-fondatorul-asaltul-lupilor-despre-curaj-disciplina-si-antreprenoriat-5346004": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/christian-nistor-fondatorul-asaltul-lupilor-despre-curaj-disciplina-si-antreprenoriat-5346004.html",
+    "processed_at": "2025-09-13T06:03:34.560308",
+    "content_length": 208578
+  },
+  "2025-09:www.bzi.ro:/cine-este-tyler-robinson-tanarul-arestat-pentru-uciderea-lui-charlie-kirk-5348926": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cine-este-tyler-robinson-tanarul-arestat-pentru-uciderea-lui-charlie-kirk-5348926.html",
+    "processed_at": "2025-09-13T06:03:35.659451",
+    "content_length": 209051
+  },
+  "2025-09:www.bzi.ro:/ciorba-de-legume-cu-smantana-reteta-simpla-si-gustoasa-ce-merita-incercata-5347693": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ciorba-de-legume-cu-smantana-reteta-simpla-si-gustoasa-ce-merita-incercata-5347693.html",
+    "processed_at": "2025-09-13T06:03:36.750906",
+    "content_length": 217971
+  },
+  "2025-09:www.bzi.ro:/combinatii-nasoale-la-spetalul-lui-futerman-saracii-pacienti-prin-ce-trec-5348643": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/combinatii-nasoale-la-spetalul-lui-futerman-saracii-pacienti-prin-ce-trec-5348643.html",
+    "processed_at": "2025-09-13T06:03:37.876735",
+    "content_length": 199976
+  },
+  "2025-09:www.bzi.ro:/contact": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /contact",
+    "processed_at": "2025-09-13T06:03:38.894510"
+  },
+  "2025-09:www.bzi.ro:/controverse-uriase-cantaretul-care-a-lansat-charlie-kirk-mort-la-31-de-ani-primeste-atentia-fbi-si-furia-fanilor-5348953": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/controverse-uriase-cantaretul-care-a-lansat-charlie-kirk-mort-la-31-de-ani-primeste-atentia-fbi-si-furia-fanilor-5348953.html",
+    "processed_at": "2025-09-13T06:03:38.995629",
+    "content_length": 214475
+  },
+  "2025-09:www.bzi.ro:/conversia-fortata-a-imprumuturilor-in-capital-social-cum-vor-fi-afectati-oamenii-5344538": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/conversia-fortata-a-imprumuturilor-in-capital-social-cum-vor-fi-afectati-oamenii-5344538.html",
+    "processed_at": "2025-09-13T06:03:40.112293",
+    "content_length": 217131
+  },
+  "2025-09:www.bzi.ro:/cookies": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:41.130915"
+  },
+  "2025-09:www.bzi.ro:/cristian-uncescu-skipper-si-fondator-embark-sailing-school-invitat-la-bzi-live-povesteste-aventurile-de-pe-mari-5347458": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cristian-uncescu-skipper-si-fondator-embark-sailing-school-invitat-la-bzi-live-povesteste-aventurile-de-pe-mari-5347458.html",
+    "processed_at": "2025-09-13T06:03:42.031633",
+    "content_length": 206471
+  },
+  "2025-09:www.bzi.ro:/culinar": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:03:43.049014"
+  },
+  "2025-09:www.bzi.ro:/cum-comunicam-eficient-cu-copiii-nostri-aflam-la-podcastbzi-cu-raluca-alexandru-terapeut-holistic-si-coach-alaturi-de-irina-zaharia-5346957": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cum-comunicam-eficient-cu-copiii-nostri-aflam-la-podcastbzi-cu-raluca-alexandru-terapeut-holistic-si-coach-alaturi-de-irina-zaharia-5346957.html",
+    "processed_at": "2025-09-13T06:03:43.157501",
+    "content_length": 207877
+  },
+  "2025-09:www.bzi.ro:/cum-iti-intretii-hanoracul-preferat-ca-sa-arate-mereu-ca-nou-5348552": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cum-iti-intretii-hanoracul-preferat-ca-sa-arate-mereu-ca-nou-5348552.html",
+    "processed_at": "2025-09-13T06:03:44.256756",
+    "content_length": 210782
+  },
+  "2025-09:www.bzi.ro:/cum-putem-avea-un-somn-calitativ-iata-care-sunt-recomandarile-explicate-de-catre-teona-baciulica-medic-psihiatru-5348592": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cum-putem-avea-un-somn-calitativ-iata-care-sunt-recomandarile-explicate-de-catre-teona-baciulica-medic-psihiatru-5348592.html",
+    "processed_at": "2025-09-13T06:03:45.353897",
+    "content_length": 221003
+  },
+  "2025-09:www.bzi.ro:/cum-sa-alegi-un-cazino-online-potrivit-pentru-incepatori-p-5347908": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cum-sa-alegi-un-cazino-online-potrivit-pentru-incepatori-p-5347908.html",
+    "processed_at": "2025-09-13T06:03:46.457390",
+    "content_length": 212732
+  },
+  "2025-09:www.bzi.ro:/cum-sa-te-bucuri-din-plin-de-noul-iphone-17-5348249": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/cum-sa-te-bucuri-din-plin-de-noul-iphone-17-5348249.html",
+    "processed_at": "2025-09-13T06:03:47.552449",
+    "content_length": 212572
+  },
+  "2025-09:www.bzi.ro:/curs-facultativ-de-limba-portugheza-si-norvegiana-la-uaic-iasi-5348157": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/curs-facultativ-de-limba-portugheza-si-norvegiana-la-uaic-iasi-5348157.html",
+    "processed_at": "2025-09-13T06:03:48.651557",
+    "content_length": 206787
+  },
+  "2025-09:www.bzi.ro:/de-necrezut-familia-irynei-fata-ucisa-la-doar-23-de-ani-a-refuzat-repatrierea-iata-adevaratul-motiv-5348939": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/de-necrezut-familia-irynei-fata-ucisa-la-doar-23-de-ani-a-refuzat-repatrierea-iata-adevaratul-motiv-5348939.html",
+    "processed_at": "2025-09-13T06:03:49.757677",
+    "content_length": 213035
+  },
+  "2025-09:www.bzi.ro:/descoperim-cum-arta-si-miscarea-pot-deveni-instrumente-de-transformare-pentru-copii-si-comunitate-la-bzi-live-impreuna-cu-invitata-anca-ciliac-art-terapeut-5346679": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/descoperim-cum-arta-si-miscarea-pot-deveni-instrumente-de-transformare-pentru-copii-si-comunitate-la-bzi-live-impreuna-cu-invitata-anca-ciliac-art-terapeut-5346679.html",
+    "processed_at": "2025-09-13T06:03:51.568346",
+    "content_length": 209802
+  },
+  "2025-09:www.bzi.ro:/descoperire-de-proportii-intr-un-sit-arheologic-din-turcia-acest-mesaj-vechi-de-1-600-de-ani-a-iesit-la-lumina-5348342": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/descoperire-de-proportii-intr-un-sit-arheologic-din-turcia-acest-mesaj-vechi-de-1-600-de-ani-a-iesit-la-lumina-5348342.html",
+    "processed_at": "2025-09-13T06:03:52.698013",
+    "content_length": 219177
+  },
+  "2025-09:www.bzi.ro:/despre-subiectul-momentului-in-romania-toate-detaliile-si-analizele-legate-de-situatia-grava-din-sistemul-educational-in-studioul-bzi-live-alaturi-de-prof-laviniu-lacusta-presedintele-uslip-iasi-5346094": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /despre",
+    "processed_at": "2025-09-13T06:03:53.714828"
+  },
+  "2025-09:www.bzi.ro:/despre-utilizarea-inteligentei-artificiale-pentru-crearea-unei-strategii-de-marketing-cu-mirona-gadei-fondator-salt-on-waves-intr-un-nou-episod-de-podcastbzi-5347850": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /despre",
+    "processed_at": "2025-09-13T06:03:53.731567"
+  },
+  "2025-09:www.bzi.ro:/destinatia-ideala-pentru-cafea-en-gros-online-5348677": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/destinatia-ideala-pentru-cafea-en-gros-online-5348677.html",
+    "processed_at": "2025-09-13T06:03:53.826054",
+    "content_length": 209567
+  },
+  "2025-09:www.bzi.ro:/detalii-cutremuratoare-ce-scria-pe-gloantele-folosite-pentru-asasinarea-lui-charlie-kirk-5348633": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/detalii-cutremuratoare-ce-scria-pe-gloantele-folosite-pentru-asasinarea-lui-charlie-kirk-5348633.html",
+    "processed_at": "2025-09-13T06:03:54.921302",
+    "content_length": 217495
+  },
+  "2025-09:www.bzi.ro:/diabetul-permite-consumul-de-slanina-iata-care-sunt-riscurile-si-cand-esti-in-siguranta-5347672": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/diabetul-permite-consumul-de-slanina-iata-care-sunt-riscurile-si-cand-esti-in-siguranta-5347672.html",
+    "processed_at": "2025-09-13T06:03:56.045444",
+    "content_length": 218859
+  },
+  "2025-09:www.bzi.ro:/dieta-care-te-poate-ajuta-sa-traiesti-100-de-ani-iata-secretul-pentru-care-americanii-platesc-sume-foarte-mari-5348330": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/dieta-care-te-poate-ajuta-sa-traiesti-100-de-ani-iata-secretul-pentru-care-americanii-platesc-sume-foarte-mari-5348330.html",
+    "processed_at": "2025-09-13T06:03:57.167466",
+    "content_length": 219424
+  },
+  "2025-09:www.bzi.ro:/directia-de-asistenta-sociala-iasi-ofera-sprijin-iesenilor-in-depunerea-documentelor-pentru-acordarea-tichetelor-electronice-de-energie-5347999": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/directia-de-asistenta-sociala-iasi-ofera-sprijin-iesenilor-in-depunerea-documentelor-pentru-acordarea-tichetelor-electronice-de-energie-5347999.html",
+    "processed_at": "2025-09-13T06:03:58.276139",
+    "content_length": 216013
+  },
+  "2025-09:www.bzi.ro:/doliu-la-iasi-a-murit-prof-univ-dr-gheorghita-costachescu-un-nume-marcant-al-scolii-iesene-de-obstetrica-si-ginecologie-5348371": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/doliu-la-iasi-a-murit-prof-univ-dr-gheorghita-costachescu-un-nume-marcant-al-scolii-iesene-de-obstetrica-si-ginecologie-5348371.html",
+    "processed_at": "2025-09-13T06:03:59.384568",
+    "content_length": 208687
+  },
+  "2025-09:www.bzi.ro:/domeniul-in-care-angajatii-nu-au-nemultumiri-la-locul-de-munca-ce-salarii-primesc-si-ce-program-au-5345014": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/domeniul-in-care-angajatii-nu-au-nemultumiri-la-locul-de-munca-ce-salarii-primesc-si-ce-program-au-5345014.html",
+    "processed_at": "2025-09-13T06:04:00.487547",
+    "content_length": 213878
+  },
+  "2025-09:www.bzi.ro:/donald-trump-spune-ca-rabdarea-sa-cu-putin-se-epuizeaza-rapid-5348920": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/donald-trump-spune-ca-rabdarea-sa-cu-putin-se-epuizeaza-rapid-5348920.html",
+    "processed_at": "2025-09-13T06:04:01.599956",
+    "content_length": 200679
+  },
+  "2025-09:www.bzi.ro:/doua-companii-importante-din-tara-reduc-semnificativ-personalul-cati-angajati-isi-vor-pierde-locul-de-munca-5346064": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/doua-companii-importante-din-tara-reduc-semnificativ-personalul-cati-angajati-isi-vor-pierde-locul-de-munca-5346064.html",
+    "processed_at": "2025-09-13T06:04:02.711064",
+    "content_length": 216797
+  },
+  "2025-09:www.bzi.ro:/duminica-14-septembrie-crestinii-ortodocsi-sarbatoresc-inaltarea-sfintei-cruci-ce-traditii-si-obiceiuri-respecta-romanii-in-aceasta-zi-5348884": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/duminica-14-septembrie-crestinii-ortodocsi-sarbatoresc-inaltarea-sfintei-cruci-ce-traditii-si-obiceiuri-respecta-romanii-in-aceasta-zi-5348884.html",
+    "processed_at": "2025-09-13T06:04:03.815531",
+    "content_length": 217691
+  },
+  "2025-09:www.bzi.ro:/dupa-fiecare-ploaie-locuitorii-din-zona-statiei-padurii-din-iasi-se-confrunta-cu-aceeasi-problema-gropile-din-asfalt-si-baltile-5348908": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/dupa-fiecare-ploaie-locuitorii-din-zona-statiei-padurii-din-iasi-se-confrunta-cu-aceeasi-problema-gropile-din-asfalt-si-baltile-5348908.html",
+    "processed_at": "2025-09-13T06:04:04.901359",
+    "content_length": 210456
+  },
+  "2025-09:www.bzi.ro:/durere-si-revolta-familiile-celor-3-tineri-morti-in-ape-cer-despagubiri-colosale-5348956": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/durere-si-revolta-familiile-celor-3-tineri-morti-in-ape-cer-despagubiri-colosale-5348956.html",
+    "processed_at": "2025-09-13T06:04:05.985969",
+    "content_length": 205913
+  },
+  "2025-09:www.bzi.ro:/economic-local-s17": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:07.000458"
+  },
+  "2025-09:www.bzi.ro:/editie-bzi-live-alaturi-de-dumitru-manea-alias-miron-manega-jurnalist-scriitor-senator-de-iasi-al-s-o-s-romania-vor-fi-abordate-cele-mai-importante-teme-pentru-romani-5347809": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/editie-bzi-live-alaturi-de-dumitru-manea-alias-miron-manega-jurnalist-scriitor-senator-de-iasi-al-s-o-s-romania-vor-fi-abordate-cele-mai-importante-teme-pentru-romani-5347809.html",
+    "processed_at": "2025-09-13T06:04:07.131999",
+    "content_length": 210769
+  },
+  "2025-09:www.bzi.ro:/editie-exclusiva-bzi-live-alaturi-de-invitatul-permanent-gheorghe-nichita-fostul-primar-al-iasului-analiza-la-zi-a-celor-mai-importante-subiecte-ale-momentului-5346857": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/editie-exclusiva-bzi-live-alaturi-de-invitatul-permanent-gheorghe-nichita-fostul-primar-al-iasului-analiza-la-zi-a-celor-mai-importante-subiecte-ale-momentului-5346857.html",
+    "processed_at": "2025-09-13T06:04:08.977036",
+    "content_length": 213355
+  },
+  "2025-09:www.bzi.ro:/educatie-privata-in-iasi-cat-ii-costa-pe-parinti-sa-isi-trimita-copiii-la-scolile-si-gradinitele-particulare-5348863": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/educatie-privata-in-iasi-cat-ii-costa-pe-parinti-sa-isi-trimita-copiii-la-scolile-si-gradinitele-particulare-5348863.html",
+    "processed_at": "2025-09-13T06:04:10.090495",
+    "content_length": 218201
+  },
+  "2025-09:www.bzi.ro:/el-este-principalul-suspect-in-cazul-uciderii-lui-charlie-kirk-fbi-ofera-100-000-de-dolari-recompensa-iata-imaginile-cu-momentul-fugii-5348193": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/el-este-principalul-suspect-in-cazul-uciderii-lui-charlie-kirk-fbi-ofera-100-000-de-dolari-recompensa-iata-imaginile-cu-momentul-fugii-5348193.html",
+    "processed_at": "2025-09-13T06:04:11.219652",
+    "content_length": 221042
+  },
+  "2025-09:www.bzi.ro:/elena-udrea-imagine-surprinzatoare-in-timp-ce-si-a-dus-fiica-la-scoala-fara-machiaj-si-cu-o-tinuta-casual-a-atras-toate-privirile-5348379": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/elena-udrea-imagine-surprinzatoare-in-timp-ce-si-a-dus-fiica-la-scoala-fara-machiaj-si-cu-o-tinuta-casual-a-atras-toate-privirile-5348379.html",
+    "processed_at": "2025-09-13T06:04:12.338312",
+    "content_length": 219407
+  },
+  "2025-09:www.bzi.ro:/eveniment-social-s4": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:13.346478"
+  },
+  "2025-09:www.bzi.ro:/evenimente-care-vor-avea-loc-in-arhiepiscopia-iasilor-in-perioada-14-20-septembrie-2025-5348676": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/evenimente-care-vor-avea-loc-in-arhiepiscopia-iasilor-in-perioada-14-20-septembrie-2025-5348676.html",
+    "processed_at": "2025-09-13T06:04:13.443601",
+    "content_length": 213457
+  },
+  "2025-09:www.bzi.ro:/fabrica-de-diplome-false-feg-opereaza-in-toata-tara-iata-ce-se-intampla-la-fabrica-de-asistenti-a-lui-cristian-stanciu-din-oltenita-foto-video-5348792": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/fabrica-de-diplome-false-feg-opereaza-in-toata-tara-iata-ce-se-intampla-la-fabrica-de-asistenti-a-lui-cristian-stanciu-din-oltenita-foto-video-5348792.html",
+    "processed_at": "2025-09-13T06:04:14.581649",
+    "content_length": 240604
+  },
+  "2025-09:www.bzi.ro:/fara-filtre-ce-nu-postam-doare-cel-mai-tare-un-proiect-educativ-si-artistic-de-anvergura-organizat-la-iasi-5348661": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/fara-filtre-ce-nu-postam-doare-cel-mai-tare-un-proiect-educativ-si-artistic-de-anvergura-organizat-la-iasi-5348661.html",
+    "processed_at": "2025-09-13T06:04:15.695294",
+    "content_length": 211211
+  },
+  "2025-09:www.bzi.ro:/filit-iasi-anunta-primii-invitati-ai-editiei-din-anul-2025-5348497": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/filit-iasi-anunta-primii-invitati-ai-editiei-din-anul-2025-5348497.html",
+    "processed_at": "2025-09-13T06:04:17.164686",
+    "content_length": 209162
+  },
+  "2025-09:www.bzi.ro:/firma-detinuta-de-mihaela-neagu-a-pus-mana-pe-un-contract-de-63-milioane-de-euro-de-la-apavital-5348840": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/firma-detinuta-de-mihaela-neagu-a-pus-mana-pe-un-contract-de-63-milioane-de-euro-de-la-apavital-5348840.html",
+    "processed_at": "2025-09-13T06:04:18.280219",
+    "content_length": 216976
+  },
+  "2025-09:www.bzi.ro:/focar-de-hepatita-a-in-braesti-zeci-copii-sunt-internati-iar-sute-de-elevi-au-inceput-scoala-in-sistem-online-dr-tudor-ciuhodaru-cere-de-urgenta-predarea-educatiei-pentru-sanatate-5348251": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/focar-de-hepatita-a-in-braesti-zeci-copii-sunt-internati-iar-sute-de-elevi-au-inceput-scoala-in-sistem-online-dr-tudor-ciuhodaru-cere-de-urgenta-predarea-educatiei-pentru-sanatate-5348251.html",
+    "processed_at": "2025-09-13T06:04:19.395360",
+    "content_length": 212609
+  },
+  "2025-09:www.bzi.ro:/foto-48-000-de-euro-a-costat-acest-logo-banal-al-postei-romane-5348432": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/foto-48-000-de-euro-a-costat-acest-logo-banal-al-postei-romane-5348432.html",
+    "processed_at": "2025-09-13T06:04:20.509909",
+    "content_length": 216130
+  },
+  "2025-09:www.bzi.ro:/gheorghe-hagi-revine-pe-teren-in-echipa-legendelor-lumii-care-va-infrunta-echipa-legendelor-portugaliei-5348936": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/gheorghe-hagi-revine-pe-teren-in-echipa-legendelor-lumii-care-va-infrunta-echipa-legendelor-portugaliei-5348936.html",
+    "processed_at": "2025-09-13T06:04:21.608588",
+    "content_length": 206202
+  },
+  "2025-09:www.bzi.ro:/iasul-are-un-nou-prefect-constantin-dolachi-este-investit-si-depune-juramantul-5348258": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/iasul-are-un-nou-prefect-constantin-dolachi-este-investit-si-depune-juramantul-5348258.html",
+    "processed_at": "2025-09-13T06:04:23.111724",
+    "content_length": 210804
+  },
+  "2025-09:www.bzi.ro:/ilie-bolojan-cu-fmi-la-masa-ne-taie-azi-ca-sa-ne-imprumute-maine-5348635": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ilie-bolojan-cu-fmi-la-masa-ne-taie-azi-ca-sa-ne-imprumute-maine-5348635.html",
+    "processed_at": "2025-09-13T06:04:24.525369",
+    "content_length": 210959
+  },
+  "2025-09:www.bzi.ro:/imagini-dezolante-in-pietele-din-iasi-produsele-se-vand-in-mizerie-iar-pietarii-stau-cu-picioarele-in-apa-directorul-vasile-tiron-sunt-plecat-in-concediu-5348697": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/imagini-dezolante-in-pietele-din-iasi-produsele-se-vand-in-mizerie-iar-pietarii-stau-cu-picioarele-in-apa-directorul-vasile-tiron-sunt-plecat-in-concediu-5348697.html",
+    "processed_at": "2025-09-13T06:04:25.642165",
+    "content_length": 235478
+  },
+  "2025-09:www.bzi.ro:/imagini-spectaculoase-surprinse-la-iasi-peste-1-700-de-fazani-au-fost-eliberati-sa-populeze-fondurile-de-vanatoare-din-judet-5348941": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/imagini-spectaculoase-surprinse-la-iasi-peste-1-700-de-fazani-au-fost-eliberati-sa-populeze-fondurile-de-vanatoare-din-judet-5348941.html",
+    "processed_at": "2025-09-13T06:04:26.755443",
+    "content_length": 208197
+  },
+  "2025-09:www.bzi.ro:/implantologia-de-la-mit-la-realitate-la-emisiunea-de-sanatate-bzi-live-impreuna-cu-invitata-conf-dr-eliza-dragan-medic-specialist-chirurgie-dento-alveolara-5348235": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/implantologia-de-la-mit-la-realitate-la-emisiunea-de-sanatate-bzi-live-impreuna-cu-invitata-conf-dr-eliza-dragan-medic-specialist-chirurgie-dento-alveolara-5348235.html",
+    "processed_at": "2025-09-13T06:04:27.858232",
+    "content_length": 210665
+  },
+  "2025-09:www.bzi.ro:/in-slujba-memoriei-eroilor-romaniei-dr-ing-leonard-constantin-stafie-s-au-implinit-106-ani-de-la-infiintarea-asociatiei-5348666": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/in-slujba-memoriei-eroilor-romaniei-dr-ing-leonard-constantin-stafie-s-au-implinit-106-ani-de-la-infiintarea-asociatiei-5348666.html",
+    "processed_at": "2025-09-13T06:04:28.968289",
+    "content_length": 213426
+  },
+  "2025-09:www.bzi.ro:/inaltarea-sfintei-cruci-parintele-calistrat-chifan-discuta-la-bzi-live-despre-cea-mai-veche-sarbatoare-inchinata-cinstirii-sfantului-lemn-5347624": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/inaltarea-sfintei-cruci-parintele-calistrat-chifan-discuta-la-bzi-live-despre-cea-mai-veche-sarbatoare-inchinata-cinstirii-sfantului-lemn-5347624.html",
+    "processed_at": "2025-09-13T06:04:30.073141",
+    "content_length": 207513
+  },
+  "2025-09:www.bzi.ro:/incep-inscrierile-pentru-cursurile-centrului-judetean-de-excelenta-iasi-anul-scolar-2025-2026-5348522": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/incep-inscrierile-pentru-cursurile-centrului-judetean-de-excelenta-iasi-anul-scolar-2025-2026-5348522.html",
+    "processed_at": "2025-09-13T06:04:31.623478",
+    "content_length": 207746
+  },
+  "2025-09:www.bzi.ro:/incep-razbunarile-directorului-citidin-dupa-aparitiile-la-gazeta-face-presiuni-pentru-ca-turnatorii-sa-fie-inlaturati-iata-l-pe-primul-vizat-5348689": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/incep-razbunarile-directorului-citidin-dupa-aparitiile-la-gazeta-face-presiuni-pentru-ca-turnatorii-sa-fie-inlaturati-iata-l-pe-primul-vizat-5348689.html",
+    "processed_at": "2025-09-13T06:04:32.762693",
+    "content_length": 205531
+  },
+  "2025-09:www.bzi.ro:/incident-in-municipiul-iasi-o-masina-apartinand-societatii-salubris-a-cazut-intr-o-groapa-aparuta-pe-carosabil-5348950": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/incident-in-municipiul-iasi-o-masina-apartinand-societatii-salubris-a-cazut-intr-o-groapa-aparuta-pe-carosabil-5348950.html",
+    "processed_at": "2025-09-13T06:04:33.856852",
+    "content_length": 207859
+  },
+  "2025-09:www.bzi.ro:/index-a": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.879683"
+  },
+  "2025-09:www.bzi.ro:/index-b": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.887630"
+  },
+  "2025-09:www.bzi.ro:/index-c": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.893495"
+  },
+  "2025-09:www.bzi.ro:/index-d": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.898508"
+  },
+  "2025-09:www.bzi.ro:/index-e": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.903136"
+  },
+  "2025-09:www.bzi.ro:/index-f": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.907670"
+  },
+  "2025-09:www.bzi.ro:/index-g": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.912142"
+  },
+  "2025-09:www.bzi.ro:/index-h": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.916529"
+  },
+  "2025-09:www.bzi.ro:/index-i": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.920853"
+  },
+  "2025-09:www.bzi.ro:/index-j": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.925175"
+  },
+  "2025-09:www.bzi.ro:/index-l": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.929586"
+  },
+  "2025-09:www.bzi.ro:/index-m": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.933989"
+  },
+  "2025-09:www.bzi.ro:/index-n": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.938474"
+  },
+  "2025-09:www.bzi.ro:/index-o": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.943103"
+  },
+  "2025-09:www.bzi.ro:/index-p": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.947604"
+  },
+  "2025-09:www.bzi.ro:/index-r": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.952236"
+  },
+  "2025-09:www.bzi.ro:/index-s": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.956755"
+  },
+  "2025-09:www.bzi.ro:/index-t": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.961112"
+  },
+  "2025-09:www.bzi.ro:/index-u": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.965455"
+  },
+  "2025-09:www.bzi.ro:/index-v": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.971528"
+  },
+  "2025-09:www.bzi.ro:/index-z": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /index",
+    "processed_at": "2025-09-13T06:04:34.976334"
+  },
+  "2025-09:www.bzi.ro:/informatii-utile": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:34.980971"
+  },
+  "2025-09:www.bzi.ro:/international-s9": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:34.985591"
+  },
+  "2025-09:www.bzi.ro:/ipocrizia-statului-vazuta-de-pe-marte-jurnalista-sorina-matei-acuza-dubla-masura-intre-voluntarii-lui-georgescu-si-echipa-lui-nicusor-dan-5348266": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ipocrizia-statului-vazuta-de-pe-marte-jurnalista-sorina-matei-acuza-dubla-masura-intre-voluntarii-lui-georgescu-si-echipa-lui-nicusor-dan-5348266.html",
+    "processed_at": "2025-09-13T06:04:35.094121",
+    "content_length": 218485
+  },
+  "2025-09:www.bzi.ro:/kate-beckinsale-risca-sa-primeasca-o-amenda-uriasa-o-regula-pe-care-a-incalcat-o-fara-sa-stie-i-ar-putea-aduce-probleme-mari-5348322": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/kate-beckinsale-risca-sa-primeasca-o-amenda-uriasa-o-regula-pe-care-a-incalcat-o-fara-sa-stie-i-ar-putea-aduce-probleme-mari-5348322.html",
+    "processed_at": "2025-09-13T06:04:36.209162",
+    "content_length": 219262
+  },
+  "2025-09:www.bzi.ro:/lidia-buble-declaratii-surprinzatoare-despre-iubitul-ei-ce-melodie-i-a-dedicat-lui-horatiu-nicolau-5348567": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/lidia-buble-declaratii-surprinzatoare-despre-iubitul-ei-ce-melodie-i-a-dedicat-lui-horatiu-nicolau-5348567.html",
+    "processed_at": "2025-09-13T06:04:37.320577",
+    "content_length": 218088
+  },
+  "2025-09:www.bzi.ro:/lista-completa-a-alimentelor-care-se-scumpesc-iar-bolojan-a-refuzat-categoric-prelungirea-pfafonarii-5348682": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/lista-completa-a-alimentelor-care-se-scumpesc-iar-bolojan-a-refuzat-categoric-prelungirea-pfafonarii-5348682.html",
+    "processed_at": "2025-09-13T06:04:38.428238",
+    "content_length": 212336
+  },
+  "2025-09:www.bzi.ro:/local-s14": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:39.433646"
+  },
+  "2025-09:www.bzi.ro:/lovitura-dura-pentru-industria-romaneasca-arcelormittal-a-anuntat-ca-opreste-definitiv-productia-5348932": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/lovitura-dura-pentru-industria-romaneasca-arcelormittal-a-anuntat-ca-opreste-definitiv-productia-5348932.html",
+    "processed_at": "2025-09-13T06:04:39.532210",
+    "content_length": 211638
+  },
+  "2025-09:www.bzi.ro:/mafia-din-primaria-iasi-actioneaza-cristina-balan-directorul-fondului-locativ-si-a-scos-parintii-la-inaintare-intr-o-combinatie-imobiliara-cu-iz-penal-de-sute-de-mii-de-euro-la-poalele-copoului-5348763": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/mafia-din-primaria-iasi-actioneaza-cristina-balan-directorul-fondului-locativ-si-a-scos-parintii-la-inaintare-intr-o-combinatie-imobiliara-cu-iz-penal-de-sute-de-mii-de-euro-la-poalele-copoului-5348763.html",
+    "processed_at": "2025-09-13T06:04:40.644942",
+    "content_length": 249449
+  },
+  "2025-09:www.bzi.ro:/magazin-s12": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:41.664651"
+  },
+  "2025-09:www.bzi.ro:/mai-multe-tari-europene-au-anuntat-ca-nu-vor-participa-la-eurovision-2026-care-este-motivul-5348694": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/mai-multe-tari-europene-au-anuntat-ca-nu-vor-participa-la-eurovision-2026-care-este-motivul-5348694.html",
+    "processed_at": "2025-09-13T06:04:41.766736",
+    "content_length": 211321
+  },
+  "2025-09:www.bzi.ro:/maia-morgenstern-reactie-dura-dupa-valul-de-critici-la-adresa-fiicei-sale-parerea-conteaza-cam-cat-conteaza-continutul-scutecelor-5346931": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/maia-morgenstern-reactie-dura-dupa-valul-de-critici-la-adresa-fiicei-sale-parerea-conteaza-cam-cat-conteaza-continutul-scutecelor-5346931.html",
+    "processed_at": "2025-09-13T06:04:42.931881",
+    "content_length": 220512
+  },
+  "2025-09:www.bzi.ro:/marinela-debu-presedinta-asociatiei-pacientilor-cu-hepatita-din-romania-vorbeste-despre-noile-modificari-legislative-care-schimba-situatia-pacientilor-cu-afectiuni-hepatice-la-bzi-live-5345858": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/marinela-debu-presedinta-asociatiei-pacientilor-cu-hepatita-din-romania-vorbeste-despre-noile-modificari-legislative-care-schimba-situatia-pacientilor-cu-afectiuni-hepatice-la-bzi-live-5345858.html",
+    "processed_at": "2025-09-13T06:04:44.707693",
+    "content_length": 209124
+  },
+  "2025-09:www.bzi.ro:/marketingul-responsabil-in-igaming-cum-construiesc-operatorii-increderea-utilizatorilorp-5346982": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/marketingul-responsabil-in-igaming-cum-construiesc-operatorii-increderea-utilizatorilorp-5346982.html",
+    "processed_at": "2025-09-13T06:04:45.841434",
+    "content_length": 209429
+  },
+  "2025-09:www.bzi.ro:/michael-j-fox-moment-viral-la-us-open-2025-detaliul-care-a-emotionat-o-lume-intreaga-5347489": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/michael-j-fox-moment-viral-la-us-open-2025-detaliul-care-a-emotionat-o-lume-intreaga-5347489.html",
+    "processed_at": "2025-09-13T06:04:46.957483",
+    "content_length": 218555
+  },
+  "2025-09:www.bzi.ro:/milioane-de-pensionari-ar-putea-sa-nu-mai-primeasca-pensie-de-cand-incep-problemele-5348659": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/milioane-de-pensionari-ar-putea-sa-nu-mai-primeasca-pensie-de-cand-incep-problemele-5348659.html",
+    "processed_at": "2025-09-13T06:04:48.068367",
+    "content_length": 217690
+  },
+  "2025-09:www.bzi.ro:/mirona-gadei-fondator-salt-on-waves-despre-inteligenta-artificiala-in-strategiile-de-marketing-un-brand-inseamna-feeling-sa-simti-sa-transmita-ceva-5348894": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/mirona-gadei-fondator-salt-on-waves-despre-inteligenta-artificiala-in-strategiile-de-marketing-un-brand-inseamna-feeling-sa-simti-sa-transmita-ceva-5348894.html",
+    "processed_at": "2025-09-13T06:04:49.182272",
+    "content_length": 220309
+  },
+  "2025-09:www.bzi.ro:/moarte-fulgeratoare-o-adolescenta-de-15-ani-s-a-stins-dupa-ce-s-a-electrocutat-in-baie-parintii-rapusi-de-durere-5348931": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/moarte-fulgeratoare-o-adolescenta-de-15-ani-s-a-stins-dupa-ce-s-a-electrocutat-in-baie-parintii-rapusi-de-durere-5348931.html",
+    "processed_at": "2025-09-13T06:04:50.284891",
+    "content_length": 217414
+  },
+  "2025-09:www.bzi.ro:/national-s8": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:04:51.308213"
+  },
+  "2025-09:www.bzi.ro:/nicola-dezvaluiri-cutremuratoare-despre-cariera-nu-ma-mai-intereseaza-viata-nu-e-roz-5347418": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/nicola-dezvaluiri-cutremuratoare-despre-cariera-nu-ma-mai-intereseaza-viata-nu-e-roz-5347418.html",
+    "processed_at": "2025-09-13T06:04:51.403616",
+    "content_length": 217533
+  },
+  "2025-09:www.bzi.ro:/ninja-crispi-primul-airfryer-portabil-cu-recipient-de-sticla-a-ajuns-in-romania-5347833": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ninja-crispi-primul-airfryer-portabil-cu-recipient-de-sticla-a-ajuns-in-romania-5347833.html",
+    "processed_at": "2025-09-13T06:04:52.929684",
+    "content_length": 208859
+  },
+  "2025-09:www.bzi.ro:/noi-locuri-de-munca-pentru-romani-unde-se-pot-angaja-cei-care-sunt-in-cautarea-unui-job-stabil-5347682": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/noi-locuri-de-munca-pentru-romani-unde-se-pot-angaja-cei-care-sunt-in-cautarea-unui-job-stabil-5347682.html",
+    "processed_at": "2025-09-13T06:04:54.445018",
+    "content_length": 218438
+  },
+  "2025-09:www.bzi.ro:/numele-suspectului-in-cazul-uciderii-lui-charlie-kirk-cum-a-fost-prins-tanarul-5348685": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/numele-suspectului-in-cazul-uciderii-lui-charlie-kirk-cum-a-fost-prins-tanarul-5348685.html",
+    "processed_at": "2025-09-13T06:04:55.554040",
+    "content_length": 211290
+  },
+  "2025-09:www.bzi.ro:/o-femeie-a-incercat-sa-intre-in-palatul-parlamentului-cu-6-cutite-5348311": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/o-femeie-a-incercat-sa-intre-in-palatul-parlamentului-cu-6-cutite-5348311.html",
+    "processed_at": "2025-09-13T06:04:56.661994",
+    "content_length": 208965
+  },
+  "2025-09:www.bzi.ro:/o-ieseanca-traieste-de-o-luna-drama-vietii-sale-fiul-sau-in-varsta-de-44-de-ani-este-disparut-a-plecat-in-lumea-lui-si-a-luat-traista-in-mana-si-a-plecat-5348748": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/o-ieseanca-traieste-de-o-luna-drama-vietii-sale-fiul-sau-in-varsta-de-44-de-ani-este-disparut-a-plecat-in-lumea-lui-si-a-luat-traista-in-mana-si-a-plecat-5348748.html",
+    "processed_at": "2025-09-13T06:04:57.789638",
+    "content_length": 232582
+  },
+  "2025-09:www.bzi.ro:/o-noua-regula-pentru-romanii-care-au-firma-devine-obligatoriu-pentru-societatile-comerciale-5346090": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/o-noua-regula-pentru-romanii-care-au-firma-devine-obligatoriu-pentru-societatile-comerciale-5346090.html",
+    "processed_at": "2025-09-13T06:04:58.931387",
+    "content_length": 215794
+  },
+  "2025-09:www.bzi.ro:/oana-lis-a-spus-de-ce-nu-i-a-daruit-un-copil-lui-viorel-lis-motivul-este-de-a-dreptul-halucinant-5348286": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/oana-lis-a-spus-de-ce-nu-i-a-daruit-un-copil-lui-viorel-lis-motivul-este-de-a-dreptul-halucinant-5348286.html",
+    "processed_at": "2025-09-13T06:05:00.098366",
+    "content_length": 217656
+  },
+  "2025-09:www.bzi.ro:/oana-radu-nu-este-casatorita-in-momentul-de-fata-ce-s-a-intamplat-la-evenimentul-de-la-malul-marii-5348513": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/oana-radu-nu-este-casatorita-in-momentul-de-fata-ce-s-a-intamplat-la-evenimentul-de-la-malul-marii-5348513.html",
+    "processed_at": "2025-09-13T06:05:01.192032",
+    "content_length": 219994
+  },
+  "2025-09:www.bzi.ro:/operatiunea-cu-numele-de-cod-zapad-rusia-si-belarusul-incep-exercitii-militare-comune-de-amploare-5348760": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/operatiunea-cu-numele-de-cod-zapad-rusia-si-belarusul-incep-exercitii-militare-comune-de-amploare-5348760.html",
+    "processed_at": "2025-09-13T06:05:02.284985",
+    "content_length": 211505
+  },
+  "2025-09:www.bzi.ro:/pastila-srs": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:05:03.298096"
+  },
+  "2025-09:www.bzi.ro:/podcastbzi-aduce-in-prim-plan-lumea-frumusetii-intr-o-discutie-moderata-de-irina-zaharia-alaturi-de-brandusa-bordeianu-make-up-artist-5346114": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /podcast",
+    "processed_at": "2025-09-13T06:05:03.310778"
+  },
+  "2025-09:www.bzi.ro:/politica-de-confidentialitate": {
+    "status": "filtered",
+    "reason": "matches skip pattern: /politica-",
+    "processed_at": "2025-09-13T06:05:03.320146"
+  },
+  "2025-09:www.bzi.ro:/politistii-sunt-pe-urmele-acestei-tinere-din-iasi-diana-s-a-prostituat-cat-timp-a-fost-insarcinata-iar-dupa-ce-a-nascut-bebelusul-ei-a-murit-in-conditii-suspecte-5348756": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/politistii-sunt-pe-urmele-acestei-tinere-din-iasi-diana-s-a-prostituat-cat-timp-a-fost-insarcinata-iar-dupa-ce-a-nascut-bebelusul-ei-a-murit-in-conditii-suspecte-5348756.html",
+    "processed_at": "2025-09-13T06:05:03.420537",
+    "content_length": 233607
+  },
+  "2025-09:www.bzi.ro:/prea-multe-medicamente-despre-polipragmazia-la-pacientul-varstnic-discuta-dr-alice-dona-medic-specialist-geriatrie-si-gerontologie-la-bzi-live-5346576": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/prea-multe-medicamente-despre-polipragmazia-la-pacientul-varstnic-discuta-dr-alice-dona-medic-specialist-geriatrie-si-gerontologie-la-bzi-live-5346576.html",
+    "processed_at": "2025-09-13T06:05:05.287286",
+    "content_length": 207637
+  },
+  "2025-09:www.bzi.ro:/presedinte-condamnat-pentru-lovitura-de-stat-5348495": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/presedinte-condamnat-pentru-lovitura-de-stat-5348495.html",
+    "processed_at": "2025-09-13T06:05:06.392899",
+    "content_length": 197267
+  },
+  "2025-09:www.bzi.ro:/primaria-iasi-a-contractat-serviciile-de-verificare-tehnica-pentru-investitiile-din-patru-unitati-de-invatamant-din-municipiu-5348843": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/primaria-iasi-a-contractat-serviciile-de-verificare-tehnica-pentru-investitiile-din-patru-unitati-de-invatamant-din-municipiu-5348843.html",
+    "processed_at": "2025-09-13T06:05:07.532248",
+    "content_length": 217348
+  },
+  "2025-09:www.bzi.ro:/prime-kapital-a-finalizat-lucrarile-structurale-la-faza-3-silk-district-si-se-apropie-de-1-000-de-apartamente-vandute-urmeaza-faza-4-loom-homes-built-in-silk-5348419": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/prime-kapital-a-finalizat-lucrarile-structurale-la-faza-3-silk-district-si-se-apropie-de-1-000-de-apartamente-vandute-urmeaza-faza-4-loom-homes-built-in-silk-5348419.html",
+    "processed_at": "2025-09-13T06:05:08.648356",
+    "content_length": 216349
+  },
+  "2025-09:www.bzi.ro:/prof-dr-camelia-gavrila-despre-situatia-critica-din-sistemul-de-invatamant-va-fi-un-an-al-supravietuirii-5348009": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/prof-dr-camelia-gavrila-despre-situatia-critica-din-sistemul-de-invatamant-va-fi-un-an-al-supravietuirii-5348009.html",
+    "processed_at": "2025-09-13T06:05:09.766236",
+    "content_length": 226230
+  },
+  "2025-09:www.bzi.ro:/prof-univ-dr-veronica-mocanu-medic-primar-endocrinolog-si-fondatoarea-proiectului-traista-cu-sanatate-vine-la-podcastbzi-5348551": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/prof-univ-dr-veronica-mocanu-medic-primar-endocrinolog-si-fondatoarea-proiectului-traista-cu-sanatate-vine-la-podcastbzi-5348551.html",
+    "processed_at": "2025-09-13T06:05:11.641208",
+    "content_length": 206834
+  },
+  "2025-09:www.bzi.ro:/prognoza-meteo-pentru-sambata-13-septembrie-2025-vreme-de-inceput-de-toamna-in-romania-5348662": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/prognoza-meteo-pentru-sambata-13-septembrie-2025-vreme-de-inceput-de-toamna-in-romania-5348662.html",
+    "processed_at": "2025-09-13T06:05:13.203005",
+    "content_length": 207933
+  },
+  "2025-09:www.bzi.ro:/proiectie-de-gala-enescu-jupuit-de-viu-in-prezenta-echipei-la-cinema-ateneu-iasi-5348874": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/proiectie-de-gala-enescu-jupuit-de-viu-in-prezenta-echipei-la-cinema-ateneu-iasi-5348874.html",
+    "processed_at": "2025-09-13T06:05:14.322999",
+    "content_length": 208130
+  },
+  "2025-09:www.bzi.ro:/rabla-2025-incepe-cu-cel-mai-mare-buget-din-istorie-oportunitati-si-obligatii-pentru-producatori-si-dealeri-auto-5348854": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/rabla-2025-incepe-cu-cel-mai-mare-buget-din-istorie-oportunitati-si-obligatii-pentru-producatori-si-dealeri-auto-5348854.html",
+    "processed_at": "2025-09-13T06:05:15.452562",
+    "content_length": 207980
+  },
+  "2025-09:www.bzi.ro:/raluca-alexandru-dezbate-impactul-bullyingului-asupra-vietii-iata-care-sunt-efectele-emotionale-si-solutii-pentru-parinti-5348566": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/raluca-alexandru-dezbate-impactul-bullyingului-asupra-vietii-iata-care-sunt-efectele-emotionale-si-solutii-pentru-parinti-5348566.html",
+    "processed_at": "2025-09-13T06:05:16.565794",
+    "content_length": 220976
+  },
+  "2025-09:www.bzi.ro:/raluca-alexandru-vorbeste-despre-importanta-comunicarii-in-familie-iata-cum-sa-construiesti-legaturi-puternice-5348558": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/raluca-alexandru-vorbeste-despre-importanta-comunicarii-in-familie-iata-cum-sa-construiesti-legaturi-puternice-5348558.html",
+    "processed_at": "2025-09-13T06:05:18.406337",
+    "content_length": 220147
+  },
+  "2025-09:www.bzi.ro:/raluca-si-ion-saulescu-de-la-mireasa-divorteaza-dupa-patru-ani-am-ales-sa-imi-deschid-ochii-mult-mai-larg-5348498": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/raluca-si-ion-saulescu-de-la-mireasa-divorteaza-dupa-patru-ani-am-ales-sa-imi-deschid-ochii-mult-mai-larg-5348498.html",
+    "processed_at": "2025-09-13T06:05:19.940214",
+    "content_length": 218735
+  },
+  "2025-09:www.bzi.ro:/ramona-olaru-despre-relatiile-esuate-nu-putem-sa-fim-doua-printese-5348147": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ramona-olaru-despre-relatiile-esuate-nu-putem-sa-fim-doua-printese-5348147.html",
+    "processed_at": "2025-09-13T06:05:21.474576",
+    "content_length": 213624
+  },
+  "2025-09:www.bzi.ro:/reguli-noi-pentru-firmele-care-angajeaza-someri-ce-conditie-este-impusa-prin-lege-5343356": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/reguli-noi-pentru-firmele-care-angajeaza-someri-ce-conditie-este-impusa-prin-lege-5343356.html",
+    "processed_at": "2025-09-13T06:05:22.572636",
+    "content_length": 215278
+  },
+  "2025-09:www.bzi.ro:/reteta-pentru-prajitura-chinezoaica-desert-deosebit-foarte-simplu-de-facut-5348177": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/reteta-pentru-prajitura-chinezoaica-desert-deosebit-foarte-simplu-de-facut-5348177.html",
+    "processed_at": "2025-09-13T06:05:23.667078",
+    "content_length": 217738
+  },
+  "2025-09:www.bzi.ro:/revolutie-in-industria-horeca-conceptul-care-atrage-tot-mai-multi-romani-5348476": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/revolutie-in-industria-horeca-conceptul-care-atrage-tot-mai-multi-romani-5348476.html",
+    "processed_at": "2025-09-13T06:05:24.779734",
+    "content_length": 215630
+  },
+  "2025-09:www.bzi.ro:/romana-disciplina-obligatorie-in-franta-5348438": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/romana-disciplina-obligatorie-in-franta-5348438.html",
+    "processed_at": "2025-09-13T06:05:26.189289",
+    "content_length": 197052
+  },
+  "2025-09:www.bzi.ro:/romana-introdusa-ca-limba-straina-in-scolile-din-franta-programul-pilot-lansat-langa-paris-5348548": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/romana-introdusa-ca-limba-straina-in-scolile-din-franta-programul-pilot-lansat-langa-paris-5348548.html",
+    "processed_at": "2025-09-13T06:05:27.271332",
+    "content_length": 204278
+  },
+  "2025-09:www.bzi.ro:/romania-in-patria-albastra-5348436": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/romania-in-patria-albastra-5348436.html",
+    "processed_at": "2025-09-13T06:05:28.729845",
+    "content_length": 196546
+  },
+  "2025-09:www.bzi.ro:/rusia-dupa-convocarea-ambasadorului-la-mae-ce-explicatii-a-oferit-ambasadorul-5348791": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/rusia-dupa-convocarea-ambasadorului-la-mae-ce-explicatii-a-oferit-ambasadorul-5348791.html",
+    "processed_at": "2025-09-13T06:05:29.829247",
+    "content_length": 209827
+  },
+  "2025-09:www.bzi.ro:/salubris-cumpara-peste-150-000-de-kilograme-de-hrana-pentru-cainii-de-la-padoc-costul-ajunge-la-650-000-de-lei-5348847": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/salubris-cumpara-peste-150-000-de-kilograme-de-hrana-pentru-cainii-de-la-padoc-costul-ajunge-la-650-000-de-lei-5348847.html",
+    "processed_at": "2025-09-13T06:05:30.948773",
+    "content_length": 216149
+  },
+  "2025-09:www.bzi.ro:/scandal-monstru-in-sistemul-de-sanatate-din-cauza-reformei-pregatite-de-guvernul-bolojan-5348929": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/scandal-monstru-in-sistemul-de-sanatate-din-cauza-reformei-pregatite-de-guvernul-bolojan-5348929.html",
+    "processed_at": "2025-09-13T06:05:32.060198",
+    "content_length": 212306
+  },
+  "2025-09:www.bzi.ro:/scene-sfasietoare-la-scoala-un-baietel-de-12-ani-si-a-dat-ultima-suflare-in-timp-ce-isi-astepta-mama-5348922": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/scene-sfasietoare-la-scoala-un-baietel-de-12-ani-si-a-dat-ultima-suflare-in-timp-ce-isi-astepta-mama-5348922.html",
+    "processed_at": "2025-09-13T06:05:33.155331",
+    "content_length": 213310
+  },
+  "2025-09:www.bzi.ro:/se-schimba-regulile-pentru-soferii-care-isi-lasa-masina-in-aceste-locuri-trebuie-sa-o-mute-imediat-sanctiunile-sunt-uriase-5348138": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/se-schimba-regulile-pentru-soferii-care-isi-lasa-masina-in-aceste-locuri-trebuie-sa-o-mute-imediat-sanctiunile-sunt-uriase-5348138.html",
+    "processed_at": "2025-09-13T06:05:34.273134",
+    "content_length": 217376
+  },
+  "2025-09:www.bzi.ro:/silviu-biris-are-doi-copii-adulti-din-primul-mariaj-cum-e-viata-dupa-divort-la-al-doilea-mariaj-5348475": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/silviu-biris-are-doi-copii-adulti-din-primul-mariaj-cum-e-viata-dupa-divort-la-al-doilea-mariaj-5348475.html",
+    "processed_at": "2025-09-13T06:05:35.409945",
+    "content_length": 218071
+  },
+  "2025-09:www.bzi.ro:/sport-s10": {
+    "status": "filtered",
+    "reason": "matches domain-specific pattern: /sport-",
+    "processed_at": "2025-09-13T06:05:36.432932"
+  },
+  "2025-09:www.bzi.ro:/stagiunea-operei-nationale-romane-iasi-se-deschide-duminica-la-palas-cu-gala-extraordinara-magia-serii-in-sunet-si-lumina-5348668": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/stagiunea-operei-nationale-romane-iasi-se-deschide-duminica-la-palas-cu-gala-extraordinara-magia-serii-in-sunet-si-lumina-5348668.html",
+    "processed_at": "2025-09-13T06:05:36.934813",
+    "content_length": 210401
+  },
+  "2025-09:www.bzi.ro:/stiati-ce-se-intampla-la-farmaciile-doctor-nax-5348687": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/stiati-ce-se-intampla-la-farmaciile-doctor-nax-5348687.html",
+    "processed_at": "2025-09-13T06:05:38.042122",
+    "content_length": 198540
+  },
+  "2025-09:www.bzi.ro:/studentii-de-la-tuiasi-se-pot-caza-in-camine-incepand-cu-22-septembrie-ce-acte-trebuie-sa-prezinte-5348880": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/studentii-de-la-tuiasi-se-pot-caza-in-camine-incepand-cu-22-septembrie-ce-acte-trebuie-sa-prezinte-5348880.html",
+    "processed_at": "2025-09-13T06:05:39.161819",
+    "content_length": 210388
+  },
+  "2025-09:www.bzi.ro:/studentii-de-la-uaic-pot-castiga-burse-de-2-000-de-euro-iata-care-sunt-criteriile-5348857": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/studentii-de-la-uaic-pot-castiga-burse-de-2-000-de-euro-iata-care-sunt-criteriile-5348857.html",
+    "processed_at": "2025-09-13T06:05:40.730316",
+    "content_length": 211029
+  },
+  "2025-09:www.bzi.ro:/super-dialog-special-bzi-live-alaturi-de-invitatul-permanent-liderul-s-o-s-romania-si-europarlamentar-diana-sosoaca-totul-despre-situatia-grava-din-tara-si-riscurile-externe-5347803": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/super-dialog-special-bzi-live-alaturi-de-invitatul-permanent-liderul-s-o-s-romania-si-europarlamentar-diana-sosoaca-totul-despre-situatia-grava-din-tara-si-riscurile-externe-5347803.html",
+    "processed_at": "2025-09-13T06:05:41.823836",
+    "content_length": 212879
+  },
+  "2025-09:www.bzi.ro:/talk-show-bzi-live-alaturi-de-eugen-teodorovici-fost-ministru-al-finantelor-publice-respectiv-fondurilor-europene-vor-fi-dezbatute-si-analizate-cele-mai-calde-subiecte-ale-momentului-5347806": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/talk-show-bzi-live-alaturi-de-eugen-teodorovici-fost-ministru-al-finantelor-publice-respectiv-fondurilor-europene-vor-fi-dezbatute-si-analizate-cele-mai-calde-subiecte-ale-momentului-5347806.html",
+    "processed_at": "2025-09-13T06:05:43.695600",
+    "content_length": 209656
+  },
+  "2025-09:www.bzi.ro:/top-cinci-functii-utile-ale-apple-watch-11-pentru-utilizatorii-incepatori-5347636": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/top-cinci-functii-utile-ale-apple-watch-11-pentru-utilizatorii-incepatori-5347636.html",
+    "processed_at": "2025-09-13T06:05:44.785693",
+    "content_length": 216058
+  },
+  "2025-09:www.bzi.ro:/top-educatie-editie-speciala-bzi-live-alaturi-de-managerul-colegiului-national-costache-negruzzi-din-iasi-despre-situatia-din-educatia-romaneasca-proiectii-proiecte-si-perspective-5346091": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/top-educatie-editie-speciala-bzi-live-alaturi-de-managerul-colegiului-national-costache-negruzzi-din-iasi-despre-situatia-din-educatia-romaneasca-proiectii-proiecte-si-perspective-5346091.html",
+    "processed_at": "2025-09-13T06:05:45.897333",
+    "content_length": 213434
+  },
+  "2025-09:www.bzi.ro:/top-talk-show-bzi-live-cu-un-invitat-special-fostul-premier-al-romaniei-viorica-dancila-de-la-vizita-in-china-la-situatia-grava-nationala-si-internationala-5346854": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/top-talk-show-bzi-live-cu-un-invitat-special-fostul-premier-al-romaniei-viorica-dancila-de-la-vizita-in-china-la-situatia-grava-nationala-si-internationala-5346854.html",
+    "processed_at": "2025-09-13T06:05:46.996028",
+    "content_length": 208694
+  },
+  "2025-09:www.bzi.ro:/tort-cu-caramel-si-mascarpone-reteta-simpla-si-delicioasa-ideala-pentru-momentele-speciale-5348402": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/tort-cu-caramel-si-mascarpone-reteta-simpla-si-delicioasa-ideala-pentru-momentele-speciale-5348402.html",
+    "processed_at": "2025-09-13T06:05:48.104424",
+    "content_length": 218300
+  },
+  "2025-09:www.bzi.ro:/tuiasi-motorsport-performanta-universitara-pe-podiumul-raliului-iasului-2025-5348151": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/tuiasi-motorsport-performanta-universitara-pe-podiumul-raliului-iasului-2025-5348151.html",
+    "processed_at": "2025-09-13T06:05:49.634586",
+    "content_length": 208805
+  },
+  "2025-09:www.bzi.ro:/uaic-a-primit-vizita-unei-delegatii-de-la-universitatea-nationala-iurii-fedkovici-din-cernauti-5348868": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/uaic-a-primit-vizita-unei-delegatii-de-la-universitatea-nationala-iurii-fedkovici-din-cernauti-5348868.html",
+    "processed_at": "2025-09-13T06:05:50.753708",
+    "content_length": 208991
+  },
+  "2025-09:www.bzi.ro:/ultimele-povesti-ale-verii-bohemian-rhapsody-la-finalul-movie-nights-si-jack-si-vrejul-de-fasole-la-kids-thursdays-5347842": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/ultimele-povesti-ale-verii-bohemian-rhapsody-la-finalul-movie-nights-si-jack-si-vrejul-de-fasole-la-kids-thursdays-5347842.html",
+    "processed_at": "2025-09-13T06:05:51.861112",
+    "content_length": 212922
+  },
+  "2025-09:www.bzi.ro:/ultimele-stiri": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:05:52.869715"
+  },
+  "2025-09:www.bzi.ro:/un-avion-boeing-737-a-aterizat-de-urgenta-la-bord-a-fost-semnalat-un-incendiu-5348859": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/un-avion-boeing-737-a-aterizat-de-urgenta-la-bord-a-fost-semnalat-un-incendiu-5348859.html",
+    "processed_at": "2025-09-13T06:05:52.967466",
+    "content_length": 207897
+  },
+  "2025-09:www.bzi.ro:/un-barbat-din-romania-a-incercat-de-doua-ori-sa-isi-ucida-fostul-socru-ce-metode-a-folosit-acesta-si-ce-pedeapsa-a-primit-5348674": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/un-barbat-din-romania-a-incercat-de-doua-ori-sa-isi-ucida-fostul-socru-ce-metode-a-folosit-acesta-si-ce-pedeapsa-a-primit-5348674.html",
+    "processed_at": "2025-09-13T06:05:54.079449",
+    "content_length": 209909
+  },
+  "2025-09:www.bzi.ro:/un-eveniment-unic-al-ministerului-apararii-nationale-va-avea-loc-sambata-la-iasi-marsul-lupilor-negri-5348037": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/un-eveniment-unic-al-ministerului-apararii-nationale-va-avea-loc-sambata-la-iasi-marsul-lupilor-negri-5348037.html",
+    "processed_at": "2025-09-13T06:05:55.194062",
+    "content_length": 213332
+  },
+  "2025-09:www.bzi.ro:/un-sofer-beat-peste-masura-a-fost-prins-de-politisti-la-podu-iloaiei-a-fost-retinut-pentru-24-de-ore-5348691": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/un-sofer-beat-peste-masura-a-fost-prins-de-politisti-la-podu-iloaiei-a-fost-retinut-pentru-24-de-ore-5348691.html",
+    "processed_at": "2025-09-13T06:05:56.310153",
+    "content_length": 216020
+  },
+  "2025-09:www.bzi.ro:/venitul-real-pe-cap-de-locuitor-romanii-saracesc-de-la-o-luna-la-alta-5347471": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/venitul-real-pe-cap-de-locuitor-romanii-saracesc-de-la-o-luna-la-alta-5347471.html",
+    "processed_at": "2025-09-13T06:05:57.822833",
+    "content_length": 211888
+  },
+  "2025-09:www.bzi.ro:/viata-la-tara-visul-catre-care-se-indreapta-tot-mai-multi-bucuresteni-5348372": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/viata-la-tara-visul-catre-care-se-indreapta-tot-mai-multi-bucuresteni-5348372.html",
+    "processed_at": "2025-09-13T06:05:58.966550",
+    "content_length": 211515
+  },
+  "2025-09:www.bzi.ro:/video-socant-o-femeie-din-iasi-ar-fi-prins-un-porumbel-pe-care-ulterior-l-ar-fi-mancat-5348900": {
+    "status": "success",
+    "file_path": "content/2025-09/www.bzi.ro/raw/video-socant-o-femeie-din-iasi-ar-fi-prins-un-porumbel-pe-care-ulterior-l-ar-fi-mancat-5348900.html",
+    "processed_at": "2025-09-13T06:06:00.074024",
+    "content_length": 214616
+  },
+  "2025-09:www.bzi.ro:/wp-content/uploads/2025/09/pp-13.pdf": {
+    "status": "filtered",
+    "reason": "no article ID found",
+    "processed_at": "2025-09-13T06:06:01.095731"
   }
 }

@@ -376,10 +376,13 @@ class AIAnalyzer:
         
         return metadata_files
 
-    def run(self):
-        """Main processing function"""
+    def run(self, limit=None):
+        """Main processing function with optional limit"""
         start_time = time.time()
         print(f"AI Analyzer started at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        if limit:
+            print(f"Processing limit: {limit} files")
         
         # Find all metadata files to process
         metadata_files = self.find_metadata_files()
@@ -389,9 +392,22 @@ class AIAnalyzer:
         
         print(f"Found {len(metadata_files)} files to analyze")
         
-        # Process each file
+        # Process each file with limit
+        successfully_processed_count = 0
         for markdown_file, metadata_file in metadata_files:
+            if limit and successfully_processed_count >= limit:
+                print(f"Reached limit of {limit} files")
+                break
+            
+            # Store stats before processing
+            prev_successful = self.stats['successful_analysis']
+            
+            # Analyze the content
             self.analyze_content(markdown_file, metadata_file)
+            
+            # Only count towards limit if analysis was successful
+            if self.stats['successful_analysis'] > prev_successful:
+                successfully_processed_count += 1
             
             # Small delay to avoid overwhelming the system
             time.sleep(0.1)
@@ -441,5 +457,17 @@ class AIAnalyzer:
             f.write(log_entry)
 
 if __name__ == "__main__":
+    import sys
+    
+    # Parse command line arguments
+    limit = None
+    if len(sys.argv) > 1:
+        try:
+            limit = int(sys.argv[1])
+        except ValueError:
+            print("Error: Limit must be a number")
+            print("Usage: python3 ai_analyzer.py [LIMIT]")
+            sys.exit(1)
+    
     analyzer = AIAnalyzer()
-    analyzer.run()
+    analyzer.run(limit)
