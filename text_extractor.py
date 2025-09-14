@@ -405,6 +405,74 @@ class TextExtractor:
             print(f"Markdown formatting cleanup failed: {e}")
             return text  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails
 
+    def ensure_proper_paragraphs(self, text):
+        """
+        Ensure proper paragraph separation in extracted text
+        
+        Args:
+            text (str): Extracted text that may have missing paragraph breaks
+            
+        Returns:
+            str: Text with proper paragraph separation
+        """
+        try:
+            import re
+            
+            if not text:
+                return text
+            
+            lines = text.split('\n')
+            processed_lines = []
+            
+            for i, line in enumerate(lines):
+                stripped_line = line.strip()
+                
+                # Skip empty lines
+                if not stripped_line:
+                    processed_lines.append(line)
+                    continue
+                
+                # Add current line
+                processed_lines.append(line)
+                
+                # Check if this line should be followed by a paragraph break
+                # Heuristics for paragraph endings:
+                # 1. Lines ending with sentence-ending punctuation
+                # 2. Followed by a line that starts a new thought/sentence
+                # 3. Not if the next line is a header or already has spacing
+                
+                if i < len(lines) - 1:  # Not the last line
+                    next_line = lines[i + 1].strip()
+                    
+                    # Check if current line ends a sentence/paragraph
+                    ends_sentence = stripped_line.endswith(('.', '!', '?', '"', '"', '".', '".', '".'))
+                    
+                    # Check if next line starts a new paragraph/thought
+                    starts_new_thought = (
+                        next_line and  # Next line has content
+                        not next_line.startswith(('#', '>', '-', '*', '1.', '2.', '3.')) and  # Not a header, quote, or list
+                        (next_line[0].isupper() or next_line.startswith('"') or next_line.startswith('"')) and  # Starts with capital or quote
+                        not any(next_line.startswith(word) for word in ['și ', 'dar ', 'iar ', 'sau ', 'însă ', 'pentru că ', 'deoarece '])  # Not a continuation word
+                    )
+                    
+                    # Add paragraph break if conditions are met
+                    if (ends_sentence and starts_new_thought and 
+                        next_line != '' and  # Next line is not empty
+                        len(processed_lines) > 0 and processed_lines[-1].strip() != ''):  # Current line is not empty
+                        
+                        # Check if there's already a paragraph break
+                        if i + 1 < len(lines) and lines[i + 1].strip() == '':
+                            continue  # Already has spacing
+                        
+                        # Add paragraph break
+                        processed_lines.append('')
+            
+            return '\n'.join(processed_lines)
+            
+        except Exception as e:
+            print(f"Paragraph processing failed: {e}")
+            return text  # Return original if processing fails
+
 
 
 
@@ -694,8 +762,11 @@ class TextExtractor:
             # Clean up Markdown formatting issues
             cleaned_extracted_text = self.clean_markdown_formatting(extracted_text.strip())
             
+            # Ensure proper paragraph separation
+            paragraph_corrected_text = self.ensure_proper_paragraphs(cleaned_extracted_text)
+            
             # Format headers in the extracted text
-            markdown_content = self.format_headers_markdown(cleaned_extracted_text, cleaned_html_content)
+            markdown_content = self.format_headers_markdown(paragraph_corrected_text, cleaned_html_content)
             
             # Apply domain-specific text cleanup (boilerplate removal)
             markdown_content = self.text_cleaner.clean_with_domain_rules(markdown_content, domain)
