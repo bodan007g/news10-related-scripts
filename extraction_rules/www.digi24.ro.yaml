@@ -81,3 +81,15 @@ cleanup_patterns:
     - "Înscrie-te.*newsletter.*"
   stop_at_patterns:
     - "Restul articolului"  # Stop extraction here
+  boilerplate_removal:
+    - 'Urmărește știrile Digi24\.ro și pe Google News.*'
+    - 'Editor\s*:\s*[A-ZÀ-ȚȘĂÂÎa-zàȚșăâî\.\s]+(?:\s|$)'  # Editor attributions with Romanian chars
+    - 'Etichete:\s*-\s*[\w\s,-]*'  # Tag sections
+    - "Citește și:.*"
+    - "Vezi și:.*"
+    - "Citește mai mult.*"
+    - "Distribuie pe Facebook.*"
+    - "Distribuie pe Twitter.*"
+    - "Urmărește.*pe.*social.*"
+    - "Abonează-te la.*"
+    - "Pentru mai multe.*"

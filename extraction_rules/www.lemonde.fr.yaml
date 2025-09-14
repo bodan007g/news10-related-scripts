@@ -61,3 +61,15 @@ cleanup_patterns:
     - "S'abonner.*?à partir de.*€.*"
   stop_at_patterns:
     - "Il vous reste \\d+[.,]\\d*%"  # Stop extraction here
+  boilerplate_removal:
+    - "Suivez.*?Le Monde.*"
+    - "Retrouvez.*?Le Monde.*sur.*"
+    - "Partager cet article.*"
+    - "Lire aussi.*"
+    - "Voir aussi.*"
+    - "Lire plus tard.*"
+    - 'Par\s+[A-ZÀ-Üa-zà-ü\s\.]+(?:,\s*[A-ZÀ-Üa-zà-ü\s\.]+)*(?:\s|$)'  # Author bylines with French chars
+    - 'Publié\s+le\s+\d{1,2}/\d{1,2}/\d{4}.*'  # Publication dates
+    - 'Modifié\s+le\s+\d{1,2}/\d{1,2}/\d{4}.*'  # Modification dates
+    - "S'abonner.*?à partir de.*€.*"
+    - "Recevez.*?newsletter.*"

@@ -9,29 +9,32 @@ import json
 import yaml
 from datetime import datetime
 
-
 # Configuration
 import trafilatura
 from newspaper import Article
+from text_cleanup import MultiLanguageTextCleaner
 import time
 CONTENT_DIR = "content"
 LOGS_DIR = "logs"
 STATUS_FILE = "text_extractor_status.json"
 
 class TextExtractor:
-    def __init__(self, extraction_method='trafilatura', save_cleaned_html=False):
+    def __init__(self, extraction_method='trafilatura', save_cleaned_html=False, domain_filter=None):
         """
         Initialize TextExtractor
         
         Args:
             extraction_method (str): 'trafilatura' (default) or 'newspaper'
             save_cleaned_html (bool): If True, save cleaned HTML next to original files
+            domain_filter (str): If provided, only process files from this domain (e.g., 'www.digi24.ro')
         """
         if extraction_method not in ['trafilatura', 'newspaper']:
             raise ValueError("extraction_method must be 'trafilatura' or 'newspaper'")
         
         self.extraction_method = extraction_method
         self.save_cleaned_html = save_cleaned_html
+        self.domain_filter = domain_filter
+        self.text_cleaner = MultiLanguageTextCleaner()
         self.processed_status = self.load_status()
         self.stats = {
             'total_processed': 0,
@@ -319,10 +322,12 @@ class TextExtractor:
             text = re.sub(r'(\w)`[ \t]*\n[ \t]*(\w)', r'\1`\2', text)
             text = re.sub(r'(\w)[ \t]*\n[ \t]*`(\w)', r'\1`\2', text)
             
-            # Remove empty bold/italic tags
-            text = re.sub(r'\*\*\s*\*\*', '', text)
-            text = re.sub(r'(?<!\*)\*\s*\*(?!\*)', '', text)
-            text = re.sub(r'``', '', text)
+            # Remove empty bold/italic tags - FIXED: be more specific to avoid matching valid bold formatting
+            text = re.sub(r'\*\*\s*\*\*', '', text)  # Remove empty bold tags like ** **
+            # FIXED: Only match single * followed by whitespace and another single * (true empty italic tags)
+            # This avoids matching ** (bold markers)
+            text = re.sub(r'(?<!\*)\*\s+\*(?!\*)', '', text)  # Remove empty italic tags like * * but not **
+            text = re.sub(r'``', '', text)  # Remove empty code tags
             
             # Fix multiple consecutive formatting markers
             text = re.sub(r'\*{3,}', '**', text)
@@ -360,7 +365,7 @@ class TextExtractor:
             
         except Exception as e:
             print(f"Markdown formatting cleanup failed: {e}")
-            return text  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails
+            return text  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails  # Return original if processing fails
 
 
 
@@ -648,6 +653,9 @@ class TextExtractor:
             # Format headers in the extracted text
             markdown_content = self.format_headers_markdown(cleaned_extracted_text, cleaned_html_content)
             
+            # Apply domain-specific text cleanup (boilerplate removal)
+            markdown_content = self.text_cleaner.clean_with_domain_rules(markdown_content, domain)
+            
             # Create basic metadata from extraction results
             metadata = {
                 'title': '',
@@ -766,13 +774,25 @@ class TextExtractor:
         if limit:
             print(f"Processing limit: {limit} HTML files")
         
+        if self.domain_filter:
+            print(f"Domain filter: Only processing files from {self.domain_filter}")
+        
         # Find all HTML files to process
         html_files = self.find_html_files()
         if not html_files:
             print("No HTML files found to process")
             return
         
-        print(f"Found {len(html_files)} HTML files to process")
+        # Apply domain filtering if specified
+        if self.domain_filter:
+            original_count = len(html_files)
+            html_files = [(path, domain) for path, domain in html_files if domain == self.domain_filter]
+            print(f"Found {original_count} total HTML files, {len(html_files)} matching domain filter")
+            if not html_files:
+                print(f"No HTML files found for domain: {self.domain_filter}")
+                return
+        else:
+            print(f"Found {len(html_files)} HTML files to process")
         
         # Process each file with limit
         successfully_processed_count = 0
@@ -858,25 +878,28 @@ if __name__ == "__main__":
     limit = None
     extraction_method = 'trafilatura'  # Default
     save_cleaned_html = False  # Default
+    domain_filter = None  # Default
     
     if len(sys.argv) > 1:
         # Check for help flag first
         if sys.argv[1] in ['--help', '-h']:
             print("Text Extractor Script - Extracts clean article text from HTML files")
             print("")
-            print("Usage: python text_extractor.py [LIMIT] [METHOD] [--save-cleaned-html]")
+            print("Usage: python text_extractor.py [LIMIT] [METHOD] [--save-cleaned-html] [--domain DOMAIN]")
             print("")
             print("Parameters:")
             print("  LIMIT              (optional): Number of HTML files to process (leave empty for all)")
             print("  METHOD             (optional): 'trafilatura' (default) or 'newspaper'")
             print("  --save-cleaned-html (optional): Save cleaned HTML files alongside original files")
+            print("  --domain DOMAIN    (optional): Only process files from specified domain (e.g., www.digi24.ro)")
             print("")
             print("Examples:")
-            print("  python text_extractor.py                                    # Process all files with trafilatura")
-            print("  python text_extractor.py 10                                 # Process 10 files with trafilatura")
-            print("  python text_extractor.py 5 newspaper                        # Process 5 files with newspaper")
-            print("  python text_extractor.py 10 trafilatura --save-cleaned-html # Process 10 files and save cleaned HTML")
-            print("  python text_extractor.py \"\" newspaper --save-cleaned-html   # Process all files with newspaper and save cleaned HTML")
+            print("  python text_extractor.py                                         # Process all files with trafilatura")
+            print("  python text_extractor.py 10                                      # Process 10 files with trafilatura")
+            print("  python text_extractor.py 5 newspaper                             # Process 5 files with newspaper")
+            print("  python text_extractor.py 10 trafilatura --save-cleaned-html      # Process 10 files and save cleaned HTML")
+            print("  python text_extractor.py \"\" newspaper --save-cleaned-html        # Process all files with newspaper and save cleaned HTML")
+            print("  python text_extractor.py 5 trafilatura --domain www.digi24.ro   # Process 5 files from digi24.ro only")
             sys.exit(0)
         
         try:
@@ -888,19 +911,31 @@ if __name__ == "__main__":
             print("Error: Invalid limit value. Must be an integer.")
             sys.exit(1)
     
-    # Check for extraction method argument
-    if len(sys.argv) > 2:
-        extraction_method = sys.argv[2].lower()
-        if extraction_method not in ['trafilatura', 'newspaper']:
-            print("Error: Extraction method must be 'trafilatura' or 'newspaper'")
-            print("Usage: python text_extractor.py [limit] [extraction_method] [--save-cleaned-html]")
+    # Parse remaining arguments
+    i = 2
+    while i < len(sys.argv):
+        arg = sys.argv[i]
+        
+        if arg == '--save-cleaned-html':
+            save_cleaned_html = True
+            print("💧 Cleaned HTML will be saved alongside extraction results")
+        elif arg == '--domain':
+            if i + 1 < len(sys.argv):
+                domain_filter = sys.argv[i + 1]
+                i += 1  # Skip the domain value
+                print(f"🌐 Domain filter: {domain_filter}")
+            else:
+                print("Error: --domain requires a domain value")
+                sys.exit(1)
+        elif arg.lower() in ['trafilatura', 'newspaper']:
+            extraction_method = arg.lower()
+        else:
+            print(f"Error: Unknown argument '{arg}'")
+            print("Usage: python text_extractor.py [limit] [method] [--save-cleaned-html] [--domain DOMAIN]")
             sys.exit(1)
-    
-    # Check for save cleaned HTML flag
-    if len(sys.argv) > 3 and sys.argv[3] == '--save-cleaned-html':
-        save_cleaned_html = True
-        print("💧 Cleaned HTML will be saved alongside extraction results")
+        
+        i += 1
     
     print(f"Using extraction method: {extraction_method}")
-    extractor = TextExtractor(extraction_method=extraction_method, save_cleaned_html=save_cleaned_html)
+    extractor = TextExtractor(extraction_method=extraction_method, save_cleaned_html=save_cleaned_html, domain_filter=domain_filter)
     extractor.run(limit)

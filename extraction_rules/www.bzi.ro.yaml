@@ -75,3 +75,16 @@ cleanup_patterns:
     - "Înscrie-te.*newsletter.*"
   stop_at_patterns:
     - "Restul articolului este rezervat"  # Stop extraction here
+  boilerplate_removal:
+    - 'Urmărește.*BZI\.ro.*'
+    - 'Urmărește.*pe.*BZI.*'
+    - 'Găsește.*BZI.*pe.*'
+    - 'Editor\s*:\s*[A-ZÀ-ȚȘĂÂÎa-zàȚșăâî\.\s]+(?:\s|$)'  # Editor attributions
+    - 'Sursa\s*:\s*[A-ZÀ-ȚȘĂÂÎa-zàȚșăâî\.\s]+(?:\s|$)'  # Source attributions
+    - "Distribuie acest articol.*"
+    - "Citește și:.*"
+    - "Vezi și:.*"
+    - "Continuă citirea.*"
+    - "În același subiect.*"
+    - "Găsește.*pe Facebook.*"
+    - "Urmărește.*pe Twitter.*"
