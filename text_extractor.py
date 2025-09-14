@@ -522,6 +522,12 @@ class TextExtractor:
                     header_level = 2  # Default secondary header
             
             if is_header:
+                # Ensure empty line before header (but not if it's the first line or already has empty line)
+                if (i > 0 and formatted_lines and 
+                    formatted_lines[-1].strip() != "" and  # Previous line is not empty
+                    not formatted_lines[-1].startswith('#')):  # Previous line is not already a header
+                    formatted_lines.append("")  # Add empty line before header
+                
                 # Format as Markdown header
                 formatted_lines.append(f"{'#' * header_level} {stripped}")
                 # Add underline for emphasis if requested
