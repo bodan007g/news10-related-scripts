@@ -8,7 +8,7 @@
 #   ./run_text_extractor.sh 5 trafilatura                      # Process 5 files with trafilatura
 #   ./run_text_extractor.sh 10 newspaper --save-cleaned-html   # Process 10 files and save cleaned HTML
 #   ./run_text_extractor.sh "" trafilatura --save-cleaned-html # Process all files with trafilatura and save cleaned HTML
-#   ./run_text_extractor.sh 2 trafilatura --domain www.digi24.ro # Process 2 files from digi24.ro only
+#   ./run_text_extractor.sh 2 trafilatura --domain digi24.ro     # Process 2 files from digi24.ro only
 #
 # Parameters:
 #   $1 (optional): Limit - Number of HTML files to process (leave empty for all)
@@ -38,7 +38,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "  LIMIT                   (optional): Number of HTML files to process (leave empty for all)"
     echo "  METHOD                  (optional): 'newspaper' (default) or 'trafilatura'"
     echo "  --save-cleaned-html     (optional): Save cleaned HTML files alongside original files"
-    echo "  --domain DOMAIN         (optional): Only process files from specified domain (e.g., www.digi24.ro)"
+    echo "  --domain DOMAIN         (optional): Only process files from specified domain (e.g., digi24.ro, bzi.ro)"
     echo ""
     echo "Examples:"
     echo "  ./run_text_extractor.sh                                         # Process all files with newspaper"
@@ -46,7 +46,8 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "  ./run_text_extractor.sh 5 trafilatura                           # Process 5 files with trafilatura"
     echo "  ./run_text_extractor.sh 10 newspaper --save-cleaned-html        # Process 10 files and save cleaned HTML"
     echo "  ./run_text_extractor.sh \"\" trafilatura --save-cleaned-html      # Process all files with trafilatura and save cleaned HTML"
-    echo "  ./run_text_extractor.sh 2 trafilatura --domain www.digi24.ro    # Process 2 files from digi24.ro only"
+    echo "  ./run_text_extractor.sh 2 trafilatura --domain digi24.ro        # Process 2 files from digi24.ro only"
+    echo "  ./run_text_extractor.sh 5 --domain bzi.ro                       # Process 5 files from bzi.ro only"
     echo ""
     echo "Methods Comparison:"
     echo "  newspaper:   Slower (~0.3s), news-focused, good article detection, limited metadata (DEFAULT)"

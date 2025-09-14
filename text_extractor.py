@@ -26,14 +26,14 @@ class TextExtractor:
         Args:
             extraction_method (str): 'trafilatura' (default) or 'newspaper'
             save_cleaned_html (bool): If True, save cleaned HTML next to original files
-            domain_filter (str): If provided, only process files from this domain (e.g., 'www.digi24.ro')
+            domain_filter (str): If provided, only process files from this domain (e.g., 'www.digi24.ro' or 'digi24.ro')
         """
         if extraction_method not in ['trafilatura', 'newspaper']:
             raise ValueError("extraction_method must be 'trafilatura' or 'newspaper'")
         
         self.extraction_method = extraction_method
         self.save_cleaned_html = save_cleaned_html
-        self.domain_filter = domain_filter
+        self.domain_filter = self.normalize_domain(domain_filter) if domain_filter else None
         self.text_cleaner = MultiLanguageTextCleaner()
         self.processed_status = self.load_status()
         self.stats = {
@@ -43,6 +43,44 @@ class TextExtractor:
             'already_processed': 0,
             'skipped_files': 0
         }  # Don't wrap lines  # Don't wrap lines  # Don't wrap lines
+
+    def normalize_domain(self, domain):
+        """
+        Normalize domain names to their full form
+        
+        Args:
+            domain (str): Domain name (e.g., 'digi24.ro' or 'www.digi24.ro')
+            
+        Returns:
+            str: Normalized domain name (e.g., 'www.digi24.ro')
+        """
+        if not domain:
+            return domain
+            
+        # Domain mapping for short forms to full forms
+        domain_mapping = {
+            'digi24.ro': 'www.digi24.ro',
+            'bzi.ro': 'www.bzi.ro',
+            'lemonde.fr': 'www.lemonde.fr'
+        }
+        
+        # If it's already a full domain (starts with www.), return as-is
+        if domain.startswith('www.'):
+            return domain
+            
+        # If it's a known short form, map to full form
+        if domain in domain_mapping:
+            normalized = domain_mapping[domain]
+            print(f"🌐 Domain mapping: {domain} -> {normalized}")
+            return normalized
+            
+        # If it's an unknown short form, try adding www.
+        if not domain.startswith('www.'):
+            normalized = f"www.{domain}"
+            print(f"🌐 Domain normalization: {domain} -> {normalized}")
+            return normalized
+            
+        return domain
 
     def load_status(self):
         """Load processing status from file"""
@@ -891,7 +929,7 @@ if __name__ == "__main__":
             print("  LIMIT              (optional): Number of HTML files to process (leave empty for all)")
             print("  METHOD             (optional): 'trafilatura' (default) or 'newspaper'")
             print("  --save-cleaned-html (optional): Save cleaned HTML files alongside original files")
-            print("  --domain DOMAIN    (optional): Only process files from specified domain (e.g., www.digi24.ro)")
+            print("  --domain DOMAIN    (optional): Only process files from specified domain (e.g., digi24.ro, bzi.ro, www.digi24.ro)")
             print("")
             print("Examples:")
             print("  python text_extractor.py                                         # Process all files with trafilatura")
@@ -899,7 +937,8 @@ if __name__ == "__main__":
             print("  python text_extractor.py 5 newspaper                             # Process 5 files with newspaper")
             print("  python text_extractor.py 10 trafilatura --save-cleaned-html      # Process 10 files and save cleaned HTML")
             print("  python text_extractor.py \"\" newspaper --save-cleaned-html        # Process all files with newspaper and save cleaned HTML")
-            print("  python text_extractor.py 5 trafilatura --domain www.digi24.ro   # Process 5 files from digi24.ro only")
+            print("  python text_extractor.py 5 trafilatura --domain digi24.ro       # Process 5 files from digi24.ro only")
+            print("  python text_extractor.py 2 --domain bzi.ro                       # Process 2 files from bzi.ro only")
             sys.exit(0)
         
         try:
