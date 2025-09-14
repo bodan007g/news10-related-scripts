@@ -33,6 +33,7 @@ class TextExtractor:
         
         self.extraction_method = extraction_method
         self.save_cleaned_html = save_cleaned_html
+        self.original_domain_filter = domain_filter
         self.domain_filter = self.normalize_domain(domain_filter) if domain_filter else None
         self.text_cleaner = MultiLanguageTextCleaner()
         self.processed_status = self.load_status()
@@ -71,13 +72,11 @@ class TextExtractor:
         # If it's a known short form, map to full form
         if domain in domain_mapping:
             normalized = domain_mapping[domain]
-            print(f"🌐 Domain mapping: {domain} -> {normalized}")
             return normalized
             
         # If it's an unknown short form, try adding www.
         if not domain.startswith('www.'):
             normalized = f"www.{domain}"
-            print(f"🌐 Domain normalization: {domain} -> {normalized}")
             return normalized
             
         return domain
@@ -890,7 +889,10 @@ class TextExtractor:
             print(f"Processing limit: {limit} HTML files")
         
         if self.domain_filter:
-            print(f"Domain filter: Only processing files from {self.domain_filter}")
+            if self.original_domain_filter != self.domain_filter:
+                print(f"🌐 Domain filter: {self.original_domain_filter} -> {self.domain_filter}")
+            else:
+                print(f"🌐 Domain filter: {self.domain_filter}")
         
         # Find all HTML files to process
         html_files = self.find_html_files()
@@ -1039,7 +1041,6 @@ if __name__ == "__main__":
             if i + 1 < len(sys.argv):
                 domain_filter = sys.argv[i + 1]
                 i += 1  # Skip the domain value
-                print(f"🌐 Domain filter: {domain_filter}")
             else:
                 print("Error: --domain requires a domain value")
                 sys.exit(1)
