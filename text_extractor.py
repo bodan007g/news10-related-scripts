@@ -567,13 +567,13 @@ class TextExtractor:
             
             # Heuristics for detecting headers:
             # 1. Short lines (typically under 80 chars)
-            # 2. No ending punctuation (., !, ?)
+            # 2. No ending punctuation (., !, :, ;, ,) - Allow ? for question headers  
             # 3. Followed by content or empty line
             # 4. Not starting with common content words
             
             if (len(stripped) < 80 and 
                 len(stripped) > 5 and
-                not stripped.endswith(('.', '!', '?', ':', ';', ',') ) and
+                not stripped.endswith(('.', '!', ':', ';', ',') ) and  # Allow ? for question headers
                 not stripped.startswith(('În ', 'De ', 'Cu ', 'Pentru ', 'Prin ', 'Astfel', 'Așa', 'Dar', 'Și')) and
                 # Check if next non-empty line exists and looks like content
                 self._next_line_looks_like_content(lines, i)):
@@ -671,6 +671,8 @@ class TextExtractor:
                 return
             
             # Save cleaned HTML if requested
+            cleaned_html_saved = False
+            full_cleaned_path = ""
             if self.save_cleaned_html:
                 rel_path = os.path.relpath(file_path, CONTENT_DIR)
                 cleaned_path = rel_path.replace('/raw/', '/cleaned/')
@@ -683,7 +685,7 @@ class TextExtractor:
                 with open(full_cleaned_path, 'w', encoding='utf-8') as f:
                     f.write(cleaned_html_content)
                 
-                print(f"💧 Cleaned HTML saved: {full_cleaned_path}")
+                cleaned_html_saved = True
             
             # Reconstruct original URL
             original_url = self.reconstruct_url(domain, file_path)
@@ -835,7 +837,12 @@ class TextExtractor:
             self.processed_status[file_key] = status_entry
             
             self.stats['successful_extractions'] += 1
-            print(f"✅ Extracted ({self.extraction_method}) ({domain}): {os.path.basename(full_extracted_path)}")
+            
+            # Create success message with optional cleaned HTML indicator
+            success_msg = f"✅ Extracted ({self.extraction_method}) ({domain}): {os.path.basename(full_extracted_path)}"
+            if cleaned_html_saved:
+                success_msg += " 💧"  # Water drop icon to indicate cleaned HTML was saved
+            print(success_msg)
                 
         except Exception as e:
             print(f"❌ Error ({domain}): {e}")

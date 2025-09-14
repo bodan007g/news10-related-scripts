@@ -40,8 +40,7 @@ class MultiLanguageTextCleaner:
                     r'Partager sur Twitter.*',
                     r'Suivez.*?sur.*',
                     r'Retrouvez.*?sur.*',
-                    r'Rejoignez.*?sur.*',
-                    r'@[A-Za-z0-9_]+'  # Twitter handles
+                    r'Rejoignez.*?sur.*'
                 ],
                 
                 'newsletter_promotional': [
@@ -66,7 +65,7 @@ class MultiLanguageTextCleaner:
                     r'\(.*?Mis à jour.*?\)',
                     r'\(.*?Publié.*?\)',
                     r'\(.*?Modifié.*?\)',
-                    r'Par\s+[A-Z][a-z]+\s+[A-Z][a-z]+.*',  # Author bylines
+                    r'^Par\s+[A-Z][a-z]+\s+[A-Z][a-z]+.*$',  # Author bylines at start of line
                     r'Édité par.*',
                     r'Relu par.*'
                 ]
@@ -101,8 +100,7 @@ class MultiLanguageTextCleaner:
                     r'Distribuie pe Twitter.*',
                     r'Urmărește.*?pe.*',
                     r'Găsește.*?pe.*',
-                    r'Alătură-te.*?pe.*',
-                    r'@[A-Za-z0-9_]+'  # Social media handles
+                    r'Alătură-te.*?pe.*'
                 ],
                 
                 'newsletter_promotional': [
@@ -127,7 +125,7 @@ class MultiLanguageTextCleaner:
                     r'\(.*?Actualizat.*?\)',
                     r'\(.*?Publicat.*?\)',
                     r'\(.*?Modificat.*?\)',
-                    r'De\s+[A-Z][a-z]+\s+[A-Z][a-z]+.*',  # Author bylines
+                    r'^De\s+[A-Z][a-z]+\s+[A-Z][a-z]+.*$',  # Author bylines only at start of line
                     r'Editor:.*',
                     r'Autor:.*'
                 ]
@@ -160,8 +158,7 @@ class MultiLanguageTextCleaner:
                     r'Share on Twitter.*',
                     r'Follow.*?on.*',
                     r'Find.*?on.*',
-                    r'Join.*?on.*',
-                    r'@[A-Za-z0-9_]+'
+                    r'Join.*?on.*'
                 ],
                 
                 'newsletter_promotional': [
@@ -178,7 +175,7 @@ class MultiLanguageTextCleaner:
         # Universal patterns that work across languages
         self.universal_patterns = {
             'social_media': [
-                r'@[a-zA-Z0-9_]+',           # Twitter/social handles
+                r'^@[a-zA-Z0-9_]+$',         # Social handles only on their own line
                 r'#[a-zA-Z0-9_]+',           # Hashtags
                 r'bit\.ly/[a-zA-Z0-9]+',     # Short URLs
                 r'tinyurl\.com/[a-zA-Z0-9]+' # Short URLs
@@ -258,17 +255,20 @@ class MultiLanguageTextCleaner:
         paywall_hit = False
         
         for line in lines:
-            line = line.strip()
-            if not line:
+            stripped_line = line.strip()
+            
+            # Preserve empty lines for paragraph breaks
+            if not stripped_line:
+                cleaned_lines.append('')
                 continue
             
             # Check for paywall/subscription wall
             if stop_at_paywall and not paywall_hit:
                 paywall_patterns = patterns.get('subscription_walls', [])
                 for pattern in paywall_patterns:
-                    if re.search(pattern, line, re.IGNORECASE):
+                    if re.search(pattern, stripped_line, re.IGNORECASE):
                         paywall_hit = True
-                        print(f"Paywall detected, stopping at: {line[:100]}...")
+                        # Paywall detected (verbose output removed)
                         break
                 
                 if paywall_hit:
@@ -283,7 +283,7 @@ class MultiLanguageTextCleaner:
                     continue
                     
                 for pattern in category_patterns:
-                    if re.search(pattern, line, re.IGNORECASE):
+                    if re.search(pattern, stripped_line, re.IGNORECASE):
                         should_skip = True
                         break
                 if should_skip:
@@ -293,7 +293,7 @@ class MultiLanguageTextCleaner:
             if not should_skip:
                 for category, category_patterns in self.universal_patterns.items():
                     for pattern in category_patterns:
-                        if re.search(pattern, line, re.IGNORECASE):
+                        if re.search(pattern, stripped_line, re.IGNORECASE):
                             should_skip = True
                             break
                     if should_skip:
@@ -301,7 +301,7 @@ class MultiLanguageTextCleaner:
             
             # Keep line if it passes all filters
             if not should_skip:
-                cleaned_lines.append(line)
+                cleaned_lines.append(stripped_line)
         
         # Join cleaned lines
         cleaned_text = '\n'.join(cleaned_lines)
@@ -311,11 +311,10 @@ class MultiLanguageTextCleaner:
         
         # Stats
         original_lines = len([l for l in original_text.split('\n') if l.strip()])
-        cleaned_lines_count = len(cleaned_lines)
+        cleaned_lines_count = len([l for l in cleaned_lines if l.strip()])
         
-        print(f"Text cleaning: {original_lines} → {cleaned_lines_count} lines ({language})")
-        if paywall_hit:
-            print("Stopped at paywall/subscription barrier")
+        # Optionally log statistics (removed verbose output)
+        # original_lines → cleaned_lines_count lines ({language})
         
         return cleaned_text
 
