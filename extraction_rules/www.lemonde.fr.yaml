@@ -93,3 +93,76 @@ cleanup_patterns:
     - "Pourquoi voyez-vous ce message.*"  # FAQ headers
     - "modifier votre mot de passe.*"  # Password change suggestions
     - "Votre abonnement n'autorise pas.*"  # Subscription restrictions
+
+# Custom content sections extraction
+custom_content_sections:
+  enabled: true
+  sections:
+    - name: "title"
+      description: "Main article title from various possible locations"
+      selectors:
+        - "js:lmd.context.article.title"  # JavaScript metadata extraction
+        - "h1.article__title"
+        - ".article-header h1" 
+        - "article h1"
+        - ".post-title h1"
+        - "[data-module='ArticleTitle'] h1"
+        - ".headline h1"
+        - "h1[class*='title']"
+      fallback_selectors:
+        - "h1"
+        - "title"  # HTML title as last resort
+      format: "# {content}"
+      required: false
+      order: 1
+      
+    - name: "subtitle"
+      description: "Article subtitle or deck text"
+      selectors:
+        - ".article__subtitle"
+        - ".article__deck"
+        - ".article-header .subtitle"
+        - "[data-module='ArticleSubtitle']"
+        - ".post-subtitle"
+        - ".headline .deck"
+        - ".article__lead"
+        - "h2[class*='subtitle']"
+        - "p[class*='subtitle']"
+        - ".article-summary"
+        - "meta[name='description']"  # Meta description as primary subtitle source
+      fallback_selectors:
+        - "h2"
+        - ".lead"
+      format: "## {content}"
+      required: false
+      order: 2
+      processing:
+        # Clean meta description content
+        clean_patterns:
+          - "^ANALYSE\\.\\s*"  # Remove "ANALYSE. " prefix from meta descriptions
+          - "^TRIBUNE\\.\\s*"  # Remove "TRIBUNE. " prefix 
+          - "^CHRONIQUE\\.\\s*"  # Remove "CHRONIQUE. " prefix
+          - "^OPINION\\.\\s*"  # Remove "OPINION. " prefix
+
+    - name: "author_details"
+      description: "Enhanced author information with byline"
+      selectors:
+        - "js:lmd.context.article.authorlist"  # JavaScript author extraction
+        - ".article__author-info"
+        - ".byline"
+        - ".author-byline"
+        - ".article__author"
+        - ".meta__author"
+        - "[data-module='AuthorInfo']"
+      format: "*{content}*"  # Changed from "By {content}" since JS already includes "Par"
+      required: false
+      order: 3
+
+  # Processing options
+  processing_options:
+    trim_whitespace: true
+    remove_empty_sections: true
+    add_separator_between_sections: true
+    separator: "\n\n"
+    max_section_length: 500  # Characters
+    skip_duplicates: true  # Don't add if content already appears in main article

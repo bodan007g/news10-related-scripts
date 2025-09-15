@@ -286,6 +286,413 @@ class TextExtractor:
             print(f"Light HTML cleaning failed: {e}")
             return html_content  # Return original if cleaning fails
 
+    def load_domain_extraction_rules(self, domain):
+        """Load domain-specific extraction rules from YAML file"""
+        config_file = os.path.join("extraction_rules", f"{domain}.yaml")
+        if os.path.exists(config_file):
+            try:
+                with open(config_file, 'r', encoding='utf-8') as f:
+                    return yaml.safe_load(f) or {}
+            except Exception as e:
+                print(f"Warning: Could not load extraction rules for {domain}: {e}")
+        return {}
+
+    def extract_custom_sections(self, soup, domain, url=None):
+        """
+        Extract custom content sections defined in domain rules
+        
+        Args:
+            soup: BeautifulSoup object of cleaned HTML
+            domain (str): Domain name for loading rules
+            url (str): Original article URL for fallback extraction
+            
+        Returns:
+            str: Formatted custom sections content or empty string
+        """
+        try:
+            rules = self.load_domain_extraction_rules(domain)
+            custom_sections = rules.get('custom_content_sections', {})
+            
+            if not custom_sections.get('enabled', False):
+                return ""
+            
+            sections = custom_sections.get('sections', [])
+            if not sections:
+                return ""
+            
+            # Sort sections by order field
+            sections = sorted(sections, key=lambda x: x.get('order', 999))
+            
+            sections_content = []
+            processing_options = custom_sections.get('processing_options', {})
+            
+            for section in sections:
+                content = self.extract_section_content(soup, section, processing_options, url)
+                if content:
+                    sections_content.append(content)
+            
+            return self.format_custom_sections(sections_content, processing_options)
+            
+        except Exception as e:
+            print(f"Warning: Custom sections extraction failed for {domain}: {e}")
+            return ""
+
+    def extract_section_content(self, soup, section_config, processing_options, url=None):
+        """
+        Extract content for a specific custom section
+        
+        Args:
+            soup: BeautifulSoup object
+            section_config (dict): Section configuration from YAML
+            processing_options (dict): Global processing options
+            url (str): Original article URL for fallback extraction
+            
+        Returns:
+            str: Formatted section content or None if not found
+        """
+        try:
+            selectors = section_config.get('selectors', [])
+            fallback_selectors = section_config.get('fallback_selectors', [])
+            section_name = section_config.get('name', '')
+            
+            # Try primary selectors first
+            content = self.try_selectors(soup, selectors)
+            
+            # Try fallback selectors if no content found
+            if not content and fallback_selectors:
+                content = self.try_selectors(soup, fallback_selectors)
+            
+            # For title sections, try URL extraction if HTML selectors failed
+            if not content and section_name == "title" and url:
+                # Extract domain from the soup's context or use a passed domain
+                # We'll get domain from the URL
+                from urllib.parse import urlparse
+                parsed_url = urlparse(url)
+                domain = parsed_url.netloc
+                
+                url_title = self.extract_title_from_url(url, domain)
+                if url_title:
+                    content = url_title
+                    print(f"📖 Extracted title from URL for {domain}")
+            
+            if not content:
+                return None
+            
+            # Apply section-specific processing patterns
+            section_processing = section_config.get('processing', {})
+            clean_patterns = section_processing.get('clean_patterns', [])
+            
+            for pattern in clean_patterns:
+                import re
+                content = re.sub(pattern, '', content).strip()
+            
+            # Apply global processing options
+            if processing_options.get('trim_whitespace', True):
+                content = content.strip()
+            
+            # Check maximum length
+            max_length = processing_options.get('max_section_length', 500)
+            if len(content) > max_length:
+                content = content[:max_length].rsplit(' ', 1)[0] + "..."
+            
+            # Skip if empty after processing
+            if not content:
+                return None
+            
+            # Apply formatting template
+            format_template = section_config.get('format', '{content}')
+            return format_template.format(content=content)
+            
+        except Exception as e:
+            print(f"Warning: Section content extraction failed: {e}")
+            return None
+
+    def try_selectors(self, soup, selectors):
+        """
+        Try multiple CSS selectors to find content, including special JavaScript extraction
+        
+        Args:
+            soup: BeautifulSoup object
+            selectors (list): List of CSS selectors to try
+            
+        Returns:
+            str: First found content or empty string
+        """
+        for selector in selectors:
+            try:
+                # Special handling for JavaScript extraction
+                if selector.startswith('js:'):
+                    content = self.extract_from_javascript(soup, selector[3:])
+                    if content:
+                        return content
+                    continue
+                
+                # Regular CSS selector
+                elements = soup.select(selector)
+                for element in elements:
+                    # Special handling for meta tags - extract from content attribute
+                    if element.name == 'meta' and element.has_attr('content'):
+                        content = element['content'].strip()
+                        if content and len(content) > 3:
+                            return content
+                    else:
+                        # Regular text extraction
+                        text = element.get_text(strip=True)
+                        if text and len(text) > 3:  # Found meaningful content
+                            return text
+            except Exception as e:
+                print(f"Warning: Selector '{selector}' failed: {e}")
+                continue
+        return ""
+
+    def extract_from_javascript(self, soup, js_path):
+        """
+        Extract content from JavaScript variables embedded in script tags
+        
+        Args:
+            soup: BeautifulSoup object
+            js_path (str): JavaScript path like 'lmd.context.article.title'
+            
+        Returns:
+            str: Extracted content or empty string
+        """
+        try:
+            import json
+            import re
+            import html
+            from bs4 import BeautifulSoup as BS
+            
+            # Find all script tags
+            script_tags = soup.find_all('script')
+            
+            for script in script_tags:
+                script_content = script.string if script.string else ""
+                
+                # Look for variable declarations that might contain our data
+                # Handle different patterns: var lmd = {...}, window.lmd = {...}, etc.
+                var_patterns = [
+                    rf'var\s+{js_path.split(".")[0]}\s*=\s*({{.*?}});',
+                    rf'window\.{js_path.split(".")[0]}\s*=\s*({{.*?}});',
+                    rf'{js_path.split(".")[0]}\s*=\s*({{.*?}});'
+                ]
+                
+                for pattern in var_patterns:
+                    matches = re.search(pattern, script_content, re.DOTALL | re.MULTILINE)
+                    if matches:
+                        try:
+                            # Parse the JSON object
+                            json_str = matches.group(1)
+                            data = json.loads(json_str)
+                            
+                            # Navigate the object path
+                            path_parts = js_path.split('.')[1:]  # Skip the variable name
+                            current = data
+                            
+                            for part in path_parts:
+                                if isinstance(current, dict) and part in current:
+                                    current = current[part]
+                                else:
+                                    current = None
+                                    break
+                            
+                            if current and isinstance(current, str):
+                                # Clean up HTML content: decode entities and strip tags
+                                decoded = html.unescape(current)  # Decode HTML entities like &nbsp;
+                                soup_temp = BS(decoded, 'html.parser')
+                                clean_text = soup_temp.get_text(separator=' ', strip=True)  # Strip HTML tags with space separator
+                                return clean_text
+                                
+                        except (json.JSONDecodeError, KeyError) as e:
+                            print(f"Warning: Failed to parse JavaScript data: {e}")
+                            continue
+            
+            return ""
+            
+        except Exception as e:
+            print(f"Warning: JavaScript extraction failed: {e}")
+            return ""
+
+    def format_custom_sections(self, sections_content, processing_options):
+        """
+        Format multiple custom sections into final content
+        
+        Args:
+            sections_content (list): List of formatted section strings
+            processing_options (dict): Processing options from YAML
+            
+        Returns:
+            str: Formatted sections content
+        """
+        if not sections_content:
+            return ""
+        
+        # Remove empty sections if requested
+        if processing_options.get('remove_empty_sections', True):
+            sections_content = [s for s in sections_content if s.strip()]
+        
+        if not sections_content:
+            return ""
+        
+        # Join sections with separator
+        separator = processing_options.get('separator', '\n\n')
+        if processing_options.get('add_separator_between_sections', True):
+            return separator.join(sections_content)
+        else:
+            return '\n'.join(sections_content)
+
+    def check_duplicate_content(self, custom_content, main_content, threshold=0.8):
+        """
+        Check if custom content is already present in main content
+        
+        Args:
+            custom_content (str): Custom sections content
+            main_content (str): Main article content
+            threshold (float): Similarity threshold (0.0-1.0)
+            
+        Returns:
+            bool: True if content appears to be duplicate
+        """
+        if not custom_content or not main_content:
+            return False
+        
+        # Simple check: if significant portion of custom content appears in main content
+        custom_words = set(custom_content.lower().split())
+        main_words = set(main_content.lower().split())
+        
+        if len(custom_words) < 3:  # Too short to check meaningfully
+            return False
+        
+        # Calculate overlap
+        overlap = len(custom_words.intersection(main_words))
+        similarity = overlap / len(custom_words)
+        
+        return similarity >= threshold
+
+    def extract_title_from_url(self, url, domain):
+        """
+        Extract article title from URL for sites where HTML title is missing
+        
+        Args:
+            url (str): Article URL
+            domain (str): Domain name
+            
+        Returns:
+            str: Extracted title or empty string
+        """
+        try:
+            import re
+            from urllib.parse import urlparse
+            
+            # Domain-specific URL title extraction patterns
+            if domain == "www.lemonde.fr":
+                # Le Monde URLs: extract slug and convert to readable title
+                # Example: katrina-l-ouragan-infernal-sur-netflix-vingt-ans-apres-spike-lee-prend-le-pouls-de-la-nouvelle-orleans
+                parsed = urlparse(url)
+                path = parsed.path
+                
+                # Extract the article slug (last part before article ID)
+                # Pattern: /article-slug_ARTICLEID_CATEGORYID.html
+                match = re.search(r'/([^/]+)_\d+_\d+\.html$', path)
+                if match:
+                    slug = match.group(1)
+                    
+                    # Convert slug to readable title
+                    title = self.convert_slug_to_title(slug, "fr")
+                    return title
+                    
+            elif domain == "www.bzi.ro":
+                # BZI.ro URLs: similar pattern
+                parsed = urlparse(url)
+                path = parsed.path
+                
+                # Extract the article slug (before article ID)
+                match = re.search(r'/([^/]+)-\d+$', path)
+                if match:
+                    slug = match.group(1)
+                    title = self.convert_slug_to_title(slug, "ro")
+                    return title
+                    
+            elif domain == "www.digi24.ro":
+                # Digi24.ro URLs: similar pattern
+                parsed = urlparse(url)
+                path = parsed.path
+                
+                # Extract the article slug (before article ID)
+                match = re.search(r'/([^/]+)-(\d+)$', path)
+                if match:
+                    slug = match.group(1)
+                    title = self.convert_slug_to_title(slug, "ro")
+                    return title
+                    
+            return ""
+            
+        except Exception as e:
+            print(f"Warning: URL title extraction failed: {e}")
+            return ""
+
+    def convert_slug_to_title(self, slug, language):
+        """
+        Convert URL slug to readable title
+        
+        Args:
+            slug (str): URL slug with dashes
+            language (str): Language code (fr, ro, en)
+            
+        Returns:
+            str: Readable title
+        """
+        try:
+            # Replace dashes with spaces
+            words = slug.split('-')
+            
+            # Language-specific title formatting
+            if language == "fr":
+                # French: capitalize first word and proper nouns
+                formatted_words = []
+                for i, word in enumerate(words):
+                    if i == 0:
+                        # Capitalize first word
+                        formatted_words.append(word.capitalize())
+                    elif word.lower() in ['le', 'la', 'les', 'de', 'du', 'des', 'à', 'au', 'aux', 'et', 'ou', 'pour', 'sur', 'avec', 'sans', 'dans', 'par', 'un', 'une']:
+                        # Keep articles and prepositions lowercase
+                        formatted_words.append(word.lower())
+                    elif len(word) > 3:
+                        # Capitalize longer words (likely proper nouns or important words)
+                        formatted_words.append(word.capitalize())
+                    else:
+                        formatted_words.append(word.lower())
+                        
+            elif language == "ro":
+                # Romanian: similar rules
+                formatted_words = []
+                for i, word in enumerate(words):
+                    if i == 0:
+                        formatted_words.append(word.capitalize())
+                    elif word.lower() in ['de', 'la', 'în', 'cu', 'pe', 'din', 'pentru', 'prin', 'după', 'înainte', 'fără', 'și', 'sau', 'dar', 'iar', 'un', 'o']:
+                        formatted_words.append(word.lower())
+                    elif len(word) > 3:
+                        formatted_words.append(word.capitalize())
+                    else:
+                        formatted_words.append(word.lower())
+                        
+            else:
+                # Default: capitalize each word except short articles/prepositions
+                formatted_words = []
+                for i, word in enumerate(words):
+                    if i == 0:
+                        formatted_words.append(word.capitalize())
+                    elif word.lower() in ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']:
+                        formatted_words.append(word.lower())
+                    else:
+                        formatted_words.append(word.capitalize())
+            
+            return ' '.join(formatted_words)
+            
+        except Exception as e:
+            print(f"Warning: Slug conversion failed: {e}")
+            # Fallback: simple title case
+            return slug.replace('-', ' ').title()
+
     def preserve_html_formatting(self, html_content):
         """
         Convert HTML formatting to Markdown before text extraction
@@ -624,7 +1031,31 @@ class TextExtractor:
         """Format headers in text with proper Markdown syntax"""
         if not text:
             return text
-            
+        
+        # First, try to identify headers from HTML structure if available
+        html_headers = {}
+        if html_content:
+            try:
+                from bs4 import BeautifulSoup
+                import unicodedata
+                
+                soup = BeautifulSoup(html_content, 'html.parser')
+                
+                # Find all header tags and map their text to header levels
+                for level in range(1, 7):  # h1 to h6
+                    headers = soup.find_all(f'h{level}')
+                    for header in headers:
+                        header_text = header.get_text(strip=True)
+                        if header_text and len(header_text) > 3:
+                            # Normalize text for better matching
+                            normalized = unicodedata.normalize('NFKC', header_text)
+                            html_headers[normalized] = level
+                            # Also store original for exact matching
+                            html_headers[header_text] = level
+            except Exception as e:
+                # If HTML parsing fails, fall back to heuristic method
+                pass
+        
         lines = text.split('\n')
         formatted_lines = []
         
@@ -634,32 +1065,50 @@ class TextExtractor:
                 formatted_lines.append(line)
                 continue
                 
-            # Check if this looks like a header
+            # Check if this text matches a header from HTML
             is_header = False
             header_level = 1
             
-            # Heuristics for detecting headers:
-            # 1. Short lines (typically under 80 chars)
-            # 2. No ending punctuation (., !, :, ;, ,) - Allow ? for question headers  
-            # 3. Followed by content or empty line
-            # 4. Not starting with common content words
-            
-            if (len(stripped) < 80 and 
-                len(stripped) > 5 and
-                not stripped.endswith(('.', '!', ':', ';', ',') ) and  # Allow ? for question headers
-                not stripped.startswith(('În ', 'De ', 'Cu ', 'Pentru ', 'Prin ', 'Astfel', 'Așa', 'Dar', 'Și')) and
-                # Check if next non-empty line exists and looks like content
-                self._next_line_looks_like_content(lines, i)):
-                
+            # Try exact match first
+            if stripped in html_headers:
                 is_header = True
+                header_level = html_headers[stripped]
+            else:
+                # Try normalized match
+                try:
+                    import unicodedata
+                    normalized = unicodedata.normalize('NFKC', stripped)
+                    if normalized in html_headers:
+                        is_header = True
+                        header_level = html_headers[normalized]
+                except:
+                    pass
+            
+            if not is_header:
+                # Fallback to heuristic detection for headers not found in HTML
+                # Check if this looks like a header
+                # Heuristics for detecting headers:
+                # 1. Short lines (typically under 80 chars)
+                # 2. No ending punctuation (., !, :, ;, ,) - Allow ? for question headers  
+                # 3. Followed by content or empty line
+                # 4. Not starting with common content words
                 
-                # Determine header level based on context and formatting
-                if i == 0 or (i < 3 and not any(formatted_lines[-3:])):  # First meaningful line
-                    header_level = 1
-                elif any(keyword in stripped.lower() for keyword in ['actualizare', 'știrea inițială', 'concluzia', 'background', 'ce s-a întâmplat']):
-                    header_level = 2
-                else:
-                    header_level = 2  # Default secondary header
+                if (len(stripped) < 80 and 
+                    len(stripped) > 5 and
+                    not stripped.endswith(('.', '!', ':', ';', ',') ) and  # Allow ? for question headers
+                    not stripped.startswith(('În ', 'De ', 'Cu ', 'Pentru ', 'Prin ', 'Astfel', 'Așa', 'Dar', 'Și')) and
+                    # Check if next non-empty line exists and looks like content
+                    self._next_line_looks_like_content(lines, i)):
+                    
+                    is_header = True
+                    
+                    # Determine header level based on context and formatting
+                    if i == 0 or (i < 3 and not any(formatted_lines[-3:])):  # First meaningful line
+                        header_level = 1
+                    elif any(keyword in stripped.lower() for keyword in ['actualizare', 'știrea inițială', 'concluzia', 'background', 'ce s-a întâmplat']):
+                        header_level = 2
+                    else:
+                        header_level = 2  # Default secondary header
             
             if is_header:
                 # Ensure empty line before header (but not if it's the first line or already has empty line)
@@ -774,6 +1223,11 @@ class TextExtractor:
             else:
                 raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
+            # Extract custom sections from original HTML (before cleaning to preserve script tags)
+            from bs4 import BeautifulSoup
+            soup_original = BeautifulSoup(formatted_html_content, 'html.parser')
+            custom_sections = self.extract_custom_sections(soup_original, domain, original_url)
+            
             # Save cleaned HTML if requested
             cleaned_html_saved = False
             full_cleaned_path = ""
@@ -862,6 +1316,21 @@ class TextExtractor:
             # Format headers in the extracted text
             markdown_content = self.format_headers_markdown(paragraph_corrected_text, cleaned_html_content)
             
+            # Combine custom sections with main content
+            if custom_sections:
+                # Check for duplicate content to avoid repetition
+                rules = self.load_domain_extraction_rules(domain)
+                custom_config = rules.get('custom_content_sections', {})
+                processing_options = custom_config.get('processing_options', {})
+                
+                if processing_options.get('skip_duplicates', True):
+                    if not self.check_duplicate_content(custom_sections, markdown_content):
+                        # Custom sections are unique, prepend them
+                        markdown_content = custom_sections + "\n\n" + markdown_content
+                else:
+                    # Always add custom sections regardless of duplication
+                    markdown_content = custom_sections + "\n\n" + markdown_content
+            
             # Apply domain-specific text cleanup (boilerplate removal)
             markdown_content = self.text_cleaner.clean_with_domain_rules(markdown_content, domain)
             
@@ -905,7 +1374,8 @@ class TextExtractor:
                 'markdown_file': full_extracted_path,
                 'content_length': len(markdown_content),
                 'extraction_method': self.extraction_method,
-                'cleaned_html_saved': self.save_cleaned_html
+                'cleaned_html_saved': self.save_cleaned_html,
+                'custom_sections_found': bool(custom_sections)
             })
             
             if self.save_cleaned_html:
@@ -921,7 +1391,8 @@ class TextExtractor:
                 'metadata_file': full_metadata_path,
                 'content_length': len(markdown_content),
                 'extraction_method': self.extraction_method,
-                'processed_at': datetime.now().isoformat()
+                'processed_at': datetime.now().isoformat(),
+                'custom_sections_found': bool(custom_sections)
             }
             
             if self.save_cleaned_html:
@@ -935,6 +1406,8 @@ class TextExtractor:
             success_msg = f"✅ Extracted ({self.extraction_method}) ({domain}): {os.path.basename(full_extracted_path)}"
             if cleaned_html_saved:
                 success_msg += " 💧"  # Water drop icon to indicate cleaned HTML was saved
+            if custom_sections:
+                success_msg += " 📝"  # Note icon to indicate custom sections were added
             print(success_msg)
                 
         except Exception as e:
