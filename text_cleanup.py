@@ -73,7 +73,7 @@ class MultiLanguageTextCleaner:
             
             'romanian': {
                 'subscription_walls': [
-                    r'Restul articolului este rezervat abonaților.*',
+                    r'Restul articolului este rezervat abonațiilor.*',
                     r'Pentru a citi restul articolului.*abonează-te.*',
                     r'Articol disponibil doar pentru abonați.*',
                     r'Conținutul complet.*doar pentru abonați.*',
@@ -176,7 +176,7 @@ class MultiLanguageTextCleaner:
         self.universal_patterns = {
             'social_media': [
                 r'^@[a-zA-Z0-9_]+$',         # Social handles only on their own line
-                r'#[a-zA-Z0-9_]+',           # Hashtags
+                r'(?:^|\s)#[a-zA-Z][a-zA-Z0-9_]*(?:\s|$)',  # Hashtags that start with letters (not numbers)
                 r'bit\.ly/[a-zA-Z0-9]+',     # Short URLs
                 r'tinyurl\.com/[a-zA-Z0-9]+' # Short URLs
             ],

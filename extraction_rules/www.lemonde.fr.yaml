@@ -37,6 +37,12 @@ remove_selectors:
   - ".comments"
   - ".author-bio"
   - ".tags"
+  - ".capping"  # Device limit sections
+  - ".capping__wrapper"
+  - ".article__gift-modal"  # Gift/subscription modals
+  - ".paywall__comments"  # Paywall comment sections
+  - "[id*='capping']"  # Any element with capping in the ID
+  - "[class*='capping']"  # Any element with capping in the class
 title_selector: "h1"
 date_selector: ".meta__date, time"
 author_selector: ".meta__author, .author"
@@ -48,6 +54,12 @@ cleanup_patterns:
     - "La suite est réservée aux abonnés.*"
     - "Article réservé à nos abonnés.*"
     - "Pour lire la suite.*abonnez-vous.*"
+    - "Parce qu'une autre personne.*est en train de lire.*Le Monde.*"
+    - "Vous ne pouvez lire.*Le Monde.*que sur.*un seul appareil.*"
+    - "Comment ne plus voir ce message.*"
+    - "Que se passera-t-il si vous continuez à lire ici.*"
+    - "Y a-t-il d'autres limites.*"
+    - "Vous ignorez qui.*"
   navigation_elements:
     - "Lire aussi.*?\\|.*?Article réservé.*"
     - "Lire plus tard.*"
@@ -73,3 +85,11 @@ cleanup_patterns:
     - 'Modifié\s+le\s+\d{1,2}/\d{1,2}/\d{4}.*'  # Modification dates
     - "S'abonner.*?à partir de.*€.*"
     - "Recevez.*?newsletter.*"
+    - "Lecture du.*?Monde.*?en cours sur un autre appareil.*"  # Device limit notices
+    - "Continuer à lire ici.*"  # Device limit buttons
+    - "Ajouter un compte.*"  # Account management
+    - "Découvrir l'offre Famille.*"  # Family offers
+    - "Découvrir les offres multicomptes.*"  # Multi-account offers
+    - "Pourquoi voyez-vous ce message.*"  # FAQ headers
+    - "modifier votre mot de passe.*"  # Password change suggestions
+    - "Votre abonnement n'autorise pas.*"  # Subscription restrictions

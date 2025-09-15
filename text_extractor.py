@@ -155,7 +155,7 @@ class TextExtractor:
             
             # Remove unwanted elements
             unwanted_tags = [
-                'script', 'style', 'nav', 'header', 'footer', 'aside',
+                'script', 'style', 'nav', 'footer', 'aside',
                 'iframe', 'embed', 'object', 'applet', 'form',
                 'button', 'input', 'textarea', 'select', 'option',
                 'noscript', 'meta', 'link', 'title'
@@ -164,6 +164,17 @@ class TextExtractor:
             for tag_name in unwanted_tags:
                 for tag in soup.find_all(tag_name):
                     tag.decompose()
+            
+            # Remove page navigation headers but preserve article headers
+            for header in soup.find_all('header'):
+                # Keep headers that likely contain article content (title, subtitle)
+                if (header.find(['h1', 'h2', 'h3']) or 
+                    'article' in str(header.get('class', '')).lower() or
+                    'title' in str(header.get('class', '')).lower() or
+                    len(header.get_text(strip=True)) > 30):  # Likely article header with substantial content
+                    continue
+                else:
+                    header.decompose()  # Remove page navigation headers
             
             # Remove elements with common non-content classes/ids
             unwanted_selectors = [
@@ -212,6 +223,68 @@ class TextExtractor:
         except Exception as e:
             print(f"HTML cleaning failed: {e}")
             return html_content  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails  # Return original if cleaning fails
+
+    def clean_html_lightly_for_newspaper(self, html_content):
+        """
+        Light HTML cleaning specifically for newspaper3k extraction
+        Preserves more structure that newspaper3k needs while removing obviously unwanted content
+        
+        Args:
+            html_content (str): Original HTML content
+            
+        Returns:
+            str: Lightly cleaned HTML with preserved content structure for newspaper3k
+        """
+        try:
+            import re
+            from bs4 import BeautifulSoup, Comment
+            
+            # Remove HTML comments first
+            html_content = re.sub(r'<!--.*?-->', '', html_content, flags=re.DOTALL)
+            
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Remove any remaining comments (BeautifulSoup parsing)
+            for comment in soup.find_all(string=lambda text: isinstance(text, Comment)):
+                comment.extract()
+            
+            # Remove clearly unwanted elements (more conservative than the aggressive cleaner)
+            unwanted_tags = [
+                'script', 'style', 'nav', 'footer', 'aside',
+                'iframe', 'embed', 'object', 'applet',
+                'noscript', 'meta', 'link', 'title'
+            ]
+            
+            for tag_name in unwanted_tags:
+                for tag in soup.find_all(tag_name):
+                    tag.decompose()
+            
+            # Remove obvious advertisement elements (more conservative)
+            unwanted_selectors = [
+                '[class*="advertisement"]', '[class*="ads"]',
+                '[id*="advertisement"]', '[id*="ads"]'
+            ]
+            
+            for selector in unwanted_selectors:
+                for element in soup.select(selector):
+                    element.decompose()
+            
+            # Remove only style attributes but keep other attributes that might help with content identification
+            for element in soup.find_all():
+                if element.name and 'style' in element.attrs:
+                    del element.attrs['style']
+            
+            # Convert to string and do minimal text cleanup
+            cleaned_html = str(soup)
+            
+            # Remove excessive whitespace but be more conservative
+            cleaned_html = re.sub(r'\n\s*\n\s*\n+', '\n\n', cleaned_html)
+            
+            return cleaned_html
+            
+        except Exception as e:
+            print(f"Light HTML cleaning failed: {e}")
+            return html_content  # Return original if cleaning fails
 
     def preserve_html_formatting(self, html_content):
         """
@@ -596,12 +669,13 @@ class TextExtractor:
                     formatted_lines.append("")  # Add empty line before header
                 
                 # Format as Markdown header
-                formatted_lines.append(f"{'#' * header_level} {stripped}")
+                header_line = f"{'#' * header_level} {stripped}"
+                formatted_lines.append(header_line)
                 # Add underline for emphasis if requested
                 if header_level == 1:
-                    formatted_lines.append("=" * len(stripped))
+                    formatted_lines.append("=" * len(header_line))
                 elif header_level == 2:
-                    formatted_lines.append("-" * len(stripped))
+                    formatted_lines.append("-" * len(header_line))
             else:
                 formatted_lines.append(line)
                 
@@ -654,21 +728,51 @@ class TextExtractor:
             # Preserve formatting before cleaning
             formatted_html_content = self.preserve_html_formatting(original_html_content)
             
-            # Clean HTML for better extraction
-            cleaned_html_content = self.clean_html_for_extraction(formatted_html_content)
+            # Reconstruct original URL
+            original_url = self.reconstruct_url(domain, file_path)
             
-            # Check if cleaning removed too much content
-            if len(cleaned_html_content.strip()) < 100:
-                self.stats['skipped_files'] += 1
-                reason = f"HTML cleaning left too little content ({len(cleaned_html_content)} chars)"
-                print(f"⚠️  Skipping ({domain}): {reason}")
-                self.log_skip_reason(file_path, domain, "cleaned_html_too_small", reason)
-                self.processed_status[file_key] = {
-                    'status': 'skipped',
-                    'reason': reason,
-                    'processed_at': datetime.now().isoformat()
-                }
-                return
+            # Use different cleaning strategies based on extraction method
+            if self.extraction_method == 'trafilatura':
+                # Trafilatura is robust, use more aggressive cleaning
+                cleaned_html_content = self.clean_html_for_extraction(formatted_html_content)
+                
+                # Check if cleaning removed too much content
+                if len(cleaned_html_content.strip()) < 100:
+                    self.stats['skipped_files'] += 1
+                    reason = f"HTML cleaning left too little content ({len(cleaned_html_content)} chars)"
+                    print(f"⚠️  Skipping ({domain}): {reason}")
+                    self.log_skip_reason(file_path, domain, "cleaned_html_too_small", reason)
+                    self.processed_status[file_key] = {
+                        'status': 'skipped',
+                        'reason': reason,
+                        'processed_at': datetime.now().isoformat()
+                    }
+                    return
+                
+                extracted_text, extracted_metadata = self.extract_with_trafilatura(cleaned_html_content, original_url)
+                
+            elif self.extraction_method == 'newspaper':
+                # Newspaper3k needs more HTML structure, use lighter cleaning
+                lightly_cleaned_html = self.clean_html_lightly_for_newspaper(formatted_html_content)
+                
+                # Check if cleaning removed too much content (more lenient threshold for newspaper)
+                if len(lightly_cleaned_html.strip()) < 500:
+                    self.stats['skipped_files'] += 1
+                    reason = f"Light HTML cleaning left too little content ({len(lightly_cleaned_html)} chars)"
+                    print(f"⚠️  Skipping ({domain}): {reason}")
+                    self.log_skip_reason(file_path, domain, "light_cleaned_html_too_small", reason)
+                    self.processed_status[file_key] = {
+                        'status': 'skipped',
+                        'reason': reason,
+                        'processed_at': datetime.now().isoformat()
+                    }
+                    return
+                
+                extracted_text, extracted_metadata = self.extract_with_newspaper(lightly_cleaned_html, original_url)
+                cleaned_html_content = lightly_cleaned_html  # For consistency in logging and saving
+                
+            else:
+                raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
             # Save cleaned HTML if requested
             cleaned_html_saved = False
@@ -686,17 +790,6 @@ class TextExtractor:
                     f.write(cleaned_html_content)
                 
                 cleaned_html_saved = True
-            
-            # Reconstruct original URL
-            original_url = self.reconstruct_url(domain, file_path)
-            
-            # Extract content using the selected method with cleaned HTML
-            if self.extraction_method == 'trafilatura':
-                extracted_text, extracted_metadata = self.extract_with_trafilatura(cleaned_html_content, original_url)
-            elif self.extraction_method == 'newspaper':
-                extracted_text, extracted_metadata = self.extract_with_newspaper(cleaned_html_content, original_url)
-            else:
-                raise ValueError(f"Unknown extraction method: {self.extraction_method}")
             
             # Check extraction results with detailed logging
             if not extracted_text:
